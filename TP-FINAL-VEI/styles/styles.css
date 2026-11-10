@@ -1,0 +1,104 @@
+
+      /* Tema oscuro */
+      [data-bs-theme=dark] {
+        --bs-body-bg: #0B0D17;
+        --bs-body-bg-rgb: 11, 13, 23;
+        --bs-body-color: #E8EAF6;
+        --bs-border-color: #23284A;
+      }
+
+      /* Navbar */
+      .site-header { background: #0F1220; border-bottom: 1px solid #23284A; }
+      .navbar[data-bs-theme=dark] {
+        --bs-navbar-color: #E8EAF6;
+        --bs-navbar-hover-color: #A5A6FF;
+        --bs-navbar-active-color: #A5A6FF;
+        --bs-navbar-brand-color: #fff;
+        --bs-navbar-brand-hover-color: #fff;
+      }
+
+      /* Botones */
+      .btn-primary {
+        --bs-btn-color: #fff; --bs-btn-bg: #4F46E5; --bs-btn-border-color: #4F46E5;
+        --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #6366F1; --bs-btn-hover-border-color: #6366F1;
+        --bs-btn-active-color: #fff; --bs-btn-active-bg: #4338CA; --bs-btn-active-border-color: #4338CA;
+      }
+      .btn-warning {
+        --bs-btn-color: #14172B; --bs-btn-bg: #F5B83D; --bs-btn-border-color: #F5B83D;
+        --bs-btn-hover-color: #14172B; --bs-btn-hover-bg: #F8C75F; --bs-btn-hover-border-color: #F8C75F;
+        --bs-btn-active-color: #14172B; --bs-btn-active-bg: #E5A82D; --bs-btn-active-border-color: #E5A82D;
+      }
+
+      /* Tarjeta del bot */
+      .hero-bot {
+        background: #151936;
+        border: 1px solid #2F3570;
+        color: #fff;
+      }
+      .hero-bot p { color: #C9CCE0; }
+      .step-badge {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 24px; height: 24px; border-radius: 50%;
+        background: #F5B83D; color: #14172B; font-weight: 700; font-size: .8rem;
+      }
+
+      /* Carrusel de cursos */
+      .section-sub { color: #A3A9C9; }
+      .carousel-nav-btn {
+        width: 44px; height: 44px; padding: 0;
+        display: inline-flex; align-items: center; justify-content: center;
+        border-radius: 10px; border: 1px solid #333A70; background: #151936; color: #E8EAF6;
+      }
+
+      .container-fluid{
+        border-radius: 8px;
+         border: 1px solid #2F3570;
+        background: #151936;
+      }
+      .carousel-nav-btn:hover { background: #1E2350; color: #fff; }
+      .carousel-stage { position: relative; }
+      @media (min-width: 768px) { .carousel-stage { padding: 0 3.5rem; } }
+      .side-arrow {
+        position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+      }
+      .side-arrow.prev { left: 0; }
+      .side-arrow.next { right: 0; }
+      .side-arrow:hover { background: #4F46E5; border-color: #4F46E5; }
+      @media (max-width: 767.98px) {
+        .side-arrow { background: rgba(21, 25, 54, .92); }
+        .side-arrow.prev { left: .5rem; }
+        .side-arrow.next { right: .5rem; }
+      }
+
+      .course-card {
+        background: #151936; border: 1px solid #262B52; border-radius: 18px; overflow: hidden;
+      }
+      .course-thumb {
+        height: 140px; background: var(--thumb);
+        display: flex; align-items: center; justify-content: center;
+      }
+      .course-tag {
+        align-self: flex-start; font-size: .75rem; font-weight: 700;
+        padding: 4px 10px; border-radius: 99px;
+        background: var(--tag-bg); color: var(--tag-fg);
+      }
+      .course-card p { color: #A3A9C9; font-size: .875rem; }
+      .btn-course {
+        --bs-btn-color: #fff; --bs-btn-bg: #272D63; --bs-btn-border-color: #272D63;
+        --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #343B7D; --bs-btn-hover-border-color: #343B7D;
+        --bs-btn-active-color: #fff; --bs-btn-active-bg: #343B7D; --bs-btn-active-border-color: #343B7D;
+        font-weight: 600;
+      }
+      .c-violet { --thumb: #4F46E5; --tag-bg: #25286B; --tag-fg: #C7C9FF; }
+      .c-teal   { --thumb: #0F766E; --tag-bg: #0F3B38; --tag-fg: #7EE7D8; }
+      .c-amber  { --thumb: #B45309; --tag-bg: #43290F; --tag-fg: #FBC27A; }
+
+      /* Puntos del carrusel (debajo de las tarjetas) */
+      #carouselCards .carousel-indicators {
+        position: static; margin: 1.25rem 0 0; justify-content: center;
+      }
+      #carouselCards .carousel-indicators [data-bs-target] {
+        width: 8px; height: 8px; border: 0; border-radius: 4px;
+        background-color: #3A4170; opacity: 1; margin: 0 4px; transition: width .2s;
+      }
+      #carouselCards .carousel-indicators .active { width: 28px; background-color: #4F46E5; }

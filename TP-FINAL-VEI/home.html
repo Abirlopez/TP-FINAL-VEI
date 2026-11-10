@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cursAR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="./styles/styles.css" rel="stylesheet">
+    
+  </head>
+  <body>
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md py-3" data-bs-theme="dark">
+        <div class="container">
+
+          <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-5 m-0" href="#">
+            <img src="./img/Designer.png" alt="Logo de cursAR" height="34" class="d-inline-block">
+            cursAR
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-sm-center gap-sm-1">
+              <li class="nav-item">
+                <a class="nav-link px-3 fw-semibold active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Mi perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Contacto</a>
+              </li>
+              <li class="nav-item ms-sm-2 mt-2 mt-sm-0">
+                <a class="btn btn-primary fw-semibold px-4" href="#">Ingresar</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-4">
+
+   
+      <section class="hero-bot rounded-4 py-4 px-4 px-md-5">
+        <div class="row align-items-center g-4">
+
+          <div class="col-md-8">
+            <h1 class="h2 fw-bold mb-2">¿Querés impulsar tu carrera en IT?</h1>
+            <p class="mb-3">Usá nuestro BOT para obtener los mejores cursos que se adecuen a tus necesidades.</p>
+
+            <ol class="list-unstyled d-flex flex-column gap-2 small mb-3">
+    <li class="d-flex align-items-center gap-2">
+        <span class="step-badge">1</span> Escribí “Hola”
+    </li>
+    <li class="d-flex align-items-center gap-2">
+        <span class="step-badge">2</span> Respondé el cuestionario
+    </li>
+    <li class="d-flex align-items-center gap-2">
+        <span class="step-badge">3</span> Inscribite en los cursos recomendados
+    </li>
+</ol>
+
+            <a href="#" class="btn btn-warning fw-semibold px-4">Hablar con el bot</a>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <img src="./img/logoIA.png" alt="Robot asistente" width="250" class="img-fluid">
+          </div>
+
+        </div>
+      </section>
+
+    
+      <section class="mt-5" id="cursos">
+
+        <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+          <div>
+            <h2 class="fs-3 fw-bold mb-1">Cursos más recomendados</h2>
+            <p class="section-sub mb-0">Los favoritos de nuestra comunidad.</p>
+          </div>
+        </div>
+
+        <div id="carouselCards" class="carousel slide">
+          <div class="carousel-stage">
+            <button class="carousel-nav-btn side-arrow prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev" aria-label="Anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="carousel-nav-btn side-arrow next" type="button" data-bs-target="#carouselCards" data-bs-slide="next" aria-label="Siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+
+          <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <div class="row g-3">
+
+        <div class="col-md-4">
+          <article class="course-card c-violet h-100 d-flex flex-column">
+            <div class="course-thumb">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1">
+              <span class="course-tag">Desarrollo web</span>
+              <h3 class="h5 fw-bold mb-0">Desarrollo Web Full Stack</h3>
+              <p class="mb-2">Aprende desarrollo Full Stack desde cero y domina JavaScript, React y Node.js con una formación práctica orientada a construir aplicaciones reales. Un programa de estudios intensivo y online que te conectará con el mundo laboral.</p>
+              <a href="#" class="btn btn-course mt-auto">Ver curso</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="course-card c-teal h-100 d-flex flex-column">
+            <div class="course-thumb">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1">
+              <span class="course-tag">Datos</span>
+              <h3 class="h5 fw-bold mb-0">Bases de datos en MySQL</h3>
+              <p class="mb-2">Aprenderás a diseñar y optimizar bases de datos relacionales, asegurando un rendimiento eficiente y seguro, incluso con grandes volúmenes de datos. Desarrollarás habilidades para gestionar y acceder a la información de manera confiable, aplicando técnicas avanzadas de administración de datos.</p>
+              <a href="#" class="btn btn-course mt-auto">Ver curso</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="course-card c-amber h-100 d-flex flex-column">
+            <div class="course-thumb">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1">
+              <span class="course-tag">Ciberseguridad</span>
+              <h3 class="h5 fw-bold mb-0">Especialista en ciberseguridad</h3>
+              <p class="mb-2">Aprenderás a identificar vulnerabilidades, implementar medidas de seguridad y realizar análisis de riesgos para garantizar la protección de la información en entornos digitales.</p>
+              <a href="#" class="btn btn-course mt-auto">Ver curso</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row g-3">
+
+        <div class="col-md-4">
+          <article class="course-card c-violet h-100 d-flex flex-column">
+            <div class="course-thumb">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1">
+              <span class="course-tag">Desarrollo web</span>
+              <h3 class="h5 fw-bold mb-0">IA en Programación</h3>
+              <p class="mb-2">Descubre cómo implementar Inteligencia Artificial en el desarrollo de software. Aprende a integrar técnicas avanzadas de machine learning y deep learning en backend, frontend, APIs y automatización de procesos. </p>
+              <a href="#" class="btn btn-course mt-auto">Ver curso</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="course-card c-teal h-100 d-flex flex-column">
+            <div class="course-thumb">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1">
+              <span class="course-tag">Datos</span>
+              <h3 class="h5 fw-bold mb-0">Curso de POWER BI</h3>
+              <p class="mb-2">Aprenderás a conectar fuentes de datos, transformar información y generar informes visuales que facilitan la toma de decisiones.
+
+Dominarás la herramienta líder en Business Intelligence para dar vida a la información. </p>
+              <a href="#" class="btn btn-course mt-auto">Ver curso</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="course-card c-amber h-100 d-flex flex-column">
+            <div class="course-thumb">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1">
+              <span class="course-tag">Ciberseguridad</span>
+              <h3 class="h5 fw-bold mb-0">Hacking etico</h3>
+              <p class="mb-2">Aprende conceptos clave como pruebas de penetración, seguridad de redes y análisis de amenazas, esenciales para proteger datos y redes en puestos de TI y seguridad.</p>
+              <a href="#" class="btn btn-course mt-auto">Ver curso</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+          </div>
+          </div>
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselCards" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Página 1"></button>
+            <button type="button" data-bs-target="#carouselCards" data-bs-slide-to="1" aria-label="Página 2"></button>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="container-fluid my-4 py-4 text-center"  >
+        <div class="row align-items-center justify-content-center ">
+            <div class="col-sm-6 col-md-6 col-lg-3 my-2"><img src="./img/imagotype-it-fill-v2-color.svg" alt="logo-educationIT" width="170"></div>
+            <div class="col-sm-6 col-md-6 col-lg-3 my-2"><img src="./img/logo-udemy.svg" alt="logo-udemy" width="130" ></div>
+            <div class="col-sm-6 col-md-6 col-lg-3 my-2"><img src="./img/henry-logo.svg" alt="logo-henry" width="170"></div>
+            <div class="col-sm-6 col-md-6 col-lg-3 my-2"><img src="./img/images.webp" alt="logo-utn" width="170"></div>
+        
+
+
+
+        </div>
+        
+
+
+      </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
