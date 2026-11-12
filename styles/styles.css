@@ -56,13 +56,37 @@
         background: #151936;
       }
       .carousel-nav-btn:hover { background: #1E2350; color: #fff; }
-      .carousel-stage { position: relative; }
-      @media (min-width: 768px) { .carousel-stage { padding: 0 3.5rem; } }
-      .side-arrow {
-        position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
-      }
-      .side-arrow.prev { left: 0; }
-      .side-arrow.next { right: 0; }
+      .carousel-stage {
+    position: relative;
+    padding: 0 3.5rem;
+}
+
+.side-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.side-arrow.prev {
+    left: 0;
+}
+
+.side-arrow.next {
+    right: 0;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 767.98px) {
+    .carousel-stage {
+        padding: 0 2.8rem;
+    }
+
+    .side-arrow {
+        width: 36px;
+        height: 36px;
+    }
+}
       .side-arrow:hover { background: #4F46E5; border-color: #4F46E5; }
       @media (max-width: 767.98px) {
         .side-arrow { background: rgba(21, 25, 54, .92); }
@@ -102,3 +126,50 @@
         background-color: #3A4170; opacity: 1; margin: 0 4px; transition: width .2s;
       }
       #carouselCards .carousel-indicators .active { width: 28px; background-color: #4F46E5; }
+
+      /* Carrusel responsive para celulares */
+@media (max-width: 767.98px) {
+
+    /* Ocultamos las flechas */
+    .side-arrow {
+        display: none;
+    }
+
+    /* Ocultamos los indicadores */
+    #carouselCards .carousel-indicators {
+        display: none;
+    }
+
+    /* Convertimos el carrusel en una fila desplazable */
+    #carouselCards .carousel-inner {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        padding-bottom: 12px;
+        scrollbar-width: none;
+    }
+
+    #carouselCards .carousel-inner::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Mostramos todos los grupos de tarjetas */
+    #carouselCards .carousel-item {
+        display: contents !important;
+    }
+
+    /* Eliminamos las filas intermedias */
+    #carouselCards .carousel-item .row {
+        display: contents;
+    }
+
+    /* Cada tarjeta ocupa casi todo el ancho */
+    #carouselCards .carousel-item .col-md-4 {
+        flex: 0 0 85%;
+        width: 85%;
+        scroll-snap-align: start;
+    }
+}
+
+   .card { background-color: #14143a; border-color: rgba(255,255,255,.09); }
