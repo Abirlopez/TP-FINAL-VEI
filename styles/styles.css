@@ -1,175 +1,457 @@
-
-      /* Tema oscuro */
-      [data-bs-theme=dark] {
-        --bs-body-bg: #0B0D17;
-        --bs-body-bg-rgb: 11, 13, 23;
-        --bs-body-color: #E8EAF6;
-        --bs-border-color: #23284A;
-      }
-
-      /* Navbar */
-      .site-header { background: #0F1220; border-bottom: 1px solid #23284A; }
-      .navbar[data-bs-theme=dark] {
-        --bs-navbar-color: #E8EAF6;
-        --bs-navbar-hover-color: #A5A6FF;
-        --bs-navbar-active-color: #A5A6FF;
-        --bs-navbar-brand-color: #fff;
-        --bs-navbar-brand-hover-color: #fff;
-      }
-
-      /* Botones */
-      .btn-primary {
-        --bs-btn-color: #fff; --bs-btn-bg: #4F46E5; --bs-btn-border-color: #4F46E5;
-        --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #6366F1; --bs-btn-hover-border-color: #6366F1;
-        --bs-btn-active-color: #fff; --bs-btn-active-bg: #4338CA; --bs-btn-active-border-color: #4338CA;
-      }
-      .btn-warning {
-        --bs-btn-color: #14172B; --bs-btn-bg: #F5B83D; --bs-btn-border-color: #F5B83D;
-        --bs-btn-hover-color: #14172B; --bs-btn-hover-bg: #F8C75F; --bs-btn-hover-border-color: #F8C75F;
-        --bs-btn-active-color: #14172B; --bs-btn-active-bg: #E5A82D; --bs-btn-active-border-color: #E5A82D;
-      }
-
-      /* Tarjeta del bot */
-      .hero-bot {
-        background: #151936;
-        border: 1px solid #2F3570;
-        color: #fff;
-      }
-      .hero-bot p { color: #C9CCE0; }
-      .step-badge {
-        display: inline-flex; align-items: center; justify-content: center;
-        width: 24px; height: 24px; border-radius: 50%;
-        background: #F5B83D; color: #14172B; font-weight: 700; font-size: .8rem;
-      }
-
-      /* Carrusel de cursos */
-      .section-sub { color: #A3A9C9; }
-      .carousel-nav-btn {
-        width: 44px; height: 44px; padding: 0;
-        display: inline-flex; align-items: center; justify-content: center;
-        border-radius: 10px; border: 1px solid #333A70; background: #151936; color: #E8EAF6;
-      }
-
-      .container-fluid{
-        border-radius: 8px;
-         border: 1px solid #2F3570;
-        background: #151936;
-      }
-      .carousel-nav-btn:hover { background: #1E2350; color: #fff; }
-      .carousel-stage {
-    position: relative;
-    padding: 0 3.5rem;
+/* ==========================================================================
+   1. Tema Oscuro & Variables Globales
+   ================================================================---------- */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0b0d17;
+  --bs-body-bg-rgb: 11, 13, 23;
+  --bs-body-color: #e8eaf6;
+  --bs-border-color: #23284a;
 }
 
-.side-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+/* ==========================================================================
+   2. Navbar, Header & Footer (Evita Layout Shift)
+   ================================================================---------- */
+.site-header {
+  background: #0f1220;
+  border-bottom: 1px solid #23284a;
+  min-height: 70px;
 }
 
-.side-arrow.prev {
-    left: 0;
+#navbar-container {
+  min-height: 70px;
+  background-color: #0f1220;
 }
 
-.side-arrow.next {
-    right: 0;
+.navbar[data-bs-theme="dark"] {
+  --bs-navbar-color: #e8eaf6;
+  --bs-navbar-hover-color: #a5a6ff;
+  --bs-navbar-active-color: #a5a6ff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
 }
 
-/* Pantallas pequeñas */
+.site-footer,
+#main-footer {
+  background: #0f1220;
+  border-top: 1px solid #23284a;
+}
+
+#footer-container,
+#contenedor-pie-pagina {
+  min-height: 70px;
+  background-color: #0f1220;
+}
+
+.text-indigo {
+  color: #818cf8;
+}
+
+.footer-text {
+  color: #a3a9c9;
+}
+
+.footer-link {
+  color: #a3a9c9;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #a5a6ff;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #151936;
+  border: 1px solid #262b52;
+  color: #e8eaf6;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-social:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #fff;
+}
+
+.footer-divider {
+  border-color: #23284a;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   3. Botones del Sistema
+   ================================================================---------- */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #4f46e5;
+  --bs-btn-border-color: #4f46e5;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #6366f1;
+  --bs-btn-hover-border-color: #6366f1;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #4338ca;
+  --bs-btn-active-border-color: #4338ca;
+}
+
+.btn-warning {
+  --bs-btn-color: #14172b;
+  --bs-btn-bg: #f5b83d;
+  --bs-btn-border-color: #f5b83d;
+  --bs-btn-hover-color: #14172b;
+  --bs-btn-hover-bg: #f8c75f;
+  --bs-btn-hover-border-color: #f8c75f;
+  --bs-btn-active-color: #14172b;
+  --bs-btn-active-bg: #e5a82d;
+  --bs-btn-active-border-color: #e5a82d;
+}
+
+.btn-course {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #272d63;
+  --bs-btn-border-color: #272d63;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #343b7d;
+  --bs-btn-hover-border-color: #343b7d;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #343b7d;
+  --bs-btn-active-border-color: #343b7d;
+  font-weight: 600;
+}
+
+.shadow-hover {
+  transition: all 0.2s ease;
+}
+.shadow-hover:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 12px rgba(245, 184, 61, 0.4);
+}
+
+/* ==========================================================================
+   4. Componentes del Home (Hero Bot, Cards, Carrusel)
+   ================================================================---------- */
+.hero-bot,
+.seccion-hero {
+  background: #151936;
+  border: 1px solid #2f3570;
+  color: #fff;
+}
+.hero-bot p,
+.seccion-hero p {
+  color: #c9cce0;
+}
+
+.step-badge,
+.insignia-paso {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f5b83d;
+  color: #14172b;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.section-sub,
+.subtitulo-seccion {
+  color: #a3a9c9;
+}
+
+.carousel-nav-btn {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #333a70;
+  background: #151936;
+  color: #e8eaf6;
+}
+.carousel-nav-btn:hover {
+  background: #1e2350;
+  color: #fff;
+}
+
+.carousel-stage,
+.escenario-carrusel {
+  position: relative;
+  padding: 0 3.5rem;
+}
+
+.side-arrow,
+.flecha-lateral {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.side-arrow.prev,
+.flecha-lateral.anterior {
+  left: 0;
+}
+.side-arrow.next,
+.flecha-lateral.siguiente {
+  right: 0;
+}
+.side-arrow:hover,
+.flecha-lateral:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.container-fluid {
+  border-radius: 8px;
+  border: 1px solid #2f3570;
+  background: #151936;
+}
+
+.course-card,
+.tarjeta-curso {
+  background: #151936;
+  border: 1px solid #262b52;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.course-thumb,
+.miniatura-curso {
+  height: 140px;
+  background: var(--thumb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.course-tag,
+.etiqueta-curso {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+}
+.course-card p,
+.tarjeta-curso p {
+  color: #a3a9c9;
+  font-size: 0.875rem;
+}
+
+.c-violet,
+.c-violeta {
+  --thumb: #4f46e5;
+  --tag-bg: #25286b;
+  --tag-fg: #c7c9ff;
+}
+.c-teal,
+.c-turquesa {
+  --thumb: #0f766e;
+  --tag-bg: #0f3b38;
+  --tag-fg: #7ee7d8;
+}
+.c-amber,
+.c-ambar {
+  --thumb: #b45309;
+  --tag-bg: #43290f;
+  --tag-fg: #fbc27a;
+}
+
+/* Indicadores del carrusel */
+#carouselCards .carousel-indicators,
+#carruselTarjetas .carousel-indicators {
+  position: static;
+  margin: 1.25rem 0 0;
+  justify-content: center;
+}
+#carouselCards .carousel-indicators [data-bs-target],
+#carruselTarjetas .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #3a4170;
+  opacity: 1;
+  margin: 0 4px;
+  transition: width 0.2s;
+}
+#carouselCards .carousel-indicators .active,
+#carruselTarjetas .carousel-indicators .active {
+  width: 28px;
+  background-color: #4f46e5;
+}
+
+.card {
+  background-color: #14143a;
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+/* ==========================================================================
+   5. Catálogo de Cursos & Filtros (Mejoras UI/UX)
+   ================================================================---------- */
+.filtros_cursos,
+.barra,
+.tarjeta-catalogo-curso {
+  background: #151936;
+  border: 1px solid #2f3570;
+  border-radius: 18px;
+}
+
+.tarjeta-catalogo-curso {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-catalogo-curso:hover {
+  border-color: #6366f1;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.15);
+}
+
+.banner-curso {
+  min-height: 130px;
+  background: linear-gradient(135deg, var(--thumb, #4f46e5) 0%, #151936 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.pattern-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.caja-descripcion-curso {
+  background: #0b0d17;
+  border: 1px solid #23284a;
+  color: #c9cce0;
+}
+
+.text-muted-custom {
+  color: #a3a9c9 !important;
+  line-height: 1.5;
+}
+
+.pildora-curso {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #1e2350;
+  color: #e8eaf6;
+  border: 1px solid #2f3570;
+}
+
+.pildora-gratis {
+  background: rgba(16, 185, 129, 0.12);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.texto-secundario-claro {
+  color: #a3a9c9;
+}
+
+.cursor-puntero {
+  cursor: pointer;
+}
+
+.grupo-filtro summary {
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+.grupo-filtro summary:hover {
+  color: #818cf8 !important;
+}
+
+.grupo-filtro summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Avatares y Colores de apoyo */
+.bg-indigo-subtle { background: rgba(99, 102, 241, 0.15); }
+.text-indigo { color: #818cf8; }
+
+.bg-teal-subtle { background: rgba(15, 118, 110, 0.25); }
+.text-teal { color: #2dd4bf; }
+
+.bg-amber-subtle { background: rgba(180, 83, 9, 0.2); }
+.text-amber { color: #fbbf24; }
+
+/* ==========================================================================
+   6. Responsividad & Media Queries
+   ================================================================---------- */
 @media (max-width: 767.98px) {
-    .carousel-stage {
-        padding: 0 2.8rem;
-    }
+  .carousel-stage,
+  .escenario-carrusel {
+    padding: 0 2.8rem;
+  }
 
-    .side-arrow {
-        width: 36px;
-        height: 36px;
-    }
+  .side-arrow,
+  .flecha-lateral {
+    width: 36px;
+    height: 36px;
+    background: rgba(21, 25, 54, 0.92);
+  }
+  .side-arrow.prev,
+  .flecha-lateral.anterior {
+    left: 0.5rem;
+  }
+  .side-arrow.next,
+  .flecha-lateral.siguiente {
+    right: 0.5rem;
+  }
+
+  /* Carrusel responsive como scroll horizontal en móviles */
+  #carouselCards .side-arrow,
+  #carruselTarjetas .side-arrow,
+  #carouselCards .flecha-lateral,
+  #carruselTarjetas .flecha-lateral,
+  #carouselCards .carousel-indicators,
+  #carruselTarjetas .carousel-indicators {
+    display: none;
+  }
+
+  #carouselCards .carousel-inner,
+  #carruselTarjetas .carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+  }
+
+  #carouselCards .carousel-inner::-webkit-scrollbar,
+  #carruselTarjetas .carousel-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  #carouselCards .carousel-item,
+  #carruselTarjetas .carousel-item {
+    display: contents !important;
+  }
+
+  #carouselCards .carousel-item .row,
+  #carruselTarjetas .carousel-item .row {
+    display: contents;
+  }
+
+  #carouselCards .carousel-item .col-md-4,
+  #carruselTarjetas .carousel-item .col-md-4 {
+    flex: 0 0 85%;
+    width: 85%;
+    scroll-snap-align: start;
+  }
 }
-      .side-arrow:hover { background: #4F46E5; border-color: #4F46E5; }
-      @media (max-width: 767.98px) {
-        .side-arrow { background: rgba(21, 25, 54, .92); }
-        .side-arrow.prev { left: .5rem; }
-        .side-arrow.next { right: .5rem; }
-      }
-
-      .course-card {
-        background: #151936; border: 1px solid #262B52; border-radius: 18px; overflow: hidden;
-      }
-      .course-thumb {
-        height: 140px; background: var(--thumb);
-        display: flex; align-items: center; justify-content: center;
-      }
-      .course-tag {
-        align-self: flex-start; font-size: .75rem; font-weight: 700;
-        padding: 4px 10px; border-radius: 99px;
-        background: var(--tag-bg); color: var(--tag-fg);
-      }
-      .course-card p { color: #A3A9C9; font-size: .875rem; }
-      .btn-course {
-        --bs-btn-color: #fff; --bs-btn-bg: #272D63; --bs-btn-border-color: #272D63;
-        --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #343B7D; --bs-btn-hover-border-color: #343B7D;
-        --bs-btn-active-color: #fff; --bs-btn-active-bg: #343B7D; --bs-btn-active-border-color: #343B7D;
-        font-weight: 600;
-      }
-      .c-violet { --thumb: #4F46E5; --tag-bg: #25286B; --tag-fg: #C7C9FF; }
-      .c-teal   { --thumb: #0F766E; --tag-bg: #0F3B38; --tag-fg: #7EE7D8; }
-      .c-amber  { --thumb: #B45309; --tag-bg: #43290F; --tag-fg: #FBC27A; }
-
-      /* Puntos del carrusel (debajo de las tarjetas) */
-      #carouselCards .carousel-indicators {
-        position: static; margin: 1.25rem 0 0; justify-content: center;
-      }
-      #carouselCards .carousel-indicators [data-bs-target] {
-        width: 8px; height: 8px; border: 0; border-radius: 4px;
-        background-color: #3A4170; opacity: 1; margin: 0 4px; transition: width .2s;
-      }
-      #carouselCards .carousel-indicators .active { width: 28px; background-color: #4F46E5; }
-
-      /* Carrusel responsive para celulares */
-@media (max-width: 767.98px) {
-
-    /* Ocultamos las flechas */
-    .side-arrow {
-        display: none;
-    }
-
-    /* Ocultamos los indicadores */
-    #carouselCards .carousel-indicators {
-        display: none;
-    }
-
-    /* Convertimos el carrusel en una fila desplazable */
-    #carouselCards .carousel-inner {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 12px;
-        padding-bottom: 12px;
-        scrollbar-width: none;
-    }
-
-    #carouselCards .carousel-inner::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Mostramos todos los grupos de tarjetas */
-    #carouselCards .carousel-item {
-        display: contents !important;
-    }
-
-    /* Eliminamos las filas intermedias */
-    #carouselCards .carousel-item .row {
-        display: contents;
-    }
-
-    /* Cada tarjeta ocupa casi todo el ancho */
-    #carouselCards .carousel-item .col-md-4 {
-        flex: 0 0 85%;
-        width: 85%;
-        scroll-snap-align: start;
-    }
-}
-
-   .card { background-color: #14143a; border-color: rgba(255,255,255,.09); }
