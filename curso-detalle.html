@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cursAR - Curso de Backend con Node.js y Spring Boot</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link href="./styles/curso-detalle.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" type="images" href="./img/Designer.png" />
+  </head>
+
+  <body>
+    <!-- NAVBAR --> 
+    <header class="site-header">
+      <div id="navbar-container"></div>
+    </header>
+
+    <!-- HERO DEL CURSO -->
+    <section
+      class="hero-detalle-curso py-4 py-lg-5 border-bottom border-secondary border-opacity-25"
+    >
+      <div class="container">
+
+        <!-- VOLVER ATRAS -->
+        <div class="mb-4">
+          <a
+            href="cursos.html"
+            class="btn btn-outline-secondary btn-sm px-3 py-2 rounded-3 d-inline-flex align-items-center gap-2 text-decoration-none"
+          >
+            <i class="bi bi-arrow-left"></i> Volver al catálogo
+          </a>
+        </div>
+
+        <div class="row g-5 align-items-start">
+
+          <!-- COLUMNA IZQUIERDA, INFO PRINCIPAL -->
+          <div class="col-12 col-lg-7">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+              <span class="pildora-curso">Desarrollo Backend</span>
+              <span class="pildora-curso pildora-gratis">Nivel Intermedio</span>
+              <span
+                class="badge bg-warning text-dark fw-bold px-2 py-1 rounded-pill"
+              >
+                <i class="bi bi-star-fill me-1"></i>5.0 (340 reseñas)
+              </span>
+            </div>
+
+            <h1 class="display-6 fw-bold text-white mb-3">
+              Curso de Backend con Node.js y Spring Boot
+            </h1>
+
+            <p class="texto-secundario-claro fs-6 mb-4 lh-base">
+              Aprendé a diseñar arquitecturas escalables, construir APIs RESTful
+              robustas, integrar mensajería asíncrona con Kafka y dominar la
+              persistencia de datos desde cero hasta entornos de producción
+              reales.
+            </p>
+
+            <!-- DATOS RAPIDOS -->
+            <div
+              class="d-flex flex-wrap gap-4 small texto-secundario-claro mb-4 pb-2"
+            >
+              <span class="d-flex align-items-center gap-2">
+                <i class="bi bi-laptop text-indigo fs-6"></i> Remoto asincrónico
+              </span>
+              <span class="d-flex align-items-center gap-2">
+                <i class="bi bi-globe text-indigo fs-6"></i> Español
+              </span>
+              <span class="d-flex align-items-center gap-2">
+                <i class="bi bi-clock text-indigo fs-6"></i> 24 horas de
+                contenido
+              </span>
+              <span class="d-flex align-items-center gap-2">
+                <i class="bi bi-patch-check text-indigo fs-6"></i> Actualizado
+                2026
+              </span>
+            </div>
+
+            <!-- INSTRUCTOR -->
+            <div
+              class="d-flex align-items-center justify-content-between flex-wrap gap-3 p-3 rounded-4 barra"
+            >
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center fw-bold fs-5"
+                  style="width: 52px; height: 52px"
+                >
+                  MG
+                </div>
+                <div>
+                  <span class="small text-indigo fw-semibold d-block"
+                    >Dictado por</span
+                  >
+                  <p class="mb-0 fw-bold text-white">Martín Gómez</p>
+                  <small class="texto-secundario-claro"
+                    >Senior Backend Architect · +1.200 alumnos</small
+                  >
+                </div>
+              </div>
+              <a href="#instructor" class="btn btn-course btn-sm px-3 rounded-3"
+                >Ver perfil</a
+              >
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA, VIDEO -->
+          <div class="col-12 col-lg-5">
+            <div class="filtros_cursos p-3 p-md-4 rounded-4 shadow-lg">
+
+              <!-- CONTENEDOR VIDEO PREVIEW -->
+              <div
+                class="video-preview-box ratio ratio-16x9 rounded-3 overflow-hidden border border-secondary border-opacity-25 mb-4 cursor-puntero"
+              >
+                <div
+                  class="banner-curso c-violeta d-flex flex-column align-items-center justify-content-center text-center p-3"
+                >
+                  <div
+                    class="pattern-bg position-absolute top-0 start-0 w-100 h-100 opacity-25"
+                  ></div>
+                  <div
+                    class="position-relative z-2 d-flex flex-column align-items-center gap-2"
+                  >
+                    <div
+                      class="btn-play-glow btn btn-warning rounded-circle d-flex align-items-center justify-content-center p-0"
+                      style="width: 58px; height: 58px"
+                    >
+                      <i class="bi bi-play-fill fs-3 text-dark ms-1"></i>
+                    </div>
+                    <span
+                      class="badge bg-dark bg-opacity-75 text-white px-3 py-2 rounded-pill fw-semibold"
+                    >
+                      Ver clase introductoria gratis
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PRECIO -->
+              <div
+                class="d-flex align-items-baseline justify-content-between mb-3 px-1"
+              >
+                <div>
+                  <span class="fs-2 fw-bold text-white">Gratuito</span>
+                  <span
+                    class="small texto-secundario-claro text-decoration-line-through ms-2"
+                    >USD $80</span
+                  >
+                </div>
+                <span class="pildora-curso pildora-gratis">100% Becado</span>
+              </div>
+
+              <!-- INSCRIBIRSE -->
+              <a
+                href="#"
+                class="btn btn-warning fw-bold w-100 py-3 rounded-3 shadow-hover mb-3 fs-6"
+              >
+                Inscribirse al curso ahora
+              </a>
+
+              <p class="text-center small texto-secundario-claro mb-3">
+                Acceso inmediato e ilimitado · Sin tarjeta de crédito
+              </p>
+
+              <hr class="border-secondary opacity-25 my-3" />
+
+              <!-- QUE INCLUYE -->
+              <div class="small texto-secundario-claro">
+                <p class="fw-semibold text-white mb-2">Este curso incluye:</p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-play-btn text-warning"></i> 38 clases en
+                    video Full HD
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-code-square text-warning"></i> 4 proyectos
+                    prácticos con código fuente
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-award text-warning"></i> Certificado digital
+                    verificable
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-chat-dots text-warning"></i> Foro de
+                    consultas con el profesor
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APRENDIZAJE, TEMARIO, REQUISITOS -->
+    <main class="container my-5">
+      <div class="row g-5">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="col-12 col-lg-7 d-flex flex-column gap-5">
+          <!-- LO QUE VAS A APRENDER -->
+          <section class="filtros_cursos p-4 rounded-4">
+            <h2 class="h4 fw-bold text-white mb-4">¿Qué vas a aprender?</h2>
+            <div class="row g-3 small texto-secundario-claro">
+              <div class="col-12 col-md-6 d-flex align-items-start gap-2">
+                <i class="bi bi-check2-circle text-warning fs-5 mt-n1"></i>
+                <span
+                  >Diseñar APIs RESTful siguiendo estándares profesionales y
+                  Spec-Driven Development.</span
+                >
+              </div>
+              <div class="col-12 col-md-6 d-flex align-items-start gap-2">
+                <i class="bi bi-check2-circle text-warning fs-5 mt-n1"></i>
+                <span
+                  >Implementar arquitecturas orientadas a eventos utilizando
+                  Apache Kafka.</span
+                >
+              </div>
+              <div class="col-12 col-md-6 d-flex align-items-start gap-2">
+                <i class="bi bi-check2-circle text-warning fs-5 mt-n1"></i>
+                <span
+                  >Gestionar bases de datos relacionales con Spring Data JPA y
+                  optimización de consultas.</span
+                >
+              </div>
+              <div class="col-12 col-md-6 d-flex align-items-start gap-2">
+                <i class="bi bi-check2-circle text-warning fs-5 mt-n1"></i>
+                <span
+                  >Contenerizar microservicios con Docker y preparar despliegues
+                  listos para producción.</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- CONTENIDOS DEL CURSO (ACORDEON) -->
+          <section>
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3"
+            >
+              <h2 class="h4 fw-bold text-white mb-0">Contenidos del Curso</h2>
+              <span class="small texto-secundario-claro"
+                >3 secciones · 14 clases · 24h total</span
+              >
+            </div>
+
+            <div
+              class="accordion accordion-cursar d-flex flex-column gap-3"
+              id="temarioCurso"
+            >
+              <!-- SECCIÓN 1 -->
+              <div class="accordion-item barra rounded-4 overflow-hidden">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button bg-transparent text-white fw-bold shadow-none p-3 p-md-4"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#seccion1"
+                    aria-expanded="true"
+                  >
+                    <div class="d-flex flex-column gap-1 pe-3">
+                      <span
+                        class="badge bg-indigo-subtle text-indigo align-self-start"
+                        >Sección 1 · 5 clases</span
+                      >
+                      <span
+                        >Cimientos: Spec-Driven Development y arquitectura con
+                        criterio</span
+                      >
+                    </div>
+                  </button>
+                </h3>
+                <div
+                  id="seccion1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#temarioCurso"
+                >
+                  <div class="accordion-body pt-0 px-3 px-md-4 pb-4">
+                    <p class="small texto-secundario-claro mb-3">
+                      Principios de diseño, contratos de API claros con OpenAPI
+                      y organización modular del proyecto.
+                    </p>
+                    <ul
+                      class="list-unstyled d-flex flex-column gap-2 small mb-0"
+                    >
+                      <li
+                        class="d-flex align-items-center justify-content-between p-2 rounded-3 caja-descripcion-curso"
+                      >
+                        <span
+                          ><i
+                            class="bi bi-play-circle-fill text-warning me-2"
+                          ></i
+                          >1. Introducción a Spec-Driven Development</span
+                        >
+                        <span class="texto-secundario-claro">18:40</span>
+                      </li>
+                      <li
+                        class="d-flex align-items-center justify-content-between p-2 rounded-3 caja-descripcion-curso"
+                      >
+                        <span
+                          ><i
+                            class="bi bi-play-circle-fill text-warning me-2"
+                          ></i
+                          >2. Diseño de contratos OpenAPI 3.0</span
+                        >
+                        <span class="texto-secundario-claro">32:15</span>
+                      </li>
+                      <li
+                        class="d-flex align-items-center justify-content-between p-2 rounded-3 caja-descripcion-curso"
+                      >
+                        <span
+                          ><i
+                            class="bi bi-file-earmark-code text-indigo me-2"
+                          ></i
+                          >3. Arquitectura Hexagonal vs Capas</span
+                        >
+                        <span class="texto-secundario-claro">25:00</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SECCIÓN 2 -->
+              <div class="accordion-item barra rounded-4 overflow-hidden">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none p-3 p-md-4"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#seccion2"
+                    aria-expanded="false"
+                  >
+                    <div class="d-flex flex-column gap-1 pe-3">
+                      <span
+                        class="badge bg-indigo-subtle text-indigo align-self-start"
+                        >Sección 2 · 5 clases</span
+                      >
+                      <span>Kafka: fundamentos y el primer evento real</span>
+                    </div>
+                  </button>
+                </h3>
+                <div
+                  id="seccion2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#temarioCurso"
+                >
+                  <div class="accordion-body pt-0 px-3 px-md-4 pb-4">
+                    <p class="small texto-secundario-claro mb-3">
+                      Arquitectura orientada a eventos, configuración de
+                      brokers, productores, consumidores y manejo de errores.
+                    </p>
+                    <ul
+                      class="list-unstyled d-flex flex-column gap-2 small mb-0"
+                    >
+                      <li
+                        class="d-flex align-items-center justify-content-between p-2 rounded-3 caja-descripcion-curso"
+                      >
+                        <span
+                          ><i class="bi bi-play-circle text-secondary me-2"></i
+                          >1. Tópicos, particiones y grupos de consumo</span
+                        >
+                        <span class="texto-secundario-claro">28:10</span>
+                      </li>
+                      <li
+                        class="d-flex align-items-center justify-content-between p-2 rounded-3 caja-descripcion-curso"
+                      >
+                        <span
+                          ><i class="bi bi-play-circle text-secondary me-2"></i
+                          >2. Levantando Kafka con Docker Compose</span
+                        >
+                        <span class="texto-secundario-claro">21:45</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SECCIÓN 3 -->
+              <div class="accordion-item barra rounded-4 overflow-hidden">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none p-3 p-md-4"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#seccion3"
+                    aria-expanded="false"
+                  >
+                    <div class="d-flex flex-column gap-1 pe-3">
+                      <span
+                        class="badge bg-indigo-subtle text-indigo align-self-start"
+                        >Sección 3 · 4 clases</span
+                      >
+                      <span
+                        >Persistencia avanzada, testing e integración
+                        continua</span
+                      >
+                    </div>
+                  </button>
+                </h3>
+                <div
+                  id="seccion3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#temarioCurso"
+                >
+                  <div class="accordion-body pt-0 px-3 px-md-4 pb-4">
+                    <p class="small texto-secundario-claro mb-0">
+                      Pruebas de integración con Testcontainers, transacciones
+                      distribuidas y monitoreo de servicios.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- COLUMNA LATERAL DERECHA: REQUISITOS PREVIOS -->
+        <div class="col-12 col-lg-5">
+          <div class="filtros_cursos p-4 rounded-4">
+            <h2 class="h4 fw-bold text-white mb-3">Requisitos previos</h2>
+            <p class="small texto-secundario-claro mb-3">
+              Para aprovechar al máximo este curso te recomendamos contar con:
+            </p>
+            <ul
+              class="list-unstyled d-flex flex-column gap-3 small texto-secundario-claro mb-0"
+            >
+              <li
+                class="d-flex align-items-start gap-2 p-3 rounded-3 caja-descripcion-curso"
+              >
+                <i class="bi bi-check-circle-fill text-warning mt-1"></i>
+                <span
+                  >Conocimientos básicos de Java (clases, interfaces,
+                  colecciones, streams y lambdas).</span
+                >
+              </li>
+              <li
+                class="d-flex align-items-start gap-2 p-3 rounded-3 caja-descripcion-curso"
+              >
+                <i class="bi bi-check-circle-fill text-warning mt-1"></i>
+                <span
+                  >Experiencia básica con Spring Boot: crear una API REST y
+                  trabajar con Spring Data JPA.</span
+                >
+              </li>
+              <li
+                class="d-flex align-items-start gap-2 p-3 rounded-3 caja-descripcion-curso"
+              >
+                <i class="bi bi-check-circle-fill text-warning mt-1"></i>
+                <span
+                  >Nociones básicas de Docker son útiles, pero se explica todo
+                  lo que se usa en el curso.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer mt-5 pt-5 pb-4">
+      <div id="footer-container"></div>
+    </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/navbar.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+  </body>
+</html>

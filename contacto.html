@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cursAR - Contacto y Soporte</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" type="images" href="./img/Designer.png" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <div id="navbar-container"></div>
+    </header>
+
+    <main class="container my-5">
+      <!-- TITULO -->
+      <div class="row mb-5 text-center text-lg-start">
+        <div class="col-12">
+          <span class="pildora-curso mb-2 d-inline-flex">Soporte y Atención</span>
+          <h1 class="display-6 fw-bold text-white mb-2">¿Tenés alguna duda o necesitás ayuda?</h1>
+          <p class="texto-secundario-claro fs-6 mb-0">
+            Completá el formulario o contactate directamente con nuestro equipo de atención al estudiante.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-5 align-items-start">
+        <!-- FORMULARIO DE CONTACTO -->
+        <div class="col-12 col-lg-7">
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm">
+            <h2 class="h4 fw-bold text-white mb-4">Envianos un mensaje</h2>
+            
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label small texto-secundario-claro fw-semibold">Nombre completo</label>
+                <input 
+                  type="text" 
+                  class="form-control bg-dark text-white border-secondary rounded-3 py-2" 
+                  id="nombre" 
+                  placeholder="Ej. Ana Pérez" 
+                  required 
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label small texto-secundario-claro fw-semibold">Correo electrónico</label>
+                <input 
+                  type="email" 
+                  class="form-control bg-dark text-white border-secondary rounded-3 py-2" 
+                  id="email" 
+                  placeholder="tucorreo@ejemplo.com" 
+                  required 
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="asunto" class="form-label small texto-secundario-claro fw-semibold">Asunto</label>
+                <select id="asunto" class="form-select bg-dark text-white border-secondary rounded-3 py-2">
+                  <option value="consulta-cursos">Consulta sobre cursos</option>
+                  <option value="soporte-tecnico">Soporte técnico / Asistente virtual</option>
+                  <option value="becas">Información sobre becas</option>
+                  <option value="otro">Otro motivo</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label for="mensaje" class="form-label small texto-secundario-claro fw-semibold">Mensaje</label>
+                <textarea 
+                  class="form-control bg-dark text-white border-secondary rounded-3" 
+                  id="mensaje" 
+                  rows="4" 
+                  placeholder="Escribí tu consulta detallada acá..." 
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-warning fw-bold w-100 py-3 rounded-3 shadow-hover">
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA - CANALES DE COMUNICACIÓN -->
+        <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+          
+          <!-- TARJETA DE CANALES DIRECTOS -->
+          <div class="filtros_cursos p-4 rounded-4 shadow-sm">
+            <h3 class="h5 fw-bold text-white mb-3">Otras vías de comunicación</h3>
+            <p class="small texto-secundario-claro mb-4">
+              También podés encontrarnos en nuestras redes o comunicarte de forma directa a través de los siguientes canales oficiales.
+            </p>
+
+            <div class="d-flex flex-column gap-3 small text-white">
+              <div class="d-flex align-items-center gap-3 p-3 rounded-3 caja-descripcion-curso">
+                <div class="footer-social fs-5 text-warning flex-shrink-0">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div>
+                  <span class="d-block text-muted small">Correo electrónico</span>
+                  <span class="fw-semibold">soportecursar@gmail.com.ar</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-3 p-3 rounded-3 caja-descripcion-curso">
+                <div class="footer-social fs-5 text-warning flex-shrink-0">
+                  <i class="bi bi-whatsapp"></i>
+                </div>
+                <div>
+                  <span class="d-block text-muted small">Atención por WhatsApp</span>
+                  <span class="fw-semibold">+54 11 5555-5555</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-3 p-3 rounded-3 caja-descripcion-curso">
+                <div class="footer-social fs-5 text-warning flex-shrink-0">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <span class="d-block text-muted small">Oficina central</span>
+                  <span class="fw-semibold">Buenos Aires, Argentina</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CAJA DE ASISTENCIA -->
+          <div class="barra p-4 rounded-4 shadow-sm">
+            <h3 class="h6 fw-bold text-white mb-2">
+              <i class="bi bi-robot text-warning me-2"></i>¿Buscás respuestas inmediatas?
+            </h3>
+            <p class="small texto-secundario-claro mb-3">
+              Recordá que podés usar nuestro bot asistente inteligente en la página principal para autogestionar recomendaciones de cursos.
+            </p>
+            <a href="index.html" class="btn btn-course btn-sm w-100 rounded-3 py-2 fw-semibold">
+              Hablar con el asistente virtual
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer mt-5 pt-5 pb-4">
+      <div id="footer-container"></div>
+    </footer>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/navbar.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+  </body>
+</html>

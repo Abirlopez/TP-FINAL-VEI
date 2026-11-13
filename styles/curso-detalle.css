@@ -1,0 +1,36 @@
+.hero-detalle-curso {
+  background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.14), transparent 55%),
+              #0b0d17;
+}
+
+.video-preview-box {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.video-preview-box:hover {
+  border-color: #6366f1 !important;
+  transform: scale(1.01);
+}
+
+.btn-play-glow {
+  box-shadow: 0 0 0 8px rgba(245, 184, 61, 0.2), 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-preview-box:hover .btn-play-glow {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 12px rgba(245, 184, 61, 0.3), 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.accordion-cursar .accordion-item {
+  border: 1px solid #2f3570;
+}
+
+.accordion-cursar .accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: rgba(79, 70, 229, 0.08);
+}
+
+.accordion-cursar .accordion-button::after {
+  filter: invert(1) brightness(1.5);
+}

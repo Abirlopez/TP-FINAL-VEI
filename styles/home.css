@@ -1,0 +1,158 @@
+.hero-bot,
+.seccion-hero {
+  background: #151936;
+  border: 1px solid #2f3570;
+  color: #fff;
+}
+.hero-bot p,
+.seccion-hero p {
+  color: #c9cce0;
+}
+
+.step-badge,
+.insignia-paso {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f5b83d;
+  color: #14172b;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.section-sub,
+.subtitulo-seccion {
+  color: #a3a9c9;
+}
+
+.carousel-nav-btn {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #333a70;
+  background: #151936;
+  color: #e8eaf6;
+}
+.carousel-nav-btn:hover {
+  background: #1e2350;
+  color: #fff;
+}
+
+.carousel-stage,
+.escenario-carrusel {
+  position: relative;
+  padding: 0 3.5rem;
+}
+
+.side-arrow,
+.flecha-lateral {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.side-arrow.prev,
+.flecha-lateral.anterior {
+  left: 0;
+}
+.side-arrow.next,
+.flecha-lateral.siguiente {
+  right: 0;
+}
+.side-arrow:hover,
+.flecha-lateral:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.container-fluid {
+  border-radius: 8px;
+  border: 1px solid #2f3570;
+  background: #151936;
+}
+
+.course-card,
+.tarjeta-curso {
+  background: #151936;
+  border: 1px solid #262b52;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.course-thumb,
+.miniatura-curso {
+  height: 140px;
+  background: var(--thumb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.course-tag,
+.etiqueta-curso {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+}
+.course-card p,
+.tarjeta-curso p {
+  color: #a3a9c9;
+  font-size: 0.875rem;
+}
+
+.c-violet,
+.c-violeta {
+  --thumb: #4f46e5;
+  --tag-bg: #25286b;
+  --tag-fg: #c7c9ff;
+}
+.c-teal,
+.c-turquesa {
+  --thumb: #0f766e;
+  --tag-bg: #0f3b38;
+  --tag-fg: #7ee7d8;
+}
+.c-amber,
+.c-ambar {
+  --thumb: #b45309;
+  --tag-bg: #43290f;
+  --tag-fg: #fbc27a;
+}
+
+/* Indicadores del carrusel */
+#carouselCards .carousel-indicators,
+#carruselTarjetas .carousel-indicators {
+  position: static;
+  margin: 1.25rem 0 0;
+  justify-content: center;
+}
+#carouselCards .carousel-indicators [data-bs-target],
+#carruselTarjetas .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #3a4170;
+  opacity: 1;
+  margin: 0 4px;
+  transition: width 0.2s;
+}
+#carouselCards .carousel-indicators .active,
+#carruselTarjetas .carousel-indicators .active {
+  width: 28px;
+  background-color: #4f46e5;
+}
+
+.card {
+  background-color: #14143a;
+  border-color: rgba(255, 255, 255, 0.09);
+}
