@@ -57,6 +57,12 @@
   border-color: rgba(16, 185, 129, 0.25);
 }
 
+.pildora-precio {
+  background: rgba(16, 185, 129, 0.12);
+  color: #f5b83d;
+  border-color: rgba(185, 154, 16, 0.25);
+}
+
 .texto-secundario-claro {
   color: #a3a9c9;
 }

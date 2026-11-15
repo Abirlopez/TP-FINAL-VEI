@@ -7,7 +7,6 @@
   --bs-border-color: #23284a;
 }
 
-
 /* 2. Navbar, Header & Footer */
 
 .site-header {
@@ -43,6 +42,10 @@
 
 .text-indigo {
   color: #818cf8;
+}
+
+.text-yellow {
+  color: #f5b83d;
 }
 
 .footer-text {
@@ -107,6 +110,24 @@
   --bs-btn-active-color: #14172b;
   --bs-btn-active-bg: #e5a82d;
   --bs-btn-active-border-color: #e5a82d;
+}
+
+.btn-success-tech {
+  --bs-btn-color: #0b0d17;
+  --bs-btn-bg: #7ee7d8;
+  --bs-btn-border-color: #7ee7d8;
+  --bs-btn-hover-color: #0b0d17;
+  --bs-btn-hover-bg: #9ef3e6;
+  --bs-btn-hover-border-color: #9ef3e6;
+  --bs-btn-active-color: #0b0d17;
+  --bs-btn-active-bg: #5bc4b5;
+  --bs-btn-active-border-color: #5bc4b5;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-success-tech:hover {
+  box-shadow: 0 0 15px rgba(126, 231, 216, 0.4);
 }
 
 .btn-course {
@@ -186,8 +207,14 @@
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(1.25); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
 }
 
 /* Burbuja de texto (Tooltip / Mensaje flotante) */
@@ -223,9 +250,6 @@
     display: none; /* Ocultamos la burbuja en pantallas muy chicas para no tapar contenido */
   }
 }
-
-
-
 
 /* 4. Responsive & Media Queries */
 @media (max-width: 767.98px) {
