@@ -24,44 +24,70 @@
       <div id="navbar-container"></div>
     </header>
 
-
     <!-- QUERES IMPULSAR TU CARRERA IT -->
 
     <main class="container my-4">
-      <section class="hero-bot rounded-4 py-4 px-4 px-md-5">
-        <div class="row align-items-center g-4">
-          <div class="col-md-8">
-            <h1 class="h2 fw-bold mb-2">¿Querés impulsar tu carrera en IT?</h1>
-            <p class="mb-3">
-              Usá nuestro BOT para obtener los mejores cursos que se adecuen a
-              tus necesidades.
+      <section class="hero-bot seccion-hero rounded-4 my-4 p-5">
+        <div class="row align-items: center; g-4">
+          <!-- Columna de Texto -->
+          <div class="col-lg-7">
+            <div
+              class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3"
+              style="
+                background: rgba(79, 70, 229, 0.15);
+                border: 1px solid #4f46e5;
+              "
+            >
+              <img
+                src="./img/logoIA.png"
+                alt="IA"
+                style="width: 20px; height: 20px"
+              />
+              <span class="text-indigo fw-semibold small"
+                >Orientación Profesional Inteligente</span
+              >
+            </div>
+
+            <h1 class="display-5 fw-bold text-white mb-3">
+              Encontrá tu curso IT ideal y anótate sin vueltas
+            </h1>
+
+            <p class="lead section-sub mb-4">
+              Completá nuestro cuestionario breve. Nuestra IA analiza tus
+              objetivos, nivel y presupuesto para recomendarte las mejores
+              capacitaciones del rubro y gestiona tu inscripción directa.
             </p>
 
-            <ol class="list-unstyled d-flex flex-column gap-2 small mb-3">
-              <li class="d-flex align-items-center gap-2">
-                <span class="step-badge">1</span> Escribí “Hola”
-              </li>
-              <li class="d-flex align-items-center gap-2">
-                <span class="step-badge">2</span> Respondé el cuestionario
-              </li>
-              <li class="d-flex align-items-center gap-2">
-                <span class="step-badge">3</span> Inscribite en los cursos
-                recomendados
-              </li>
-            </ol>
-
-            <a href="#" class="btn btn-warning fw-semibold px-4"
-              >Hablar con el bot</a
-            >
+            <div class="d-flex flex-wrap gap-3">
+              <a
+                href="#cuestionario"
+                class="btn btn-warning btn-lg px-4 fw-semibold"
+              >
+                🚀 Iniciar Test con IA
+              </a>
+              <a href="cursos.html" class="btn btn-course btn-lg px-4">
+                Ver Catálogo
+              </a>
+            </div>
           </div>
 
-          <div class="col-md-4 text-center">
-            <img
-              src="./img/logoIA.png"
-              alt="Robot asistente"
-              width="250"
-              class="img-fluid"
-            />
+          <!-- Columna de Imagen / Gráfico Tecnológico -->
+          <div class="col-lg-5 text-center">
+            <!-- Acá podés poner una imagen relacionada a programación, una ilustración SVG o un gráfico de código -->
+            <div
+              class="p-3 rounded-4"
+              style="
+                background: #0b0d17;
+                border: 1px solid #23284a;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+              "
+            >
+              <img
+                src="./img/Gemini_Generated_Image_72mwwx72mwwx72mw.jpeg"
+                alt="Plataforma de cursos IT"
+                class="img-fluid rounded-3"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -70,12 +96,30 @@
 
       <section class="mt-5" id="cursos">
         <div
-          class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3"
+          class="d-flex flex-wrap align-items-center justify-content-between mb-5"
         >
-          <div>
-            <h2 class="fs-3 fw-bold mb-1">Cursos más recomendados</h2>
-            <p class="section-sub mb-0">Los favoritos de nuestra comunidad.</p>
+          <!-- Título con un toque de degradado o color fuerte -->
+          <div class="d-flex align-items-center gap-3">
+            <h2 class="text-white fw-bold mb-0">Cursos más recomendados</h2>
+            <span
+              class="badge px-3 py-2 rounded-pill fw-medium fs-6 d-inline-flex align-items-center gap-2"
+              style="
+                background: rgba(79, 70, 229, 0.15);
+                border: 1px solid rgba(129, 140, 248, 0.3);
+                color: #a5a6ff;
+              "
+            >
+              ⭐ Los favoritos de la comunidad
+            </span>
           </div>
+
+          <!-- Opcional: Un botoncito a la derecha para equilibrar -->
+          <a
+            href="cursos.html"
+            class="text-decoration-none small text-indigo fw-semibold hover-link"
+          >
+            Ver catálogo completo →
+          </a>
         </div>
 
         <div id="carouselCards" class="carousel slide">
@@ -398,6 +442,12 @@
               aria-label="Página 2"
             ></button>
           </div>
+
+          <div class="carousel-counter-container text-center mt-3">
+            <span class="text-indigo fw-semibold small" id="carouselCounter">
+              <span id="currentIndex">1</span> / <span id="totalSlides">2</span>
+            </span>
+          </div>
         </div>
       </section>
 
@@ -594,5 +644,6 @@
     <script type="module" src="./js/navbar.js"></script>
     <script type="module" src="./js/footer.js"></script>
     <script type="module" src="./js/iaFlotante.js"></script>
+    <script type="module" src="./js/carrousel.js"></script>
   </body>
 </html>
