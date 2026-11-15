@@ -25,21 +25,24 @@
     </header>
 
     <main class="container my-5">
-      <!-- TITULO -->
-      <div class="row mb-5 text-center text-lg-start">
+      <!-- TITULO ENCUADRADO -->
+      <div class="row mb-4">
         <div class="col-12">
-          <span class="pildora-curso mb-2 d-inline-flex">Soporte y Atención</span>
-          <h1 class="display-6 fw-bold text-white mb-2">¿Tenés alguna duda o necesitás ayuda?</h1>
-          <p class="texto-secundario-claro fs-6 mb-0">
-            Completá el formulario o contactate directamente con nuestro equipo de atención al estudiante.
-          </p>
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm text-center text-lg-start">
+            <span class="pildora-curso mb-2 d-inline-flex">Soporte y Atención</span>
+            <h1 class="display-6 fw-bold text-white mb-2">¿Tenés alguna duda o necesitás ayuda?</h1>
+            <p class="texto-secundario-claro fs-6 mb-0">
+              Completá el formulario o contactate directamente con nuestro equipo de atención al estudiante. Respuesta promedio en menos de 2 horas.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="row g-5 align-items-start">
+      <!-- GRILLA PRINCIPAL -->
+      <div class="row g-4 align-items-start mb-5">
         <!-- FORMULARIO DE CONTACTO -->
         <div class="col-12 col-lg-7">
-          <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm">
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm h-100">
             <h2 class="h4 fw-bold text-white mb-4">Envianos un mensaje</h2>
             
             <form>
@@ -47,7 +50,7 @@
                 <label for="nombre" class="form-label small texto-secundario-claro fw-semibold">Nombre completo</label>
                 <input 
                   type="text" 
-                  class="form-control bg-dark text-white border-secondary rounded-3 py-2" 
+                  class="form-control text-white border-secondary rounded-3 py-2" 
                   id="nombre" 
                   placeholder="Ej. Ana Pérez" 
                   required 
@@ -58,7 +61,7 @@
                 <label for="email" class="form-label small texto-secundario-claro fw-semibold">Correo electrónico</label>
                 <input 
                   type="email" 
-                  class="form-control bg-dark text-white border-secondary rounded-3 py-2" 
+                  class="form-control text-white border-secondary rounded-3 py-2" 
                   id="email" 
                   placeholder="tucorreo@ejemplo.com" 
                   required 
@@ -67,7 +70,7 @@
 
               <div class="mb-3">
                 <label for="asunto" class="form-label small texto-secundario-claro fw-semibold">Asunto</label>
-                <select id="asunto" class="form-select bg-dark text-white border-secondary rounded-3 py-2">
+                <select id="asunto" class="form-select text-white border-secondary rounded-3 py-2">
                   <option value="consulta-cursos">Consulta sobre cursos</option>
                   <option value="soporte-tecnico">Soporte técnico / Asistente virtual</option>
                   <option value="becas">Información sobre becas</option>
@@ -78,7 +81,7 @@
               <div class="mb-4">
                 <label for="mensaje" class="form-label small texto-secundario-claro fw-semibold">Mensaje</label>
                 <textarea 
-                  class="form-control bg-dark text-white border-secondary rounded-3" 
+                  class="form-control text-white border-secondary rounded-3" 
                   id="mensaje" 
                   rows="4" 
                   placeholder="Escribí tu consulta detallada acá..." 
@@ -86,26 +89,47 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn btn-warning fw-bold w-100 py-3 rounded-3 shadow-hover">
+              <button type="submit" class="btn btn-success-tech fw-bold w-100 py-3 rounded-3 shadow-hover">
                 Enviar mensaje
               </button>
             </form>
           </div>
         </div>
 
-        <!-- COLUMNA DERECHA - CANALES DE COMUNICACIÓN -->
+        <!-- COLUMNA DERECHA - CANALES Y VISUAL -->
         <div class="col-12 col-lg-5 d-flex flex-column gap-4">
           
+          <!-- TARJETA REDISEÑADA: IMAGEN LIMPIA + PANEL DE ESTADO -->
+          <div class="filtros_cursos p-4 rounded-4 shadow-sm">
+            <!-- Imagen con diseño limpio -->
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-4 border border-secondary border-opacity-25 shadow-sm">
+              <img 
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80" 
+                alt="Equipo de soporte técnico cursAR" 
+                class="w-100 h-100 object-fit-cover"
+              >
+            </div>
+
+            <!-- Panel de estado limpio debajo de la imagen -->
+            <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom border-secondary border-opacity-25">
+              <div class="d-flex align-items-center gap-2">
+                <span class="p-2 rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="width: 10px; height: 10px;"></span>
+                <span class="text-white fw-semibold small">Equipo operativo</span>
+              </div>
+              <span class="badge text-dark fw-bold px-2 py-1 rounded-pill" style="background-color: #7ee7d8;">Soporte Activo</span>
+            </div>
+
+            <p class="small texto-secundario-claro mb-0">
+              Nuestro equipo de tutores y coordinadores revisa las consultas diariamente para garantizar respuestas ágiles y personalizadas en tu cursada.
+            </p>
+          </div>
+
           <!-- TARJETA DE CANALES DIRECTOS -->
           <div class="filtros_cursos p-4 rounded-4 shadow-sm">
             <h3 class="h5 fw-bold text-white mb-3">Otras vías de comunicación</h3>
-            <p class="small texto-secundario-claro mb-4">
-              También podés encontrarnos en nuestras redes o comunicarte de forma directa a través de los siguientes canales oficiales.
-            </p>
-
             <div class="d-flex flex-column gap-3 small text-white">
               <div class="d-flex align-items-center gap-3 p-3 rounded-3 caja-descripcion-curso">
-                <div class="footer-social fs-5 text-warning flex-shrink-0">
+                <div class="footer-social fs-5 text-teal flex-shrink-0">
                   <i class="bi bi-envelope-fill"></i>
                 </div>
                 <div>
@@ -115,7 +139,7 @@
               </div>
 
               <div class="d-flex align-items-center gap-3 p-3 rounded-3 caja-descripcion-curso">
-                <div class="footer-social fs-5 text-warning flex-shrink-0">
+                <div class="footer-social fs-5 text-teal flex-shrink-0">
                   <i class="bi bi-whatsapp"></i>
                 </div>
                 <div>
@@ -125,7 +149,7 @@
               </div>
 
               <div class="d-flex align-items-center gap-3 p-3 rounded-3 caja-descripcion-curso">
-                <div class="footer-social fs-5 text-warning flex-shrink-0">
+                <div class="footer-social fs-5 text-teal flex-shrink-0">
                   <i class="bi bi-geo-alt-fill"></i>
                 </div>
                 <div>
@@ -139,16 +163,126 @@
           <!-- CAJA DE ASISTENCIA -->
           <div class="barra p-4 rounded-4 shadow-sm">
             <h3 class="h6 fw-bold text-white mb-2">
-              <i class="bi bi-robot text-warning me-2"></i>¿Buscás respuestas inmediatas?
+              <i class="bi bi-robot text-teal me-2"></i>¿Buscás respuestas inmediatas?
             </h3>
             <p class="small texto-secundario-claro mb-3">
-              Recordá que podés usar nuestro bot asistente inteligente en la página principal para autogestionar recomendaciones de cursos.
+              Recordá que podés usar nuestro bot asistente inteligente en la página principal para autogestionar recomendaciones.
             </p>
-            <a href="index.html" class="btn btn-course btn-sm w-100 rounded-3 py-2 fw-semibold">
+            <a
+              href="index.html"
+              class="btn btn-success-tech btn-sm w-100 rounded-3 py-2 fw-semibold text-dark"
+            >
               Hablar con el asistente virtual
             </a>
           </div>
+        </div>
+      </div>
 
+      <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
+      <div class="row">
+        <div class="col-12">
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <i class="bi bi-question-circle text-teal fs-4"></i>
+              <h3 class="h4 fw-bold text-white mb-0">
+                Preguntas Frecuentes sobre el Soporte
+              </h3>
+            </div>
+
+            <div
+              class="accordion accordion-cursar d-flex flex-column gap-3"
+              id="faqContacto"
+            >
+              <!-- FAQ 1 -->
+              <div
+                class="accordion-item barra rounded-4 overflow-hidden border border-secondary border-opacity-25"
+              >
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button bg-transparent text-white fw-bold shadow-none p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    ¿Cómo obtengo el acceso a los cursos gratuitos y becados?
+                  </button>
+                </h4>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqContacto"
+                >
+                  <div
+                    class="accordion-body pt-0 px-3 pb-3 small texto-secundario-claro"
+                  >
+                    Una vez que te inscribís desde el catálogo, el acceso es
+                    inmediato y queda guardado automáticamente en tu perfil de
+                    usuario sin necesidad de ingresar tarjeta de crédito.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div
+                class="accordion-item barra rounded-4 overflow-hidden border border-secondary border-opacity-25"
+              >
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    ¿Qué hago si tengo problemas técnicos con el reproductor de
+                    video?
+                  </button>
+                </h4>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqContacto"
+                >
+                  <div
+                    class="accordion-body pt-0 px-3 pb-3 small texto-secundario-claro"
+                  >
+                    Te recomendamos recargar la página o verificar tu conexión
+                    de internet. Si persiste, podés enviarnos un mensaje
+                    seleccionando la opción "Soporte técnico" en este mismo
+                    formulario.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div
+                class="accordion-item barra rounded-4 overflow-hidden border border-secondary border-opacity-25"
+              >
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none p-3"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    ¿Los certificados de finalización son verificables?
+                  </button>
+                </h4>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqContacto"
+                >
+                  <div
+                    class="accordion-body pt-0 px-3 pb-3 small texto-secundario-claro"
+                  >
+                    Sí, cada certificado cuenta con un código QR y un
+                    identificador único que los reclutadores o empresas pueden
+                    validar directamente en nuestra plataforma.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -158,12 +292,12 @@
       <div id="footer-container"></div>
     </footer>
 
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/navbar.js"></script>
     <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/iaFlotante.js"></script>
   </body>
 </html>

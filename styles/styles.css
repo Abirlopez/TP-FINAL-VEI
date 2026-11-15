@@ -100,6 +100,19 @@
   --bs-btn-active-border-color: #4338ca;
 }
 
+.btn-outline-indigo {
+  color: #818cf8;
+  border-color: rgba(129, 140, 248, 0.4);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-indigo:hover {
+  background: rgba(79, 70, 229, 0.15);
+  color: #ffffff;
+  border-color: #818cf8;
+}
+
 .btn-warning {
   --bs-btn-color: #14172b;
   --bs-btn-bg: #f5b83d;
@@ -141,6 +154,24 @@
   --bs-btn-active-bg: #343b7d;
   --bs-btn-active-border-color: #343b7d;
   font-weight: 600;
+}
+
+.pildora-curso {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #1e2350;
+  color: #e8eaf6;
+  border: 1px solid #2f3570;
+}
+
+.pildora-gratis {
+  background: rgba(16, 185, 129, 0.12);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.25);
 }
 
 .shadow-hover {
@@ -204,6 +235,21 @@
   border: 2px solid #f5b83d;
   opacity: 0.6;
   animation: pulse-ring 2s infinite;
+}
+
+.filtros_cursos,
+.barra,
+.caja-descripcion-curso,
+.tarjeta-catalogo-curso {
+  background: #151936;
+  border: 1px solid #2f3570;
+  border-radius: 18px;
+}
+
+.caja-descripcion-curso {
+  background: #0b0d17;
+  border: 1px solid #23284a;
+  color: #c9cce0;
 }
 
 @keyframes pulse-ring {
