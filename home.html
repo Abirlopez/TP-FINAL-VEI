@@ -453,7 +453,7 @@
 
       <!-- EMPRESAS -->
 
-      <div class="container-fluid my-4 py-4 text-center">
+      <section class="container-fluid my-4 py-4 text-center">
         <div class="row align-items-center justify-content-center">
           <div class="col-sm-6 col-md-6 col-lg-3 my-2">
             <img
@@ -472,162 +472,350 @@
             <img src="./img/images.webp" alt="logo-utn" width="170" />
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- PROFESORES -->
 
-      <h2 class="fs-3 fw-bold mb-1 mt-5">
-        Contamos con los mejores profesores
-      </h2>
-      <p class="section-sub mb-4">
-        Aprendé de expertos con años de experiencia en la industria.
-      </p>
-      <div class="card-group mt-2">
-        <div class="card mb-3 mx-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="img/profesor.avif"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
+      <section class="container my-5 py-4">
+        <!-- Encabezado de la sección -->
+        <div class="text-center mb-5">
+          <span
+            class="badge px-3 py-2 rounded-pill mb-3"
+            style="
+              background: rgba(79, 70, 229, 0.15);
+              border: 1px solid rgba(129, 140, 248, 0.3);
+              color: #a5a6ff;
+            "
+          >
+            👨‍🏫 Claustro Docente de Élite
+          </span>
+          <h2 class="text-white fw-bold display-6 mb-2">
+            Contamos con los mejores profesores
+          </h2>
+          <p class="section-sub col-lg-6 mx-auto">
+            Aprendé directamente de profesionales activos en la industria tech
+            que lideran proyectos reales en empresas líderes.
+          </p>
+        </div>
+
+        <!-- Grilla de Profesores -->
+        <div class="row g-4">
+          <!-- Tarjeta Profesor 1 -->
+          <div class="col-md-4">
+            <div
+              class="course-card h-100 p-4 text-center shadow-hover d-flex flex-column"
+            >
+              <!-- Avatar circular con borde de acento -->
+              <div
+                class="position-relative mx-auto mb-3"
+                style="width: 95px; height: 95px"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                  alt="Sofía Martínez"
+                  class="rounded-circle w-100 h-100 object-fit-cover shadow"
+                  style="border: 2px solid #4f46e5"
+                />
+                <span
+                  class="position-absolute bottom-0 end-0 bg-success border border-dark rounded-circle p-2"
+                  title="Disponible"
+                ></span>
+              </div>
+
+              <h5 class="text-white fw-bold mb-1">Sofía Martínez</h5>
+              <p class="text-indigo small fw-semibold mb-2">
+                Senior Backend Engineer
+              </p>
+              <p class="small mb-4 flex-grow-1">
+                Especialista en arquitecturas escalables, bases de datos de alto
+                rendimiento y Node.js.
+              </p>
+
+              <!-- Tecnologías que enseña / domina -->
+              <div
+                class="pt-3 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-center gap-2"
+              >
+                <span class="course-tag c-violet">Node.js</span>
+                <span class="course-tag c-teal">Cloud</span>
+              </div>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Martin Gomez</h5>
-                <p class="card-text">Desarrollo Full Stack</p>
-                <p class="card-text mb-0">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <small class="text-body-secondary">4.9 · 1.200 alumnos</small>
-                </p>
-                <a href="#" class="btn btn-primary mt-3">Ver más</a>
+          </div>
+
+          <!-- Tarjeta Profesor 2 -->
+          <div class="col-md-4">
+            <div
+              class="course-card h-100 p-4 text-center shadow-hover d-flex flex-column"
+            >
+              <div
+                class="position-relative mx-auto mb-3"
+                style="width: 95px; height: 95px"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+                  alt="Lucas Gómez"
+                  class="rounded-circle w-100 h-100 object-fit-cover shadow"
+                  style="border: 2px solid #4f46e5"
+                />
+                <span
+                  class="position-absolute bottom-0 end-0 bg-success border border-dark rounded-circle p-2"
+                  title="Disponible"
+                ></span>
+              </div>
+
+              <h5 class="text-white fw-bold mb-1">Lucas Gómez</h5>
+              <p class="text-indigo small fw-semibold mb-2">
+                Lead Data Scientist
+              </p>
+              <p class="small mb-4 flex-grow-1">
+                Apasionado por el Machine Learning, análisis predictivo e IA
+                aplicada a productos digitales.
+              </p>
+
+              <div
+                class="pt-3 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-center gap-2"
+              >
+                <span class="course-tag c-amber">Python</span>
+                <span class="course-tag c-violet">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta Profesor 3 -->
+          <div class="col-md-4">
+            <div
+              class="course-card h-100 p-4 text-center shadow-hover d-flex flex-column"
+            >
+              <div
+                class="position-relative mx-auto mb-3"
+                style="width: 95px; height: 95px"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+                  alt="Camila Fernández"
+                  class="rounded-circle w-100 h-100 object-fit-cover shadow"
+                  style="border: 2px solid #4f46e5"
+                />
+                <span
+                  class="position-absolute bottom-0 end-0 bg-success border border-dark rounded-circle p-2"
+                  title="Disponible"
+                ></span>
+              </div>
+
+              <h5 class="text-white fw-bold mb-1">Camila Fernández</h5>
+              <p class="text-indigo small fw-semibold mb-2">
+                Frontend Tech Lead
+              </p>
+              <p class="small mb-4 flex-grow-1">
+                Experta en experiencias de usuario fluidas, ecosistema React y
+                rendimiento web avanzado.
+              </p>
+
+              <div
+                class="pt-3 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-center gap-2"
+              >
+                <span class="course-tag c-teal">React</span>
+                <span class="course-tag c-violet">UI/UX</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="card mb-3 mx-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="./img/profesores-1.avif"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Diego Fernandez</h5>
-                <p class="card-text">Base de datos</p>
-                <p class="card-text mb-0">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <small class="text-body-secondary">5.0 · 1.200 alumnos</small>
-                </p>
-                <a href="#" class="btn btn-primary mt-3">Ver más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3 mx-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="./img/profesores-2.avif"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Pablo Ramirez</h5>
-                <p class="card-text">Ciberseguridad</p>
-                <p class="card-text mb-0">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  <small class="text-body-secondary">4.8 · 1.200 alumnos</small>
-                </p>
-                <a href="#" class="btn btn-primary mt-3">Ver más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
       <!-- ALUMNOS -->
 
-      <div class="card-group-dos">
-        <section class="mt-5">
-          <h2 class="fs-3 fw-bold mb-1">Lo que dicen nuestros alumnos</h2>
-          <p class="section-sub mb-4">Experiencias de quienes ya cursaron.</p>
+      <!-- Sección: Lo que dicen nuestros alumnos (Versión Destacada) -->
+      <section class="container my-5 py-4">
+        <!-- Encabezado de la sección -->
+        <div class="text-center mb-5">
+          <span
+            class="badge px-3 py-2 rounded-pill mb-3"
+            style="
+              background: rgba(79, 70, 229, 0.15);
+              border: 1px solid rgba(129, 140, 248, 0.3);
+              color: #a5a6ff;
+            "
+          >
+            💬 Experiencias Reales
+          </span>
+          <h2 class="text-white fw-bold display-6 mb-2">
+            Lo que dicen nuestros alumnos
+          </h2>
+          <p class="section-sub col-lg-6 mx-auto">
+            Descubrí cómo nuestro recomendador inteligente ayudó a estudiantes a
+            dar el salto definitivo hacia el mundo IT.
+          </p>
+        </div>
 
-          <div class="row g-3">
-            <div class="col-12 col-lg-4">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title mt-auto mb-0">Adrian Lopez</h5>
-                  <h6 class="card-subtitle text-body-secondary mt-1">
-                    Bases de datos
-                  </h6>
-                  <p class="card-text mb-4 mt-4">
-                    Las clases son claras y los profesores responden rápido. Con
-                    lo que aprendí de bases de datos pude cambiar de puesto en
-                    mi trabajo.
-                  </p>
-                  <div class="text-warning mb-2">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
+        <!-- Grilla de Testimonios -->
+        <div class="row g-4">
+          <!-- Testimonio 1 -->
+          <div class="col-md-4">
+            <div
+              class="course-card h-100 p-4 d-flex flex-column shadow-hover position-relative overflow-hidden"
+            >
+              <!-- Comilla gigante decorativa de fondo -->
+              <span
+                class="position-absolute top-0 end-0 translate-middle-y me-3 text-indigo opacity-10 fw-bold"
+                style="
+                  font-size: 7rem;
+                  user-select: none;
+                  pointer-events: none;
+                  line-height: 1;
+                "
+                >“</span
+              >
+
+              <!-- Estrellas -->
+              <div class="text-warning mb-3 fs-6 position-relative z-1">
+                ★★★★★
               </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title mt-auto mb-0">Ana López</h5>
-                  <h6 class="card-subtitle text-body-secondary mt-1">
-                    Desarrollo Web Full Stack
-                  </h6>
-                  <p class="card-text mb-4 mt-4">
-                    Empecé sin saber nada de programación y a los pocos meses ya
-                    estaba armando mis propios proyectos. El bot me recomendó
-                    justo el curso que necesitaba.
-                  </p>
-                  <div class="text-warning mb-2">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title mt-auto mb-0">Tomas Herrera</h5>
-                  <h6 class="card-subtitle text-body-secondary mt-1">
-                    Desarrollo Web Full Stack
-                  </h6>
-                  <p class="card-text mb-4 mt-4">
-                    Lo que más me sirvió fue hacer una aplicación completa de
-                    principio a fin. Ahora la uso como portfolio en las
-                    entrevistas.
-                  </p>
-                  <div class="text-warning mb-2">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
+
+              <!-- Texto con barra lateral de cita -->
+              <p
+                class="small flex-grow-1 mb-4 position-relative z-1 ps-3 border-start border-3 border-indigo"
+                style="
+                  color: #c9cce0;
+                  line-height: 1.6;
+                  border-color: #4f46e5 !important;
+                "
+              >
+                "Estaba súper perdido entre tantas opciones de bootcamps y
+                lenguajes. El test de IA me orientó al instante y encontré el
+                curso de Backend ideal para arrancar sin dar vueltas."
+              </p>
+
+              <!-- Autor -->
+              <div
+                class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10 position-relative z-1"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80"
+                  alt="Matías Rodríguez"
+                  class="rounded-circle shadow-sm"
+                  style="
+                    width: 48px;
+                    height: 48px;
+                    object-fit: cover;
+                    border: 2px solid #4f46e5;
+                  "
+                />
+                <div>
+                  <h6 class="text-white fw-bold mb-0 fs-6">Matías Rodríguez</h6>
+                  <span class="text-indigo small">Backend Developer Track</span>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+
+          <!-- Testimonio 2 -->
+          <div class="col-md-4">
+            <div
+              class="course-card h-100 p-4 d-flex flex-column shadow-hover position-relative overflow-hidden"
+            >
+              <span
+                class="position-absolute top-0 end-0 translate-middle-y me-3 text-indigo opacity-10 fw-bold"
+                style="
+                  font-size: 7rem;
+                  user-select: none;
+                  pointer-events: none;
+                  line-height: 1;
+                "
+                >“</span
+              >
+
+              <div class="text-warning mb-3 fs-6 position-relative z-1">
+                ★★★★★
+              </div>
+              <p
+                class="small flex-grow-1 mb-4 position-relative z-1 ps-3 border-start border-3 border-indigo"
+                style="
+                  color: #c9cce0;
+                  line-height: 1.6;
+                  border-color: #4f46e5 !important;
+                "
+              >
+                "Lo que más me gustó es que pude resolver la inscripción
+                directamente desde la plataforma sin tener que navegar por mil
+                páginas distintas. ¡Una interfaz súper limpia y rápida!"
+              </p>
+              <div
+                class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10 position-relative z-1"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                  alt="Lucía Benítez"
+                  class="rounded-circle shadow-sm"
+                  style="
+                    width: 48px;
+                    height: 48px;
+                    object-fit: cover;
+                    border: 2px solid #4f46e5;
+                  "
+                />
+                <div>
+                  <h6 class="text-white fw-bold mb-0 fs-6">Lucía Benítez</h6>
+                  <span class="text-indigo small">Data Science con Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="col-md-4">
+            <div
+              class="course-card h-100 p-4 d-flex flex-column shadow-hover position-relative overflow-hidden"
+            >
+              <span
+                class="position-absolute top-0 end-0 translate-middle-y me-3 text-indigo opacity-10 fw-bold"
+                style="
+                  font-size: 7rem;
+                  user-select: none;
+                  pointer-events: none;
+                  line-height: 1;
+                "
+                >“</span
+              >
+
+              <div class="text-warning mb-3 fs-6 position-relative z-1">
+                ★★★★★
+              </div>
+              <p
+                class="small flex-grow-1 mb-4 position-relative z-1 ps-3 border-start border-3 border-indigo"
+                style="
+                  color: #c9cce0;
+                  line-height: 1.6;
+                  border-color: #4f46e5 !important;
+                "
+              >
+                "La recomendación de la IA pegó pleno con mis objetivos y mi
+                nivel de programación previo. Los profesores explican excelente
+                y la comunidad es muy activa."
+              </p>
+              <div
+                class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10 position-relative z-1"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                  alt="Gonzalo Peralta"
+                  class="rounded-circle shadow-sm"
+                  style="
+                    width: 48px;
+                    height: 48px;
+                    object-fit: cover;
+                    border: 2px solid #4f46e5;
+                  "
+                />
+                <div>
+                  <h6 class="text-white fw-bold mb-0 fs-6">Gonzalo Peralta</h6>
+                  <span class="text-indigo small"
+                    >React & Frontend Avanzado</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
