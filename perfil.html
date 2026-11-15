@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cursAR - Mi Perfil y Progreso</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" type="images" href="./img/Designer.png" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <div id="navbar-container"></div>
+    </header>
+
+    <main class="container my-5">
+      <!-- HERO / TARJETA DE PERFIL DE USUARIO -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm">
+            <div
+              class="d-flex flex-column flex-md-row align-items-center gap-4 text-center text-md-start"
+            >
+              <!-- Avatar del usuario con borde turquesa -->
+              <div class="position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                  alt="Foto de perfil"
+                  class="rounded-circle object-fit-cover shadow-sm border border-2 border-teal"
+                  style="width: 90px; height: 90px"
+                />
+                <span
+                  class="position-absolute bottom-0 end-0 p-2 bg-success border border-dark rounded-circle"
+                  title="En línea"
+                ></span>
+              </div>
+
+              <!-- Info principal -->
+              <div class="flex-grow-1">
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-2 mb-1"
+                >
+                  <h1 class="h3 fw-bold text-white mb-0">Ana Pérez</h1>
+                  <span
+                    class="badge text-dark fw-bold px-2 py-1 rounded-pill"
+                    style="background-color: #7ee7d8"
+                    >Estudiante Becada</span
+                  >
+                </div>
+                <p class="texto-secundario-claro small mb-3">
+                  Miembro desde marzo de 2025 • Orientación: Desarrollo Full
+                  Stack & IT
+                </p>
+
+                <!-- Estadísticas rápidas -->
+                <div
+                  class="d-flex flex-wrap justify-content-center justify-content-md-start gap-4 pt-2 border-top border-secondary border-opacity-25"
+                >
+                  <div>
+                    <span class="d-block h5 fw-bold text-white mb-0">3</span>
+                    <span class="small text-muted">Cursos activos</span>
+                  </div>
+                  <div class="vr bg-secondary opacity-25"></div>
+                  <div>
+                    <span class="d-block h5 fw-bold text-white mb-0">2</span>
+                    <span class="small text-muted">Certificados</span>
+                  </div>
+                  <div class="vr bg-secondary opacity-25"></div>
+                  <div>
+                    <span class="d-block h5 fw-bold text-white mb-0"
+                      >42 hrs</span
+                    >
+                    <span class="small text-muted">Tiempo de estudio</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botón de configuración -->
+              <div>
+                <button
+                  class="btn btn-outline-light btn-sm px-3 py-2 rounded-3 border-secondary border-opacity-50"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalEditarPerfil"
+                >
+                  <i class="bi bi-gear-fill me-1"></i> Editar Perfil
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRILLA PRINCIPAL: CURSOS EN CURSO Y LATERAL -->
+      <div class="row g-4 align-items-start">
+        <!-- COLUMNA IZQUIERDA: MIS CURSOS (7 cols) -->
+        <div class="col-12 col-lg-7 d-flex flex-column gap-4">
+          <div class="filtros_cursos p-4 rounded-4 shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h2 class="h5 fw-bold text-white mb-0">
+                <i class="bi bi-book-fill text-teal me-2"></i>Mis cursos en
+                curso
+              </h2>
+              <span
+                class="badge bg-dark border border-secondary border-opacity-50 text-white px-2 py-1"
+                >3 en progreso</span
+              >
+            </div>
+
+            <!-- CURSO 1 -->
+            <div
+              class="caja-descripcion-curso p-3 rounded-4 mb-3 border border-secondary border-opacity-25"
+            >
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 mb-2"
+              >
+                <div>
+                  <span
+                    class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 mb-1"
+                    >Backend</span
+                  >
+                  <h3 class="h6 fw-bold text-white mb-0">
+                    Java Avanzado y Programación Orientada a Objetos
+                  </h3>
+                </div>
+                <span class="small fw-semibold text-teal">75% completado</span>
+              </div>
+
+              <!-- Barra de progreso -->
+              <div class="progress bg-dark mb-3" style="height: 6px">
+                <div
+                  class="progress-bar rounded-pill"
+                  role="progressbar"
+                  style="width: 75%; background-color: #7ee7d8"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted"
+                  >Clase actual: Módulo 4 - Colecciones y Streams</span
+                >
+                <a
+                  href="curso-detalle.html"
+                  class="btn btn-success-tech btn-sm px-3 rounded-3 text-dark fw-bold"
+                >
+                  Continuar <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CURSO 2 -->
+            <div
+              class="caja-descripcion-curso p-3 rounded-4 mb-3 border border-secondary border-opacity-25"
+            >
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 mb-2"
+              >
+                <div>
+                  <span
+                    class="badge bg-indigo bg-opacity-10 text-indigo border border-indigo border-opacity-25 mb-1"
+                    style="color: #818cf8"
+                    >Frontend</span
+                  >
+                  <h3 class="h6 fw-bold text-white mb-0">
+                    Diseño UI/UX con Figma y Sistemas de Diseño
+                  </h3>
+                </div>
+                <span class="small fw-semibold text-teal">40% completado</span>
+              </div>
+
+              <!-- Barra de progreso -->
+              <div class="progress bg-dark mb-3" style="height: 6px">
+                <div
+                  class="progress-bar rounded-pill"
+                  role="progressbar"
+                  style="width: 40%; background-color: #7ee7d8"
+                  aria-valuenow="40"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted"
+                  >Clase actual: Módulo 2 - Accesibilidad y Tokens</span
+                >
+                <a
+                  href="curso-detalle.html"
+                  class="btn btn-success-tech btn-sm px-3 rounded-3 text-dark fw-bold"
+                >
+                  Continuar <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- CURSO 3 -->
+            <div
+              class="caja-descripcion-curso p-3 rounded-4 border border-secondary border-opacity-25"
+            >
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 mb-2"
+              >
+                <div>
+                  <span
+                    class="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25 mb-1"
+                    >Base de Datos</span
+                  >
+                  <h3 class="h6 fw-bold text-white mb-0">
+                    SQL y Modelado de Bases de Datos Relacionales
+                  </h3>
+                </div>
+                <span class="small fw-semibold text-teal">20% completado</span>
+              </div>
+
+              <!-- Barra de progreso -->
+              <div class="progress bg-dark mb-3" style="height: 6px">
+                <div
+                  class="progress-bar rounded-pill"
+                  role="progressbar"
+                  style="width: 20%; background-color: #7ee7d8"
+                  aria-valuenow="20"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="small text-muted"
+                  >Clase actual: Módulo 1 - Introducción a SQL</span
+                >
+                <a
+                  href="curso-detalle.html"
+                  class="btn btn-success-tech btn-sm px-3 rounded-3 text-dark fw-bold"
+                >
+                  Continuar <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: LOGROS Y CONFIGURACIÓN (5 cols) -->
+        <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+          <!-- CERTIFICADOS Y LOGROS -->
+          <div class="filtros_cursos p-4 rounded-4 shadow-sm">
+            <h3 class="h5 fw-bold text-white mb-3">
+              <i class="bi bi-award-fill text-teal me-2"></i>Certificados
+              Obtenidos
+            </h3>
+            <p class="small texto-secundario-claro mb-4">
+              Tus constancias oficiales con código QR y validación directa en la
+              plataforma.
+            </p>
+
+            <div class="d-flex flex-column gap-3">
+              <!-- Certificado 1 -->
+              <div
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 caja-descripcion-curso border border-secondary border-opacity-25"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <div class="fs-4 text-teal p-2 rounded-3 bg-dark">
+                    <i class="bi bi-patch-check-fill"></i>
+                  </div>
+                  <div>
+                    <h4 class="h6 fw-bold text-white mb-0">
+                      Introducción a Git y GitHub
+                    </h4>
+                    <span class="small text-muted">Emitido en: Oct 2025</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-light btn-sm text-nowrap rounded-2 border-secondary"
+                >
+                  <i class="bi bi-download me-1"></i> PDF
+                </button>
+              </div>
+
+              <!-- Certificado 2 -->
+              <div
+                class="d-flex align-items-center justify-content-between p-3 rounded-3 caja-descripcion-curso border border-secondary border-opacity-25"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <div class="fs-4 text-teal p-2 rounded-3 bg-dark">
+                    <i class="bi bi-patch-check-fill"></i>
+                  </div>
+                  <div>
+                    <h4 class="h6 fw-bold text-white mb-0">
+                      Fundamentos de JavaScript
+                    </h4>
+                    <span class="small text-muted">Emitido en: Dic 2025</span>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-light btn-sm text-nowrap rounded-2 border-secondary"
+                >
+                  <i class="bi bi-download me-1"></i> PDF
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ASISTENTE / ACCESO RÁPIDO -->
+          <div class="barra p-4 rounded-4 shadow-sm">
+            <h3 class="h6 fw-bold text-white mb-2">
+              <i class="bi bi-robot text-teal me-2"></i>¿Necesitás asesoramiento
+              académico?
+            </h3>
+            <p class="small texto-secundario-claro mb-3">
+              Consultale al asistente virtual de cursAR para que te sugiera el
+              próximo curso según tus objetivos profesionales.
+            </p>
+            <a
+              href="index.html"
+              class="btn btn-success-tech btn-sm w-100 rounded-3 py-2 fw-semibold text-dark"
+            >
+              Consultar con IA
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer mt-5 pt-5 pb-4">
+      <div id="footer-container"></div>
+    </footer>
+
+    <!-- MODAL DE EDICIÓN DE PERFIL -->
+<div class="modal fade" id="modalEditarPerfil" tabindex="-1" aria-labelledby="modalEditarPerfilLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content filtros_cursos border border-secondary border-opacity-25 rounded-4 p-3 shadow-lg">
+      
+      <!-- Cabecera del Modal -->
+      <div class="modal-header border-bottom border-secondary border-opacity-25 pb-3">
+        <h5 class="modal-title text-white fw-bold" id="modalEditarPerfilLabel">
+          <i class="bi bi-gear-fill text-teal me-2"></i>Editar información de perfil
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo del Modal (Formulario) -->
+      <div class="modal-body py-4">
+        <form id="formEditarPerfil">
+          <div class="mb-3">
+            <label for="editNombre" class="form-label small texto-secundario-claro fw-semibold">Nombre completo</label>
+            <input 
+              type="text" 
+              class="form-control text-white border-secondary rounded-3 py-2" 
+              id="editNombre" 
+              value="Ana Pérez" 
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="editOrientacion" class="form-label small texto-secundario-claro fw-semibold">Orientación / Carrera</label>
+            <input 
+              type="text" 
+              class="form-control text-white border-secondary rounded-3 py-2" 
+              id="editOrientacion" 
+              value="Desarrollo Full Stack & IT" 
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="editAvatar" class="form-label small texto-secundario-claro fw-semibold">URL de la foto de perfil</label>
+            <input 
+              type="text" 
+              class="form-control text-white border-secondary rounded-3 py-2" 
+              id="editAvatar" 
+              value="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" 
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- Pie del Modal (Botones de acción) -->
+      <div class="modal-footer border-top border-secondary border-opacity-25 pt-3">
+        <button type="button" class="btn btn-outline-light btn-sm px-3 rounded-3 border-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-success-tech btn-sm px-4 rounded-3 text-dark fw-bold" id="guardarCambiosPerfil" data-bs-dismiss="modal">
+          Guardar cambios
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/navbar.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/iaFlotante.js"></script>
+  </body>
+</html>
