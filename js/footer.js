@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       footerContainer.innerHTML = data;
 
-      // ==========================================
       // VALIDACIÓN DE SESIÓN PARA EL TEST DE IA DESDE EL FOOTER
-      // ==========================================
+
       const footerContainerElement = document.getElementById("footer-container");
       
       if (footerContainerElement) {

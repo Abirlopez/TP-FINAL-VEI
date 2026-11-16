@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let indiceUsuario = usuariosRegistrados.findIndex(u => u.email === usuarioActivo.email);
   let datosCompletos = indiceUsuario !== -1 ? usuariosRegistrados[indiceUsuario] : { ...usuarioActivo };
 
-  // ==========================================
+
   // 1. RENDERIZAR DATOS EN BANNER Y FORMULARIO
-  // ==========================================
+
   function actualizarVistaUsuario(datos) {
     const elNombre = document.getElementById("perfil-nombre");
     const elEmail = document.getElementById("perfil-email");
@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   actualizarVistaUsuario(datosCompletos);
 
-  // ==========================================
+
   // 2. CURSOS ADQUIRIDOS (Aislados por email)
-  // ==========================================
+
   const storageKeyCursos = `misCursos_${datosCompletos.email}`;
   const contenedorCursos = document.getElementById("contenedor-mis-cursos");
   let misCursos = JSON.parse(localStorage.getItem(storageKeyCursos)) || [];
@@ -128,9 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }).join("");
   }
 
-  // ==========================================
+
   // 3. CAMBIAR IMAGEN DE PERFIL
-  // ==========================================
+
   const btnCambiarImg = document.getElementById("btn-cambiar-img");
   const inputFotoPerfil = document.getElementById("input-foto-perfil");
   const previewFotoPerfil = document.getElementById("preview-foto-perfil");
@@ -157,9 +157,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
+
   // 4. GUARDAR DATOS PERSONALES (Nombre, Género, Nacimiento, Mail)
-  // ==========================================
+
   const formDatosPersonales = document.getElementById("formDatosPersonales");
   if (formDatosPersonales) {
     formDatosPersonales.addEventListener("submit", (e) => {
@@ -225,9 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
+
   // 5. SEGURIDAD: CAMBIO DE CONTRASEÑA (LIBRE)
-  // ==========================================
+
   const inputNuevaPass = document.getElementById("nueva-password");
   const inputRepetirPass = document.getElementById("repetir-password");
   const formSeguridad = document.getElementById("formSeguridad");
@@ -281,9 +281,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
+
   // 6. CERRAR SESIÓN
-  // ==========================================
+
   const btnCerrarSesion = document.getElementById("btnCerrarSesion");
   if (btnCerrarSesion) {
     btnCerrarSesion.addEventListener("click", () => {

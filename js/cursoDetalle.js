@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  // 1. OBTENCIÓN DE DATOS DEL CURSO (URL Y LOCALSTORAGE)
+ 
   const params = new URLSearchParams(window.location.search);
   const cursoId = params.get("id") || "fullstack";
 
-  // 1. Intentamos leer si el usuario hizo clic en una tarjeta desde el catálogo
   const cursoGuardadoJSON = localStorage.getItem("cursoDetalleActual");
   const cursoGuardado = cursoGuardadoJSON ? JSON.parse(cursoGuardadoJSON) : null;
 
@@ -173,14 +175,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  // Seleccionamos el curso base por ID de la URL
   let curso = baseDeDatosCursos[cursoId] || baseDeDatosCursos["fullstack"];
 
   if (cursoGuardado && cursoGuardado.titulo === curso.titulo) {
     curso.precioPrincipal = cursoGuardado.precio;
   }
 
-  // Inyectar datos generales
+ 
+  // 2. RENDERIZADO DE LA INFORMACIÓN EN EL DOM
+
   document.getElementById("page-title").textContent = `cursAR - ${curso.titulo}`;
   document.getElementById("curso-categoria").textContent = curso.categoria;
   document.getElementById("curso-nivel").textContent = curso.nivel;
@@ -196,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("instructor-cargo").textContent = curso.instructorCargo;
   document.getElementById("instructor-iniciales").textContent = curso.instructorIniciales;
 
-  // Lógica de precios
+  // Lógica de precios y estilos de visualización
   const elPrecioPrincipal = document.getElementById("curso-precio-principal");
   const elPrecioTachado = document.getElementById("curso-precio-tachado");
   const pildoraEstado = document.querySelector(".pildora-gratis");
@@ -224,6 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("curso-inc-1").textContent = curso.clasesCount;
   document.getElementById("curso-inc-2").textContent = curso.proyectosCount;
 
+  // Inyección de listas (Lo que aprenderás y Requisitos)
   const listaAprender = document.getElementById("lista-aprender");
   listaAprender.innerHTML = curso.aprender.map(item => `
     <div class="col-12 col-md-6 d-flex align-items-start gap-2">
@@ -240,14 +244,15 @@ document.addEventListener("DOMContentLoaded", () => {
     </li>
   `).join("");
 
-  // ==========================================
-  // VALIDACIÓN DE SESIÓN Y PROPIEDAD AL INSCRIBIRSE
-  // ==========================================
+
+  // 3. VALIDACIÓN DE SESIÓN Y PROPIEDAD AL INSCRIBIRSE
+
   const btnInscribirse = document.getElementById("btn-inscribirse-checkout");
   if (btnInscribirse) {
     btnInscribirse.addEventListener("click", (e) => {
       const usuarioActivoJSON = localStorage.getItem("usuarioActivo");
 
+      // Validar si hay usuario logueado
       if (!usuarioActivoJSON) {
         e.preventDefault();
         sessionStorage.setItem("cursoSeleccionado", curso.titulo);
@@ -260,11 +265,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const usuarioActivo = JSON.parse(usuarioActivoJSON);
       
-      // Consultamos el listado privado del usuario activo usando su email
+      // Consultar el listado privado de cursos del usuario activo
       const storageKeyCursos = `misCursos_${usuarioActivo.email}`;
       const misCursos = JSON.parse(localStorage.getItem(storageKeyCursos)) || [];
 
-      // Normalizamos el título actual del curso para compararlo correctamente con los 6 títulos oficiales
+      // Normalizar el título actual del curso para compararlo con los títulos oficiales
       let nombreCursoOficial = "Desarrollo Web Full Stack";
       const tituloLower = curso.titulo.toLowerCase();
 
@@ -282,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nombreCursoOficial = "Hacking Ético";
       }
 
-      // Verificamos si ya posee el curso en su lista personal
+      // Verificar si el usuario ya posee el curso adquirido
       const yaAdquirido = misCursos.some(c => c.curso.toLowerCase() === nombreCursoOficial.toLowerCase());
 
       if (yaAdquirido) {
@@ -291,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Si no lo tiene, guardamos el nombre oficial normalizado para el proceso de inscripción
+      // Si no lo tiene, guardar el nombre oficial para continuar la inscripción
       sessionStorage.setItem("cursoSeleccionado", nombreCursoOficial);
     });
   }

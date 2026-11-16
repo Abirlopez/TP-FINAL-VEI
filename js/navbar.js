@@ -19,7 +19,7 @@ function actualizarEstadoNavbar() {
   if (!authContainer) return;
 
   if (usuarioJSON) {
-    // --- HAY UN USUARIO LOGUEADO ---
+    // HAY UN USUARIO LOGUEADO
     const usuario = JSON.parse(usuarioJSON);
     const primerNombre = usuario.nombre.split(" ")[0]; // Ej: "Alan"
 
@@ -81,7 +81,7 @@ function actualizarEstadoNavbar() {
     }
 
   } else {
-    // --- NO HAY USUARIO LOGUEADO ---
+    // NO HAY USUARIO LOGUEADO
     if (navItemPerfil) navItemPerfil.classList.add("d-none");
 
     authContainer.innerHTML = `

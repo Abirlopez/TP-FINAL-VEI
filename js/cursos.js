@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const ordenarSelect = document.getElementById("ordenarCursos");
   const btnLimpiar = document.querySelector("aside .btn-link");
 
-  // Selectores de todos los grupos de filtros
-  const checkboxesModalidad = document.querySelectorAll(".filtro-modalidad");
-  const checkboxesHabilidad = document.querySelectorAll(".filtro-habilidad");
-  const checkboxesEmpresa = document.querySelectorAll(".filtro-empresa");
-  const checkboxesUbicacion = document.querySelectorAll(".filtro-ubicacion");
-  const checkboxesIdioma = document.querySelectorAll(".filtro-idioma");
+  const checkboxGrupos = [
+    document.querySelectorAll(".filtro-modalidad"),
+    document.querySelectorAll(".filtro-habilidad"),
+    document.querySelectorAll(".filtro-empresa"),
+    document.querySelectorAll(".filtro-ubicacion"),
+    document.querySelectorAll(".filtro-idioma")
+  ];
+
+  function obtenerValoresSeleccionados(checkboxes) {
+    return Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
+  }
 
   function filtrarYOrdenarCursos() {
-    // Obtener valores seleccionados en los checkboxes
-    const modalidadesSeleccionadas = Array.from(checkboxesModalidad).filter(cb => cb.checked).map(cb => cb.value);
-    const habilidadesSeleccionadas = Array.from(checkboxesHabilidad).filter(cb => cb.checked).map(cb => cb.value);
-    const empresasSeleccionadas = Array.from(checkboxesEmpresa).filter(cb => cb.checked).map(cb => cb.value);
-    const ubicacionesSeleccionadas = Array.from(checkboxesUbicacion).filter(cb => cb.checked).map(cb => cb.value);
-    const idiomasSeleccionados = Array.from(checkboxesIdioma).filter(cb => cb.checked).map(cb => cb.value);
+    const [modalidadesSeleccionadas, habilidadesSeleccionadas, empresasSeleccionadas, ubicacionesSeleccionadas, idiomasSeleccionados] = checkboxGrupos.map(obtenerValoresSeleccionados);
     
     // Precio máximo del slider
     const precioMaximo = filtroPrecio ? parseFloat(filtroPrecio.value) : 500;
@@ -34,11 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Filtrar tarjeta por tarjeta
     tarjetas.forEach(tarjeta => {
-      const modalidad = tarjeta.getAttribute("data-modalidad") || "";
-      const habilidad = tarjeta.getAttribute("data-habilidad") || "";
-      const empresa = tarjeta.getAttribute("data-empresa") || "";
-      const ubicacion = tarjeta.getAttribute("data-ubicacion") || "";
-      const idioma = tarjeta.getAttribute("data-idioma") || "";
+      const datosTarjeta = {
+        modalidad: tarjeta.getAttribute("data-modalidad") || "",
+        habilidad: tarjeta.getAttribute("data-habilidad") || "",
+        empresa: tarjeta.getAttribute("data-empresa") || "",
+        ubicacion: tarjeta.getAttribute("data-ubicacion") || "",
+        idioma: tarjeta.getAttribute("data-idioma") || ""
+      };
       
       // Limpieza de precio por seguridad (por si trae "$" o letras)
       const precioBruto = tarjeta.getAttribute("data-precio") || "0";
@@ -46,16 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const precio = parseFloat(precioLimpio) || 0;
 
       // Comprobaciones (si no hay nada seleccionado en un grupo, pasa el filtro por defecto)
-      const cumpleModalidad = modalidadesSeleccionadas.length === 0 || modalidadesSeleccionadas.includes(modalidad);
-      const cumpleHabilidad = habilidadesSeleccionadas.length === 0 || habilidadesSeleccionadas.includes(habilidad);
-      const cumpleEmpresa = empresasSeleccionadas.length === 0 || empresasSeleccionadas.includes(empresa);
-      const cumpleUbicacion = ubicacionesSeleccionadas.length === 0 || ubicacionesSeleccionadas.includes(ubicacion);
-      const cumpleIdioma = idiomasSeleccionados.length === 0 || idiomasSeleccionados.includes(idioma);
-      const cumplePrecio = precio <= precioMaximo;
+      const cumpleFiltros = (
+        (modalidadesSeleccionadas.length === 0 || modalidadesSeleccionadas.includes(datosTarjeta.modalidad)) &&
+        (habilidadesSeleccionadas.length === 0 || habilidadesSeleccionadas.includes(datosTarjeta.habilidad)) &&
+        (empresasSeleccionadas.length === 0 || empresasSeleccionadas.includes(datosTarjeta.empresa)) &&
+        (ubicacionesSeleccionadas.length === 0 || ubicacionesSeleccionadas.includes(datosTarjeta.ubicacion)) &&
+        (idiomasSeleccionados.length === 0 || idiomasSeleccionados.includes(datosTarjeta.idioma)) &&
+        (precio <= precioMaximo)
+      );
 
       const contenedorColumna = tarjeta.closest(".col-12");
 
-      if (cumpleModalidad && cumpleHabilidad && cumpleEmpresa && cumpleUbicacion && cumpleIdioma && cumplePrecio) {
+      if (cumpleFiltros) {
         if (contenedorColumna) contenedorColumna.style.display = "";
         visiblesCount++;
       } else {

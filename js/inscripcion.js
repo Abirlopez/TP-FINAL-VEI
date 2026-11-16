@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Recuperar el curso seleccionado y sus detalles del almacenamiento local
+
+  // 1. RECUPERACIÓN Y NORMALIZACIÓN DE DATOS DEL CURSO
+
   let nombreCursoCrudo = sessionStorage.getItem("cursoSeleccionado") || "Desarrollo Web Full Stack";
   const cursoDetalleJSON = localStorage.getItem("cursoDetalleActual");
   const cursoData = cursoDetalleJSON ? JSON.parse(cursoDetalleJSON) : null;
@@ -29,7 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const precioCurso = cursoData ? String(cursoData.precio).trim().toLowerCase() : "0";
   const esGratis = precioCurso === "0" || precioCurso === "gratuito" || precioCurso === "gratis" || precioCurso === "";
 
-  // Referencias a elementos del DOM
+
+  // 2. REFERENCIAS A ELEMENTOS DEL DOM (VISTAS Y STEPPER)
+
   const paso1 = document.getElementById("paso-1");
   const paso2 = document.getElementById("paso-2");
   const pasofinal = document.getElementById("paso-final");
@@ -72,7 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let datosEstudiante = {};
 
-  // Función robusta para actualizar los colores y estado del Stepper superior
+
+  // 3. FUNCIÓN PARA ACTUALIZAR EL ESTADO DEL STEPPER
+
   function actualizarStepper(pasoActivo) {
     const colorActivoBg = "#7ee7d8";
     const colorActivoText = "#0b0d17";
@@ -146,7 +152,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // --- LÓGICA DE TARJETA VS MERCADO PAGO ---
+
+  // 4. LÓGICA DE MÉTODOS DE PAGO (TARJETA VS MERCADO PAGO)
+
   const radiosPago = document.querySelectorAll("input[name='metodoPago']");
   const datosTarjetaBox = document.getElementById("datos-tarjeta-box");
 
@@ -157,6 +165,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+
+  // 5. NAVEGACIÓN ENTRE PASOS Y VALIDACIONES
+
 
   // Botón del Paso 1 ("Continuar")
   const btnToNext = document.getElementById("btn-to-next");
@@ -187,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Botones de retroceso (Volver)
+  // Botón para retroceder desde Paso 2 a Paso 1
   const btnBack = document.getElementById("btn-back");
   if (btnBack) {
     btnBack.addEventListener("click", () => {
@@ -197,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Botón para retroceder desde el Paso Final al paso anterior
   const btnBackToPrev = document.getElementById("btn-back-to-prev");
   if (btnBackToPrev) {
     btnBackToPrev.addEventListener("click", () => {
@@ -233,6 +246,10 @@ document.addEventListener("DOMContentLoaded", () => {
       actualizarStepper(3);
     });
   }
+
+
+  // 6. GENERACIÓN DEL RESUMEN Y PROCESAMIENTO FINAL
+
 
   // Función para llenar los datos en el resumen antes de confirmar
   function llenarResumen() {
@@ -274,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Procesamiento final: guarda en localStorage (aislado por email) y redirige a la página de éxito
+  // Procesamiento final: guarda en localStorage y redirige a la página de éxito
   function procesarInscripcionFinal() {
     pasofinal.classList.add("d-none");
     const spinner = document.getElementById("procesando-pago");
@@ -292,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     spinner.classList.remove("d-none");
 
-    // Guardamos los detalles definitivos de la compra en localStorage global para sincronizar con perfil
+    // Guardamos los detalles definitivos de la compra en localStorage global
     const detalleCompra = {
       curso: datosEstudiante.curso,
       nombre: datosEstudiante.nombre,
