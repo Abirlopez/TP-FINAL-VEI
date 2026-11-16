@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>cursAR</title>
+    <title id="page-title">cursAR</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,10 +25,9 @@
     </header>
 
     <!-- QUERES IMPULSAR TU CARRERA IT -->
-
     <main class="container my-4">
       <section class="hero-bot seccion-hero rounded-4 my-4 p-5">
-        <div class="row align-items: center; g-4">
+        <div class="row align-items-center g-4">
           <div class="col-lg-7">
             <div
               class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3"
@@ -58,7 +57,11 @@
             </p>
 
             <div class="d-flex flex-wrap gap-3">
-              <a href="./testIA.html" class="btn btn-success-tech btn-lg px-4">
+              <a
+                href="./testIA.html"
+                id="btn-iniciar-test"
+                class="btn btn-success-tech btn-lg px-4"
+              >
                 🚀 Iniciar Test con IA
               </a>
               <a href="cursos.html" class="btn btn-course btn-lg px-4">
@@ -87,7 +90,6 @@
       </section>
 
       <!-- CURSOS MAS RECOMENDADOS -->
-
       <section class="mt-5" id="cursos">
         <div
           class="d-flex flex-wrap align-items-center justify-content-between mb-5"
@@ -160,8 +162,10 @@
             </button>
 
             <div class="carousel-inner">
+              <!-- SLIDE 1 -->
               <div class="carousel-item active">
                 <div class="row g-3">
+                  <!-- 1. Full Stack -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-violet h-100 d-flex flex-column"
@@ -176,7 +180,6 @@
                           stroke-width="1.8"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          aria-hidden="true"
                         >
                           <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
                         </svg>
@@ -191,19 +194,25 @@
                         <p class="mb-2">
                           Aprende desarrollo Full Stack desde cero y domina
                           JavaScript, React y Node.js con una formación práctica
-                          orientada a construir aplicaciones reales. Un programa
-                          de estudios intensivo y online que te conectará con el
-                          mundo laboral.
+                          orientada a construir aplicaciones reales.
                         </p>
                         <a
                           href="curso-detalle.html?id=fullstack"
-                          class="btn btn-course mt-auto"
+                          class="btn btn-course mt-auto btn-guardar-curso"
+                          data-titulo="Desarrollo Web Full Stack"
+                          data-precio="0"
+                          data-modalidad="Remoto asincrónico"
+                          data-habilidad="Desarrollo Full Stack"
+                          data-empresa="Platzi"
+                          data-ubicacion="Latino América"
+                          data-idioma="Español"
                           >Ver curso</a
                         >
                       </div>
                     </article>
                   </div>
 
+                  <!-- 2. MySQL -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-teal h-100 d-flex flex-column"
@@ -218,7 +227,6 @@
                           stroke-width="1.8"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          aria-hidden="true"
                         >
                           <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
                         </svg>
@@ -232,19 +240,24 @@
                           Aprenderás a diseñar y optimizar bases de datos
                           relacionales, asegurando un rendimiento eficiente y
                           seguro, incluso con grandes volúmenes de datos.
-                          Desarrollarás habilidades para gestionar y acceder a
-                          la información de manera confiable, aplicando técnicas
-                          avanzadas de administración de datos.
                         </p>
                         <a
                           href="curso-detalle.html?id=mysql"
-                          class="btn btn-course mt-auto"
+                          class="btn btn-course mt-auto btn-guardar-curso"
+                          data-titulo="Bases de Datos en MySQL"
+                          data-precio="150"
+                          data-modalidad="Remoto asincrónico"
+                          data-habilidad="Bases de Datos"
+                          data-empresa="Data Camp"
+                          data-ubicacion="América del Norte"
+                          data-idioma="Español"
                           >Ver curso</a
                         >
                       </div>
                     </article>
                   </div>
 
+                  <!-- 3. Ciberseguridad -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-amber h-100 d-flex flex-column"
@@ -259,7 +272,6 @@
                           stroke-width="1.8"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          aria-hidden="true"
                         >
                           <path
                             d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
@@ -277,12 +289,18 @@
                         <p class="mb-2">
                           Aprenderás a identificar vulnerabilidades, implementar
                           medidas de seguridad y realizar análisis de riesgos
-                          para garantizar la protección de la información en
-                          entornos digitales.
+                          para garantizar la protección de la información.
                         </p>
                         <a
                           href="curso-detalle.html?id=ciberseguridad"
-                          class="btn btn-course mt-auto"
+                          class="btn btn-course mt-auto btn-guardar-curso"
+                          data-titulo="Especialista en Ciberseguridad"
+                          data-precio="0"
+                          data-modalidad="Remoto asincrónico"
+                          data-habilidad="Ciberseguridad"
+                          data-empresa="CoderHouse"
+                          data-ubicacion="Argentina"
+                          data-idioma="Español"
                           >Ver curso</a
                         >
                       </div>
@@ -291,8 +309,10 @@
                 </div>
               </div>
 
+              <!-- SLIDE 2 -->
               <div class="carousel-item">
                 <div class="row g-3">
+                  <!-- 4. IA -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-violet h-100 d-flex flex-column"
@@ -307,7 +327,6 @@
                           stroke-width="1.8"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          aria-hidden="true"
                         >
                           <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
                         </svg>
@@ -319,19 +338,26 @@
                         <h3 class="h5 fw-bold mb-0">IA en Programación</h3>
                         <p class="mb-2">
                           Descubre cómo implementar Inteligencia Artificial en
-                          el desarrollo de software. Aprende a integrar técnicas
-                          avanzadas de machine learning y deep learning en
-                          backend, frontend, APIs y automatización de procesos.
+                          el desarrollo de software y automatización de
+                          procesos.
                         </p>
                         <a
                           href="curso-detalle.html?id=ia"
-                          class="btn btn-course mt-auto"
+                          class="btn btn-course mt-auto btn-guardar-curso"
+                          data-titulo="IA en Programación"
+                          data-precio="300"
+                          data-modalidad="Remoto asincrónico"
+                          data-habilidad="Inteligencia Artificial"
+                          data-empresa="Platzi"
+                          data-ubicacion="Latino América"
+                          data-idioma="Español"
                           >Ver curso</a
                         >
                       </div>
                     </article>
                   </div>
 
+                  <!-- 5. Power BI -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-teal h-100 d-flex flex-column"
@@ -346,7 +372,6 @@
                           stroke-width="1.8"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          aria-hidden="true"
                         >
                           <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
                         </svg>
@@ -358,20 +383,26 @@
                         <h3 class="h5 fw-bold mb-0">Curso de POWER BI</h3>
                         <p class="mb-2">
                           Aprenderás a conectar fuentes de datos, transformar
-                          información y generar informes visuales que facilitan
-                          la toma de decisiones. Dominarás la herramienta líder
-                          en Business Intelligence para dar vida a la
-                          información.
+                          información y generar informes visuales de alto
+                          impacto con Business Intelligence.
                         </p>
                         <a
                           href="curso-detalle.html?id=powerbi"
-                          class="btn btn-course mt-auto"
+                          class="btn btn-course mt-auto btn-guardar-curso"
+                          data-titulo="Curso de Power BI"
+                          data-precio="0"
+                          data-modalidad="Remoto asincrónico"
+                          data-habilidad="Business Intelligence"
+                          data-empresa="Data Camp"
+                          data-ubicacion="América del Norte"
+                          data-idioma="Español"
                           >Ver curso</a
                         >
                       </div>
                     </article>
                   </div>
 
+                  <!-- 6. Hacking Ético -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-amber h-100 d-flex flex-column"
@@ -386,7 +417,6 @@
                           stroke-width="1.8"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          aria-hidden="true"
                         >
                           <path
                             d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
@@ -401,13 +431,19 @@
                         <h3 class="h5 fw-bold mb-0">Hacking etico</h3>
                         <p class="mb-2">
                           Aprende conceptos clave como pruebas de penetración,
-                          seguridad de redes y análisis de amenazas, esenciales
-                          para proteger datos y redes en puestos de TI y
-                          seguridad.
+                          seguridad de redes y análisis de amenazas esenciales
+                          para puestos de TI.
                         </p>
                         <a
                           href="curso-detalle.html?id=hacking"
-                          class="btn btn-course mt-auto"
+                          class="btn btn-course mt-auto btn-guardar-curso"
+                          data-titulo="Hacking Ético"
+                          data-precio="50"
+                          data-modalidad="Remoto asincrónico"
+                          data-habilidad="Ciberseguridad"
+                          data-empresa="CoderHouse"
+                          data-ubicacion="Argentina"
+                          data-idioma="Español"
                           >Ver curso</a
                         >
                       </div>
@@ -444,7 +480,6 @@
       </section>
 
       <!-- EMPRESAS -->
-
       <section class="container-fluid my-4 py-4 text-center">
         <div class="row align-items-center justify-content-center">
           <div class="col-sm-6 col-md-6 col-lg-3 my-2">
@@ -467,7 +502,6 @@
       </section>
 
       <!-- PROFESORES -->
-
       <section class="container my-5 py-4">
         <div class="text-center mb-5">
           <span
@@ -490,6 +524,7 @@
         </div>
 
         <div class="row g-4">
+          <!-- Profesor 1 -->
           <div class="col-md-4">
             <div
               class="course-card h-100 p-4 text-center shadow-hover d-flex flex-column"
@@ -509,7 +544,6 @@
                   title="Disponible"
                 ></span>
               </div>
-
               <h5 class="text-white fw-bold mb-1">Sofía Martínez</h5>
               <p class="text-indigo small fw-semibold mb-2">
                 Senior Backend Engineer
@@ -518,7 +552,6 @@
                 Especialista en arquitecturas escalables, bases de datos de alto
                 rendimiento y Node.js.
               </p>
-
               <div
                 class="pt-3 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-center gap-2"
               >
@@ -527,7 +560,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Profesor 2 -->
           <div class="col-md-4">
             <div
               class="course-card h-100 p-4 text-center shadow-hover d-flex flex-column"
@@ -547,7 +580,6 @@
                   title="Disponible"
                 ></span>
               </div>
-
               <h5 class="text-white fw-bold mb-1">Lucas Gómez</h5>
               <p class="text-indigo small fw-semibold mb-2">
                 Lead Data Scientist
@@ -556,7 +588,6 @@
                 Apasionado por el Machine Learning, análisis predictivo e IA
                 aplicada a productos digitales.
               </p>
-
               <div
                 class="pt-3 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-center gap-2"
               >
@@ -565,7 +596,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Profesor 3 -->
           <div class="col-md-4">
             <div
               class="course-card h-100 p-4 text-center shadow-hover d-flex flex-column"
@@ -585,7 +616,6 @@
                   title="Disponible"
                 ></span>
               </div>
-
               <h5 class="text-white fw-bold mb-1">Camila Fernández</h5>
               <p class="text-indigo small fw-semibold mb-2">
                 Frontend Tech Lead
@@ -594,7 +624,6 @@
                 Experta en experiencias de usuario fluidas, ecosistema React y
                 rendimiento web avanzado.
               </p>
-
               <div
                 class="pt-3 border-top border-secondary border-opacity-10 d-flex flex-wrap justify-content-center gap-2"
               >
@@ -607,7 +636,6 @@
       </section>
 
       <!-- ALUMNOS -->
-
       <section class="container my-5 py-4">
         <div class="text-center mb-5">
           <span
@@ -644,11 +672,9 @@
                 "
                 >“</span
               >
-
               <div class="text-warning mb-3 fs-6 position-relative z-1">
                 ★★★★★
               </div>
-
               <p
                 class="small flex-grow-1 mb-4 position-relative z-1 ps-3 border-start border-3 border-indigo"
                 style="
@@ -661,7 +687,6 @@
                 lenguajes. El test de IA me orientó al instante y encontré el
                 curso de Backend ideal para arrancar sin dar vueltas."
               </p>
-
               <div
                 class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10 position-relative z-1"
               >
@@ -698,7 +723,6 @@
                 "
                 >“</span
               >
-
               <div class="text-warning mb-3 fs-6 position-relative z-1">
                 ★★★★★
               </div>
@@ -750,7 +774,6 @@
                 "
                 >“</span
               >
-
               <div class="text-warning mb-3 fs-6 position-relative z-1">
                 ★★★★★
               </div>
@@ -794,7 +817,6 @@
     </main>
 
     <!-- FOOTER -->
-
     <footer>
       <div id="footer-container"></div>
     </footer>

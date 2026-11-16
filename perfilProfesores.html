@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cursAR - Claustro Docente</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" type="images" href="./img/Designer.png" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <div id="navbar-container"></div>
+    </header>
+
+    <main class="container my-5">
+      
+      <!-- ENCABEZADO -->
+      <div class="text-center mb-5">
+        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-1 mb-3">Claustro de Élite</span>
+        <h1 class="display-5 fw-bold text-white mb-2">Conocé a nuestros Profesores</h1>
+        <p class="texto-secundario-claro col-lg-6 mx-auto">
+          Líderes técnicos y arquitectos de software en actividad que enseñan las tecnologías del mercado real en cursAR.
+        </p>
+      </div>
+
+      <!-- GRILLA DINÁMICA DE PROFESORES -->
+      <div class="row g-4" id="contenedor-profesores">
+        <!-- Inyectado dinámicamente por JS -->
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer mt-5 pt-5 pb-4">
+      <div id="footer-container"></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="./js/navbar.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/iaFlotante.js"></script>
+    <script type="module" src="./js/perfilProfesores.js"></script>
+  </body>
+</html>

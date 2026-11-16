@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-md py-3" data-bs-theme="dark">
   <div class="container">
-     <a href="../home.html" class="d-inline-flex align-items-center gap-2 text-decoration-none text-white fw-bold fs-4 mb-3">
-          <img 
-            src="./img/Designer.png" 
-            alt="cursAR Logo" 
-            width="32" 
-            height="32" 
-            class="rounded-3 object-fit-cover"
-          />
-          <span>curs<span style="color: #7ee7d8;">AR</span></span>
-        </a>
+    <a href="./home.html" class="d-inline-flex align-items-center gap-2 text-decoration-none text-white fw-bold fs-4">
+      <img 
+        src="./img/Designer.png" 
+        alt="cursAR Logo" 
+        width="32" 
+        height="32" 
+        class="rounded-3 object-fit-cover"
+      />
+      <span>curs<span style="color: #7ee7d8;">AR</span></span>
+    </a>
 
     <button
       class="navbar-toggler"
@@ -24,26 +24,25 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-sm-center gap-sm-1">
+      <ul class="navbar-nav ms-auto align-items-md-center gap-md-1">
         <li class="nav-item">
-          <a
-            class="nav-link px-3 fw-semibold"
-            aria-current="page"
-            href="../home.html"
-            >Inicio</a
-          >
+          <a class="nav-link px-3 fw-semibold" href="./home.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3" href="../perfil.html">Mi perfil</a>
+          <a class="nav-link px-3" href="./cursos.html">Cursos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-3" href="../cursos.html">Cursos</a>
+          <a class="nav-link px-3" href="./contacto.html">Contacto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="../contacto.html">Contacto</a>
+        
+        <!-- Link a Mi Perfil (solo visible si está logueado) -->
+        <li class="nav-item d-none" id="nav-item-perfil">
+          <a class="nav-link px-3" href="./perfil.html">Mi perfil</a>
         </li>
-        <li class="nav-item ms-sm-2 mt-2 mt-sm-0">
-          <a class="btn btn-primary fw-semibold px-4" href="#">Ingresar</a>
+
+        <!-- Contenedor dinámico para Ingresar o Usuario Logueado -->
+        <li class="nav-item ms-md-2 mt-2 mt-md-0" id="nav-auth-container">
+          <a class="btn btn-success-tech text-dark fw-bold px-4 rounded-3" href="./logueo.html">Ingresar</a>
         </li>
       </ul>
     </div>

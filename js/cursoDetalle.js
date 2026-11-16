@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       instructorNombre: "Esteban Ruarte",
       instructorCargo: "Database Administrator",
       instructorIniciales: "ER",
-      precioPrincipal: "150", // Ejemplo de curso pago en base de datos
+      precioPrincipal: "150", 
       precioTachado: "USD $65",
       clasesCount: "25 clases en video Full HD",
       proyectosCount: "3 proyectos de bases de datos",
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       instructorNombre: "Mateo Rossi",
       instructorCargo: "AI Solutions Architect",
       instructorIniciales: "MR",
-      precioPrincipal: "300", // Ejemplo de curso pago
+      precioPrincipal: "300", 
       precioTachado: "USD $95",
       clasesCount: "30 clases en video Full HD",
       proyectosCount: "4 automatizaciones con IA",
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
       instructorNombre: "Damián Kestel",
       instructorCargo: "Lead Offensive Security Consultant",
       instructorIniciales: "DK",
-      precioPrincipal: "50", // Ejemplo de curso pago
+      precioPrincipal: "50", 
       precioTachado: "USD $160",
       clasesCount: "45 clases en video Full HD",
       proyectosCount: "5 escenarios de pentesting real",
@@ -176,12 +176,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Seleccionamos el curso base por ID de la URL
   let curso = baseDeDatosCursos[cursoId] || baseDeDatosCursos["fullstack"];
 
-  // 2. Si vino información específica desde el catálogo mediante localStorage y coincide el título, priorizamos el precio guardado
   if (cursoGuardado && cursoGuardado.titulo === curso.titulo) {
     curso.precioPrincipal = cursoGuardado.precio;
   }
 
-  // Inyectar datos generales e imagen del video
+  // Inyectar datos generales
   document.getElementById("page-title").textContent = `cursAR - ${curso.titulo}`;
   document.getElementById("curso-categoria").textContent = curso.categoria;
   document.getElementById("curso-nivel").textContent = curso.nivel;
@@ -191,20 +190,17 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("curso-descripcion-larga").textContent = curso.descripcionLarga;
   document.getElementById("curso-modalidad").textContent = "Remoto asincrónico";
   document.getElementById("curso-duracion-horas").textContent = curso.duracionHoras;
-
-  // Imagen dinámica del video de introducción
   document.getElementById("curso-video-img").src = curso.imagen;
 
   document.getElementById("instructor-nombre").textContent = curso.instructorNombre;
   document.getElementById("instructor-cargo").textContent = curso.instructorCargo;
   document.getElementById("instructor-iniciales").textContent = curso.instructorIniciales;
 
-  // LÓGICA DINÁMICA DE PRECIOS Y PÍLDORAS
+  // Lógica de precios
   const elPrecioPrincipal = document.getElementById("curso-precio-principal");
   const elPrecioTachado = document.getElementById("curso-precio-tachado");
   const pildoraEstado = document.querySelector(".pildora-gratis");
 
-  // Limpiamos y evaluamos si el precio es gratuito ("0", 0 o "Gratuito")
   const precioStr = String(curso.precioPrincipal).trim().toLowerCase();
   const esGratis = precioStr === "0" || precioStr === "gratuito" || precioStr === "gratis" || precioStr === "";
 
@@ -213,19 +209,12 @@ document.addEventListener("DOMContentLoaded", () => {
     elPrecioPrincipal.style.color = "#6ee7b7"; 
     if (elPrecioTachado) {
       elPrecioTachado.textContent = curso.precioTachado || "USD $80";
-      elPrecioTachado.style.display = "inline"; // Muestra el precio tachado de referencia (beca)
+      elPrecioTachado.style.display = "inline";
     }
-
- } else {
-    // Si es de pago (ej: "150", "300", etc.)
+  } else {
     elPrecioPrincipal.textContent = `USD $${curso.precioPrincipal}`;
-    
-    // Cambiar color del precio a turquesa/teal (o el color que quieras en HEX o RGB)
     elPrecioPrincipal.style.color = "#f5b83d"; 
-    
-    if (elPrecioTachado) {
-      elPrecioTachado.style.display = "none"; // Oculta por completo el precio tachado
-    }
+    if (elPrecioTachado) elPrecioTachado.style.display = "none";
     if (pildoraEstado) {
       pildoraEstado.textContent = "Acceso Completo";
       pildoraEstado.style.display = "inline-block";
@@ -236,33 +225,74 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("curso-inc-2").textContent = curso.proyectosCount;
 
   const listaAprender = document.getElementById("lista-aprender");
-  listaAprender.innerHTML = curso.aprender
-    .map(
-      (item) => `
-          <div class="col-12 col-md-6 d-flex align-items-start gap-2">
-            <i class="bi bi-check2-circle text-teal fs-5 mt-n1"></i>
-            <span>${item}</span>
-          </div>
-        `,
-    )
-    .join("");
+  listaAprender.innerHTML = curso.aprender.map(item => `
+    <div class="col-12 col-md-6 d-flex align-items-start gap-2">
+      <i class="bi bi-check2-circle text-teal fs-5 mt-n1"></i>
+      <span>${item}</span>
+    </div>
+  `).join("");
 
   const listaRequisitos = document.getElementById("lista-requisitos");
-  listaRequisitos.innerHTML = curso.requisitos
-    .map(
-      (req) => `
-          <li class="d-flex align-items-start gap-2 p-3 rounded-3 caja-descripcion-curso">
-            <i class="bi bi-check-circle-fill text-teal mt-1"></i>
-            <span>${req}</span>
-          </li>
-        `,
-    )
-    .join("");
+  listaRequisitos.innerHTML = curso.requisitos.map(req => `
+    <li class="d-flex align-items-start gap-2 p-3 rounded-3 caja-descripcion-curso">
+      <i class="bi bi-check-circle-fill text-teal mt-1"></i>
+      <span>${req}</span>
+    </li>
+  `).join("");
 
+  // ==========================================
+  // VALIDACIÓN DE SESIÓN Y PROPIEDAD AL INSCRIBIRSE
+  // ==========================================
   const btnInscribirse = document.getElementById("btn-inscribirse-checkout");
   if (btnInscribirse) {
-    btnInscribirse.addEventListener("click", () => {
-      sessionStorage.setItem("cursoSeleccionado", curso.titulo);
+    btnInscribirse.addEventListener("click", (e) => {
+      const usuarioActivoJSON = localStorage.getItem("usuarioActivo");
+
+      if (!usuarioActivoJSON) {
+        e.preventDefault();
+        sessionStorage.setItem("cursoSeleccionado", curso.titulo);
+        sessionStorage.setItem("redirectAfterLogin", "inscripcion.html");
+        
+        alert("Por favor iniciá sesión o create una cuenta para inscribirte al curso.");
+        window.location.href = "logueo.html";
+        return;
+      }
+
+      const usuarioActivo = JSON.parse(usuarioActivoJSON);
+      
+      // Consultamos el listado privado del usuario activo usando su email
+      const storageKeyCursos = `misCursos_${usuarioActivo.email}`;
+      const misCursos = JSON.parse(localStorage.getItem(storageKeyCursos)) || [];
+
+      // Normalizamos el título actual del curso para compararlo correctamente con los 6 títulos oficiales
+      let nombreCursoOficial = "Desarrollo Web Full Stack";
+      const tituloLower = curso.titulo.toLowerCase();
+
+      if (tituloLower.includes("full stack") || tituloLower.includes("desarrollo web")) {
+        nombreCursoOficial = "Desarrollo Web Full Stack";
+      } else if (tituloLower.includes("mysql") || tituloLower.includes("bases de datos")) {
+        nombreCursoOficial = "Bases de Datos en MySQL";
+      } else if (tituloLower.includes("ciberseguridad")) {
+        nombreCursoOficial = "Especialista en Ciberseguridad";
+      } else if (tituloLower.includes("ia") || tituloLower.includes("inteligencia artificial")) {
+        nombreCursoOficial = "IA en Programación";
+      } else if (tituloLower.includes("power bi")) {
+        nombreCursoOficial = "Curso de Power BI";
+      } else if (tituloLower.includes("hacking") || tituloLower.includes("etico")) {
+        nombreCursoOficial = "Hacking Ético";
+      }
+
+      // Verificamos si ya posee el curso en su lista personal
+      const yaAdquirido = misCursos.some(c => c.curso.toLowerCase() === nombreCursoOficial.toLowerCase());
+
+      if (yaAdquirido) {
+        e.preventDefault();
+        alert(`¡Ya tenés adquirido el curso "${nombreCursoOficial}"! Podés acceder al contenido directamente desde tu perfil.`);
+        return;
+      }
+
+      // Si no lo tiene, guardamos el nombre oficial normalizado para el proceso de inscripción
+      sessionStorage.setItem("cursoSeleccionado", nombreCursoOficial);
     });
   }
 });
