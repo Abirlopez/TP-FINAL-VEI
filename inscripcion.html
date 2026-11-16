@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cursAR - Inscripción y Pago</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" type="images" href="./img/Designer.png" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <div id="navbar-container"></div>
+    </header>
+
+    <main class="container my-5">
+      
+      <!-- INDICADOR VISUAL DE PASOS (STEPPER) -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="filtros_cursos p-4 rounded-4 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center position-relative max-w-75 mx-auto">
+              
+              <!-- Paso 1 -->
+              <div class="text-center z-1" id="stepper-1">
+                <div class="rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 shadow-sm" style="width: 40px; height: 40px; background-color: #7ee7d8; color: #0b0d17;">1</div>
+                <span class="d-block small text-white fw-semibold">Tus Datos</span>
+              </div>
+
+              <!-- Línea conectora 1 -->
+              <div class="flex-grow-1 mx-2 mx-md-4 bg-secondary bg-opacity-25 rounded-pill" style="height: 3px;">
+                <div id="linea-1" class="h-100 rounded-pill transition-all" style="width: 0%; background-color: #7ee7d8;"></div>
+              </div>
+
+              <!-- Paso 2 -->
+              <div class="text-center z-1" id="stepper-2">
+                <div class="rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary text-muted" style="width: 40px; height: 40px;">2</div>
+                <span class="d-block small text-muted fw-semibold">Método de Pago</span>
+              </div>
+
+              <!-- Línea conectora 2 -->
+              <div class="flex-grow-1 mx-2 mx-md-4 bg-secondary bg-opacity-25 rounded-pill" style="height: 3px;">
+                <div id="linea-2" class="h-100 rounded-pill transition-all" style="width: 0%; background-color: #7ee7d8;"></div>
+              </div>
+
+              <!-- Paso 3 -->
+              <div class="text-center z-1" id="stepper-3">
+                <div class="rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary text-muted" style="width: 40px; height: 40px;">3</div>
+                <span class="d-block small text-muted fw-semibold">Confirmación</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRILLA PRINCIPAL -->
+      <div class="row g-4 align-items-start mb-5">
+        
+        <!-- COLUMNA IZQUIERDA: FORMULARIO MULTI-PASO -->
+        <div class="col-12 col-lg-7">
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm h-100">
+            
+            <form id="formCheckout" novalidate>
+              
+              <!-- ==================== PASO 1: DATOS DEL ALUMNO ==================== -->
+              <div id="paso-1" class="step-checkout">
+                <div class="d-flex align-items-center gap-2 mb-4 pb-2 border-bottom border-opacity-25">
+                  <i class="bi bi-person-vcard-fill fs-5" style="color: #7ee7d8;"></i>
+                  <h2 class="h5 fw-bold text-white mb-0">Paso 1: Información del Estudiante</h2>
+                </div>
+
+                <div class="mb-3">
+                  <label for="nombreAlumno" class="form-label small texto-secundario-claro fw-semibold">Nombre y Apellido completo</label>
+                  <input type="text" class="form-control text-white rounded-3 py-2" id="nombreAlumno" placeholder="Ej: Alan Leonel Ibañez" required />
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-3">
+                    <label for="emailAlumno" class="form-label small texto-secundario-claro fw-semibold">Correo Electrónico</label>
+                    <input type="email" class="form-control text-white rounded-3 py-2" id="emailAlumno" placeholder="alumno@ejemplo.com" required />
+                  </div>
+                  <div class="col-12 col-md-6 mb-3">
+                    <label for="dniAlumno" class="form-label small texto-secundario-claro fw-semibold">DNI / Documento</label>
+                    <input type="text" class="form-control text-white rounded-3 py-2" id="dniAlumno" placeholder="Sin puntos" required />
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label for="modalidadCursada" class="form-label small texto-secundario-claro fw-semibold">Comisión / Horario preferido</label>
+                  <select class="form-select text-white rounded-3 py-2" id="modalidadCursada" required>
+                    <option value="Lunes y Miércoles - 19:00 hs">Lunes y Miércoles - 19:00 a 21:30 hs (En vivo)</option>
+                    <option value="Martes y Jueves - 19:00 hs">Martes y Jueves - 19:00 a 21:30 hs (En vivo)</option>
+                    <option value="Asincrónico a mi ritmo">100% Asincrónico (Acceso inmediato 24/7)</option>
+                  </select>
+                </div>
+
+                <div class="d-flex justify-content-end pt-3 border-top border-opacity-25">
+                  <button type="button" class="btn btn-success-tech px-4 py-2 rounded-3 text-dark fw-bold" id="btn-to-step-2">
+                    Continuar al Pago <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ==================== PASO 2: MÉTODO DE PAGO ==================== -->
+              <div id="paso-2" class="step-checkout d-none">
+                <div class="d-flex align-items-center gap-2 mb-4 pb-2 border-bottom border-secondary border-opacity-25">
+                  <i class="bi bi-credit-card-2-front-fill fs-5" style="color: #7ee7d8;"></i>
+                  <h2 class="h5 fw-bold text-white mb-0">Paso 2: Seleccioná tu Método de Pago</h2>
+                </div>
+
+                <!-- Selector Visual de Medios de Pago -->
+                <div class="row g-3 mb-4">
+                  <div class="col-12 col-sm-6">
+                    <label class="caja-descripcion-curso p-3 rounded-3 border border-secondary border-opacity-50 d-flex align-items-center gap-3 cursor-puntero h-100">
+                      <input class="form-check-input mt-0 border-secondary" type="radio" name="metodoPago" value="Tarjeta de Crédito / Débito" checked>
+                      <div>
+                        <span class="d-block text-white fw-semibold small"><i class="bi bi-credit-card me-1 text-info"></i> Tarjeta Crédito / Débito</span>
+                        <span class="d-block text-muted" style="font-size: 0.75rem;">Visa, Mastercard, Amex</span>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <label class="caja-descripcion-curso p-3 rounded-3 border border-secondary border-opacity-50 d-flex align-items-center gap-3 cursor-puntero h-100">
+                      <input class="form-check-input mt-0 border-secondary" type="radio" name="metodoPago" value="Mercado Pago / Transferencia">
+                      <div>
+                        <span class="d-block text-white fw-semibold small"><i class="bi bi-qr-code-scan me-1 text-primary"></i> Mercado Pago</span>
+                        <span class="d-block text-muted" style="font-size: 0.75rem;">Dinero en cuenta o QR</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Campos de Tarjeta -->
+                <div id="datos-tarjeta-box" class="p-3 p-md-4 rounded-4 border border-opacity-25 mb-4">
+                  <div class="mb-3">
+                    <label for="numTarjeta" class="form-label small texto-secundario-claro fw-semibold">Número de Tarjeta</label>
+                    <div class="input-group">
+                      <span class="input-group-text text-muted"><i class="bi bi-credit-card"></i></span>
+                      <input type="text" class="form-control text-white py-2" id="numTarjeta" placeholder="4509 •••• •••• 8842" maxlength="19" required />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="titularTarjeta" class="form-label small texto-secundario-claro fw-semibold">Nombre del Titular (como figura en el plástico)</label>
+                    <input type="text" class="form-control text-white rounded-3 py-2 text-uppercase" id="titularTarjeta" placeholder="ALAN L IBANEZ" required />
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="vencimientoTarjeta" class="form-label small texto-secundario-claro fw-semibold">Vencimiento</label>
+                      <input type="text" class="form-control text-white rounded-3 py-2" id="vencimientoTarjeta" placeholder="MM/AA" maxlength="5" required />
+                    </div>
+                    <div class="col-6">
+                      <label for="cvvTarjeta" class="form-label small texto-secundario-claro fw-semibold">Código (CVV)</label>
+                      <input type="password" class="form-control text-white rounded-3 py-2" id="cvvTarjeta" placeholder="•••" maxlength="4" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center pt-3 border-top border-opacity-25">
+                  <button type="button" class="btn btn-outline-light px-4 py-2 rounded-3 " id="btn-back-to-1">
+                    <i class="bi bi-arrow-left me-1"></i> Volver
+                  </button>
+                  <button type="button" class="btn btn-success-tech px-4 py-2 rounded-3 text-dark fw-bold" id="btn-to-step-3">
+                    Revisar Pedido <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ==================== PASO 3: REVISIÓN Y PAGO FINAL ==================== -->
+              <div id="paso-3" class="step-checkout d-none">
+                <div class="d-flex align-items-center gap-2 mb-4 pb-2 border-bottom border-opacity-25">
+                  <i class="bi bi-shield-lock-fill fs-5" style="color: #7ee7d8;"></i>
+                  <h2 class="h5 fw-bold text-white mb-0">Paso 3: Confirmación y Pago</h2>
+                </div>
+
+                <div class="caja-descripcion-curso p-4 rounded-4 border border-opacity-25 mb-4">
+                  <div class="d-flex justify-content-between mb-2 small">
+                    <span class="text-muted">Estudiante:</span>
+                    <span class="text-white fw-semibold" id="resumen-nombre">-</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2 small">
+                    <span class="text-muted">Correo de acceso:</span>
+                    <span class="text-white fw-semibold" id="resumen-email">-</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2 small">
+                    <span class="text-muted">Comisión elegida:</span>
+                    <span class="text-white fw-semibold" id="resumen-comision">-</span>
+                  </div>
+                  <hr class="border-opacity-25 my-2">
+                  <div class="d-flex justify-content-between small align-items-center">
+                    <span class="text-muted">Medio de pago:</span>
+                    <span class="fw-semibold px-2 py-1 rounded border" style="color: #7ee7d8;" id="resumen-pago">-</span>
+                  </div>
+                </div>
+
+                <!-- CONTENEDOR DINÁMICO DONDE SE INYECTA EL BOTÓN -->
+                <div id="contenedor-boton-pago" class="mb-3">
+                  <!-- Inyectado por JS -->
+                </div>
+
+                <div class="d-flex justify-content-start pt-3 mt-3 border-top border-opacity-25">
+                  <button type="button" class="btn btn-outline-light px-4 py-2 rounded-3" id="btn-back-to-2">
+                    <i class="bi bi-arrow-left me-1"></i> Modificar Datos
+                  </button>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- SPINNER DE PROCESAMIENTO (Oculto inicialmente) -->
+            <div id="procesando-pago" class="text-center py-5 d-none">
+              <div class="spinner-border mb-3" role="status" style="width: 3.5rem; height: 3.5rem; color: #7ee7d8;">
+                <span class="visually-hidden">Procesando...</span>
+              </div>
+              <h3 class="h5 fw-bold text-white mb-2">Validando transacción con el banco...</h3>
+              <p class="small texto-secundario-claro mb-0">No cierres ni actualices esta ventana. Te redirigiremos automáticamente.</p>
+            </div>
+              </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer mt-5 pt-5 pb-4">
+      <div id="footer-container"></div>
+    </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="./js/navbar.js"></script>
+    <script type="module" src="./js/footer.js"></script>
+    <script type="module" src="./js/iaFlotante.js"></script>
+    <script type="module" src="./js/inscripcion.js"></script>
+  </body>
+</html>

@@ -37,7 +37,7 @@
       </div>
 
       <div class="row g-4">
-        <!-- FILTROS -->
+        <!-- FILTROS (TODOS LOS ORIGINALES RESTAURADOS) -->
         <aside class="col-12 col-lg-3">
           <div
             class="filtros_cursos p-4 rounded-4 shadow-sm sticky-top"
@@ -120,25 +120,25 @@
                   <input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
-                    value="Testing Manual"
+                    value="Desarrollo Full Stack"
                   />
-                  Testing Manual
+                  Desarrollo Full Stack
                 </label>
                 <label class="d-flex align-items-center gap-2 cursor-puntero">
                   <input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
-                    value="Testing Automation"
+                    value="Bases de Datos"
                   />
-                  Testing Automation
+                  Bases de Datos
                 </label>
                 <label class="d-flex align-items-center gap-2 cursor-puntero">
                   <input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
-                    value="Machine Learning"
+                    value="Ciberseguridad"
                   />
-                  Machine Learning
+                  Ciberseguridad
                 </label>
                 <label class="d-flex align-items-center gap-2 cursor-puntero">
                   <input
@@ -152,16 +152,32 @@
                   <input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
-                    value="Analista de Datos"
+                    value="Business Intelligence"
                   />
-                  Analista de Datos
+                  Business Intelligence
+                </label>
+                <label class="d-flex align-items-center gap-2 cursor-puntero">
+                  <input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Testing Manual"
+                  />
+                  Testing Manual
+                </label>
+                <label class="d-flex align-items-center gap-2 cursor-puntero">
+                  <input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Testing Automation"
+                  />
+                  Testing Automation
                 </label>
               </div>
             </details>
 
             <hr class="border-secondary opacity-25 my-3" />
 
-            <!-- PRECIO -->
+            <!-- PRECIO MÁXIMO -->
             <details class="mb-3 grupo-filtro" open>
               <summary
                 class="fw-semibold text-white mb-2 cursor-puntero d-flex align-items-center justify-content-between"
@@ -324,7 +340,7 @@
                 class="badge text-dark px-2 py-1 rounded-pill fw-bold"
                 style="background-color: #7ee7d8;"
                 id="cantidadCursos"
-                >4</span
+                >6</span
               >
               <span>cursos encontrados</span>
             </p>
@@ -342,339 +358,340 @@
                 <option value="relevancia">Más relevantes</option>
                 <option value="az">A - Z</option>
                 <option value="za">Z - A</option>
-                <option value="precio-asc">Menor precio</option>
                 <option value="rating">Mejor valoración</option>
               </select>
             </div>
           </div>
 
-          <!-- GRILLA DE TARJETA DE CURSOS -->
+          <!-- GRILLA DE TARJETA DE CURSOS (7 TRAYECTOS) -->
           <div class="row g-4" id="listaCursos">
-            <!-- CURSO 1 -->
+            
+          
+
+            <!-- CURSO 2: DESARROLLO WEB FULL STACK -->
             <div class="col-12 col-md-6">
               <article
                 class="tarjeta-catalogo-curso h-100 d-flex flex-column p-4 rounded-4 shadow-sm"
                 data-precio="0"
                 data-modalidad="Remoto asincrónico"
-                data-habilidad="Desarrollo Backend"
-                data-empresa="CoderHouse"
-                data-ubicacion="Argentina"
-                data-idioma="Inglés"
-              >
-                <a
-                  href="curso-detalle.html?id=backend"
-                  class="text-decoration-none"
-                >
-                  <!-- IMAGEN DEL CURSOS -->
-                  <div
-                    class="banner-curso c-violeta rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
-                  >
-                    <div
-                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
-                    ></div>
-                    <i
-                      class="bi bi-hdd-stack fs-1 text-white mb-2 position-relative z-1"
-                    ></i>
-                    <h3
-                      class="h5 fw-bold text-white mb-0 position-relative z-1"
-                    >
-                      Curso de Backend
-                    </h3>
-                  </div>
-
-                  <!-- PROFESOR Y VALORACION -->
-                  <div class="mb-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-1"
-                    >
-                      <span
-                        class="fw-semibold text-white small d-flex align-items-center gap-2"
-                      >
-                        <div
-                          class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center"
-                          style="width: 24px; height: 24px; font-size: 0.75rem"
-                        >
-                          MG
-                        </div>
-                        Martín Gómez
-                      </span>
-                      <span
-                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
-                      >
-                        <i class="bi bi-star-fill me-1"></i>5.0
-                      </span>
-                    </div>
-                  </div>
-
-                  <!-- CAJA DE DESCRIPCIÓN -->
-                  <div
-                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
-                  >
-                    <p class="small mb-0 text-muted-custom">
-                      Aprendé a construir APIs RESTful robustas con Node.js,
-                      Express y bases de datos SQL/NoSQL desde cero hasta
-                      producción.
-                    </p>
-                  </div>
-                </a>
-
-                <!-- INSCRIBIRSE -->
-                <div
-                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
-                >
-                  <div class="d-flex gap-2">
-                    <span class="pildora-curso">En inglés</span>
-                    <span class="pildora-curso pildora-gratis">Gratuito</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3"
-                    >Inscribirse</a
-                  >
-                </div>
-              </article>
-            </div>
-
-            <!-- CURSO 2 -->
-            <div class="col-12 col-md-6">
-              <article
-                class="tarjeta-catalogo-curso h-100 d-flex flex-column p-4 rounded-4 shadow-sm"
-                data-precio="0"
-                data-modalidad="Remoto sincrónico"
-                data-habilidad="Desarrollo Frontend"
+                data-habilidad="Desarrollo Full Stack"
                 data-empresa="Platzi"
                 data-ubicacion="Latino América"
                 data-idioma="Español"
               >
                 <a
-                  href="curso-detalle.html?id=backend"
+                  href="curso-detalle.html?id=fullstack"
                   class="text-decoration-none"
                 >
                   <div
                     class="banner-curso c-turquesa rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div
-                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
-                    ></div>
-                    <i
-                      class="bi bi-code-slash fs-1 text-white mb-2 position-relative z-1"
-                    ></i>
-                    <h3
-                      class="h5 fw-bold text-white mb-0 position-relative z-1"
-                    >
-                      Desarrollo Frontend Moderno
+                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
+                    <i class="bi bi-code-slash fs-1 text-white mb-2 position-relative z-1"></i>
+                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                      Desarrollo Web Full Stack
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-1"
-                    >
-                      <span
-                        class="fw-semibold text-white small d-flex align-items-center gap-2"
-                      >
-                        <div
-                          class="avatar-profe bg-teal-subtle text-teal rounded-circle d-flex align-items-center justify-content-center"
-                          style="width: 24px; height: 24px; font-size: 0.75rem"
-                        >
-                          LF
-                        </div>
-                        Lucía Fernández
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
+                        <div class="avatar-profe bg-teal-subtle text-teal rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">CM</div>
+                        Carla Méndez
                       </span>
-                      <span
-                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
-                      >
-                        <i class="bi bi-star-fill me-1"></i>4.8
+                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                        <i class="bi bi-star-fill me-1"></i>4.9
                       </span>
                     </div>
                   </div>
 
-                  <div
-                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
-                  >
+                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
                     <p class="small mb-0 text-muted-custom">
-                      Dominá HTML5, CSS3, Bootstrap y React creando interfaces
-                      interactivas, responsivas y optimizadas para proyectos
-                      reales.
+                      Domina frontend y backend moderno construyendo aplicaciones con React, Node.js y bases de datos.
                     </p>
                   </div>
                 </a>
 
-                <div
-                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
-                >
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
-                    <span class="pildora-curso pildora-gratis">Gratuito</span>
+                    <span class="pildora-curso pildora-gratis">Gratis</span>
                   </div>
-                  <a
-                    href="#"
-                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3"
-                    >Inscribirse</a
-                  >
+                  <a href="curso-detalle.html?id=fullstack" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
                 </div>
               </article>
             </div>
 
-            <!-- CURSO 3 -->
+            <!-- CURSO 3: BASES DE DATOS EN MYSQL -->
             <div class="col-12 col-md-6">
               <article
                 class="tarjeta-catalogo-curso h-100 d-flex flex-column p-4 rounded-4 shadow-sm"
-                data-precio="45"
+                data-precio="150"
                 data-modalidad="Remoto asincrónico"
-                data-habilidad="Analista de Datos"
+                data-habilidad="Bases de Datos"
                 data-empresa="Data Camp"
                 data-ubicacion="América del Norte"
-                data-idioma="Inglés"
+                data-idioma="Español"
               >
                 <a
-                  href="curso-detalle.html?id=backend"
+                  href="curso-detalle.html?id=mysql"
                   class="text-decoration-none"
                 >
                   <div
                     class="banner-curso c-ambar rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div
-                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
-                    ></div>
-                    <i
-                      class="bi bi-bar-chart-line fs-1 text-white mb-2 position-relative z-1"
-                    ></i>
-                    <h3
-                      class="h5 fw-bold text-white mb-0 position-relative z-1"
-                    >
-                      Análisis de Datos con Python
+                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
+                    <i class="bi bi-database-fill-gear fs-1 text-white mb-2 position-relative z-1"></i>
+                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                      Bases de Datos en MySQL
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-1"
-                    >
-                      <span
-                        class="fw-semibold text-white small d-flex align-items-center gap-2"
-                      >
-                        <div
-                          class="avatar-profe bg-amber-subtle text-amber rounded-circle d-flex align-items-center justify-content-center"
-                          style="width: 24px; height: 24px; font-size: 0.75rem"
-                        >
-                          DF
-                        </div>
-                        Diego Fernández
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
+                        <div class="avatar-profe bg-amber-subtle text-amber rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">ER</div>
+                        Esteban Ruarte
                       </span>
-                      <span
-                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
-                      >
-                        <i class="bi bi-star-fill me-1"></i>5.0
+                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                        <i class="bi bi-star-fill me-1"></i>4.8
                       </span>
                     </div>
                   </div>
 
-                  <div
-                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
-                  >
+                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
                     <p class="small mb-0 text-muted-custom">
-                      Manipulá grandes volúmenes de datos con Pandas, NumPy y
-                      armá dashboards ejecutivos para la toma de decisiones.
+                      Aprende a modelar, optimizar y consultar bases relacionales de alto rendimiento en entornos corporativos.
                     </p>
                   </div>
                 </a>
 
-                <div
-                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
-                >
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
                   <div class="d-flex gap-2">
-                    <span class="pildora-curso">En inglés</span>
-                    <span class="pildora-curso pildora-precio">USD $45</span>
+                    <span class="pildora-curso">En español</span>
+                    <span class="pildora-curso pildora-precio">$150 USD</span>
                   </div>
-                  <a
-                    href="#"
-                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3"
-                    >Inscribirse</a
-                  >
+                  <a href="curso-detalle.html?id=mysql" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
                 </div>
               </article>
             </div>
 
-            <!-- CURSO 4 -->
+            <!-- CURSO 4: ESPECIALISTA EN CIBERSEGURIDAD -->
             <div class="col-12 col-md-6">
               <article
                 class="tarjeta-catalogo-curso h-100 d-flex flex-column p-4 rounded-4 shadow-sm"
-                data-precio="30"
+                data-precio="0"
                 data-modalidad="Remoto asincrónico"
-                data-habilidad="Testing Automation"
-                data-empresa="Udemy"
+                data-habilidad="Ciberseguridad"
+                data-empresa="CoderHouse"
                 data-ubicacion="Argentina"
                 data-idioma="Español"
               >
                 <a
-                  href="curso-detalle.html?id=backend"
+                  href="curso-detalle.html?id=ciberseguridad"
                   class="text-decoration-none"
                 >
                   <div
                     class="banner-curso c-violeta rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div
-                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
-                    ></div>
-                    <i
-                      class="bi bi-bug fs-1 text-white mb-2 position-relative z-1"
-                    ></i>
-                    <h3
-                      class="h5 fw-bold text-white mb-0 position-relative z-1"
-                    >
-                      Testing QA & Automation
+                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
+                    <i class="bi bi-shield-lock-fill fs-1 text-white mb-2 position-relative z-1"></i>
+                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                      Especialista en Ciberseguridad
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between mb-1"
-                    >
-                      <span
-                        class="fw-semibold text-white small d-flex align-items-center gap-2"
-                      >
-                        <div
-                          class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center"
-                          style="width: 24px; height: 24px; font-size: 0.75rem"
-                        >
-                          PR
-                        </div>
-                        Pablo Ramírez
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
+                        <div class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">LB</div>
+                        Lucía Benítez
                       </span>
-                      <span
-                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
-                      >
-                        <i class="bi bi-star-fill me-1"></i>4.2
+                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                        <i class="bi bi-star-fill me-1"></i>4.9
                       </span>
                     </div>
                   </div>
 
-                  <div
-                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
-                  >
+                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
                     <p class="small mb-0 text-muted-custom">
-                      Aprendé a diseñar casos de prueba y automatizar flujos
-                      end-to-end con Cypress y Playwright en entornos ágiles.
+                      Comprende vectores de amenaza, hardening de sistemas y protocolos de defensa activa en infraestructura.
                     </p>
                   </div>
                 </a>
 
-                <div
-                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
-                >
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
-                    <span class="pildora-curso pildora-precio">USD $30</span>
+                    <span class="pildora-curso pildora-gratis">Gratis</span>
                   </div>
-                  <a
-                    href="#"
-                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3"
-                    >Inscribirse</a
-                  >
+                  <a href="curso-detalle.html?id=ciberseguridad" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
                 </div>
               </article>
             </div>
+
+            <!-- CURSO 5: IA EN PROGRAMACIÓN -->
+            <div class="col-12 col-md-6">
+              <article
+                class="tarjeta-catalogo-curso h-100 d-flex flex-column p-4 rounded-4 shadow-sm"
+                data-precio="300"
+                data-modalidad="Remoto asincrónico"
+                data-habilidad="Inteligencia Artificial"
+                data-empresa="Platzi"
+                data-ubicacion="Latino América"
+                data-idioma="Español"
+              >
+                <a
+                  href="curso-detalle.html?id=ia"
+                  class="text-decoration-none"
+                >
+                  <div
+                    class="banner-curso c-turquesa rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
+                  >
+                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
+                    <i class="bi bi-cpu-fill fs-1 text-white mb-2 position-relative z-1"></i>
+                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                      IA en Programación
+                    </h3>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
+                        <div class="avatar-profe bg-teal-subtle text-teal rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">MR</div>
+                        Mateo Rossi
+                      </span>
+                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                        <i class="bi bi-star-fill me-1"></i>5.0
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                    <p class="small mb-0 text-muted-custom">
+                      Integra modelos de lenguaje avanzados y asistentes inteligentes en tu flujo de desarrollo diario.
+                    </p>
+                  </div>
+                </a>
+
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                  <div class="d-flex gap-2">
+                    <span class="pildora-curso">En español</span>
+                    <span class="pildora-curso pildora-precio">$300 USD</span>
+                  </div>
+                  <a href="curso-detalle.html?id=ia" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- CURSO 6: POWER BI -->
+            <div class="col-12 col-md-6">
+              <article
+                class="tarjeta-catalogo-curso h-100 d-flex flex-column p-4 rounded-4 shadow-sm"
+                data-precio="0"
+                data-modalidad="Remoto asincrónico"
+                data-habilidad="Business Intelligence"
+                data-empresa="Data Camp"
+                data-ubicacion="América del Norte"
+                data-idioma="Español"
+              >
+                <a
+                  href="curso-detalle.html?id=powerbi"
+                  class="text-decoration-none"
+                >
+                  <div
+                    class="banner-curso c-ambar rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
+                  >
+                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
+                    <i class="bi bi-bar-chart-fill fs-1 text-white mb-2 position-relative z-1"></i>
+                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                      Curso de Power BI
+                    </h3>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
+                        <div class="avatar-profe bg-amber-subtle text-amber rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">VS</div>
+                        Valeria Sosa
+                      </span>
+                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                        <i class="bi bi-star-fill me-1"></i>4.9
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                    <p class="small mb-0 text-muted-custom">
+                      Transforma datos dispersos en dashboards interactivos y reportes con modelado DAX avanzado.
+                    </p>
+                  </div>
+                </a>
+
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                  <div class="d-flex gap-2">
+                    <span class="pildora-curso">En español</span>
+                    <span class="pildora-curso pildora-gratis">Gratis</span>
+                  </div>
+                  <a href="curso-detalle.html?id=powerbi" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- CURSO 7: HACKING ÉTICO -->
+            <div class="col-12 col-md-6">
+              <article
+                class="tarjeta-catalogo-curso h-100 d-flex flex-column p-4 rounded-4 shadow-sm"
+                data-precio="50"
+                data-modalidad="Remoto asincrónico"
+                data-habilidad="Ciberseguridad"
+                data-empresa="CoderHouse"
+                data-ubicacion="Argentina"
+                data-idioma="Español"
+              >
+                <a
+                  href="curso-detalle.html?id=hacking"
+                  class="text-decoration-none"
+                >
+                  <div
+                    class="banner-curso c-violeta rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
+                  >
+                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
+                    <i class="bi bi-terminal-fill fs-1 text-white mb-2 position-relative z-1"></i>
+                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                      Hacking Ético
+                    </h3>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
+                        <div class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">DK</div>
+                        Damián Kestel
+                      </span>
+                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                        <i class="bi bi-star-fill me-1"></i>4.9
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                    <p class="small mb-0 text-muted-custom">
+                      Aprende técnicas profesionales de pentesting, auditoría de vulnerabilidades y pruebas de intrusión legales.
+                    </p>
+                  </div>
+                </a>
+
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                  <div class="d-flex gap-2">
+                    <span class="pildora-curso">En español</span>
+                    <span class="pildora-curso pildora-precio">$50 USD</span>
+                  </div>
+                  <a href="curso-detalle.html?id=hacking" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                </div>
+              </article>
+            </div>
+
           </div>
         </section>
       </div>
@@ -693,5 +710,6 @@
     <script src="./js/footer.js"></script>
     <script src="./js/resultados.js"></script>
     <script src="./js/iaFlotante.js"></script>
+    <script src="./js/cursos.js"></script>
   </body>
 </html>

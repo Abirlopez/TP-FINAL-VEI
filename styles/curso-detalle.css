@@ -32,7 +32,7 @@
 }
 
 .accordion-cursar .accordion-button::after {
-  filter: invert(1) brightness(1.5);
+  color: #6ee7b7;
 }
 
 /* Asegurar que las cajas contenedoras existan y tengan estilo en esta página */
