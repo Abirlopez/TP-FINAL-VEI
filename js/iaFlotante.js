@@ -15,13 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lo agregamos al final del body
   document.body.insertAdjacentHTML('beforeend', floatingHTML);
 
-  // Le sumamos la lógica del clic (ej: ir al cuestionario o mostrar un mensaje)
+  // Lógica del clic: Redirige directamente a la página del test
   document.getElementById('aiFloatingBtn')?.addEventListener('click', () => {
-    const seccionCuestionario = document.querySelector('#cuestionario') || document.querySelector('.seccion-cuestionario');
-    if (seccionCuestionario) {
-      seccionCuestionario.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = 'index.html#cuestionario'; // O la ruta a donde esté el test
-    }
+    // Si querés que vaya directo al test en todas las páginas:
+    window.location.href = "./testIA.html"; 
   });
 });
