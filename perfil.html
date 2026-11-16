@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>cursAR - Mi Perfil</title>
+    <title>cursAR - Mi Panel de Estudiante</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,38 +26,204 @@
 
     <main class="container my-5">
       
-      <!-- TARJETA DE INFORMACIÓN DEL USUARIO -->
-      <div class="filtros_cursos p-4 p-md-5 rounded-4 shadow-sm mb-5 border border-secondary border-opacity-25">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-auto text-center text-md-start mb-3 mb-md-0">
-            <div class="rounded-circle d-inline-flex align-items-center justify-content-center fw-bold fs-2 shadow-sm text-dark" style="width: 90px; height: 90px; background-color: #7ee7d8;" id="perfil-iniciales">
-              AL
+      <!-- HERO / TARJETA DE PERFIL MODERNA -->
+      <div class="p-4 p-md-5 rounded-4 shadow-sm mb-4 position-relative overflow-hidden border border-secondary border-opacity-25" style="background: linear-gradient(135deg, #0b0d17 0%, #161b33 100%);">
+        <div class="position-absolute top-0 end-0 translate-middle-y me-n5 mt-n5 rounded-circle opacity-10" style="width: 300px; height: 300px; filter: blur(80px); pointer-events: none;"></div>
+
+        <div class="row align-items-center position-relative z-1">
+          <!-- AVATAR EN BANNER (Muestra foto si tiene, o iniciales) -->
+          <div class="col-12 col-md-auto text-center text-md-start mb-4 mb-md-0">
+            <div class="rounded-circle d-inline-flex align-items-center justify-content-center fw-bold fs-1 shadow-lg text-dark overflow-hidden" style="width: 100px; height: 100px; background: linear-gradient(135deg, #7ee7d8 0%, #4ae5ce 100%); border: 3px solid rgba(255, 255, 255, 0.1);" id="banner-avatar-container">
+              <span id="perfil-iniciales">AL</span>
+              <img id="banner-avatar-img" src="" alt="Avatar" class="w-100 h-100 object-fit-cover d-none" />
             </div>
           </div>
-          <div class="col-12 col-md text-center text-md-start">
-            <h1 class="h3 fw-bold text-white mb-1" id="perfil-nombre">Cargando usuario...</h1>
-            <p class="texto-secundario-claro small mb-2" id="perfil-email">correo@ejemplo.com</p>
-            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-1">Estudiante Activo</span>
+
+          <!-- DATOS DEL USUARIO -->
+          <div class="col-12 col-md text-center text-md-start mb-4 mb-md-0">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-2 mb-1">
+              <h1 class="h3 fw-bold text-white mb-0" id="perfil-nombre">Cargando usuario...</h1>
+              <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1 small">
+                <i class="bi bi-patch-check-fill me-1"></i> Estudiante Verificado
+              </span>
+            </div>
+            <p class="texto-secundario-claro small mb-3" id="perfil-email">correo@ejemplo.com</p>
+            
+            <!-- MINI ESTADÍSTICAS RÁPIDAS -->
+            <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-4 text-muted small">
+              <div><i class="bi bi-journal-check text-teal me-1"></i> <strong class="text-white" id="stat-cursos-count">0</strong> Cursos en curso</div>
+              <div><i class="bi bi-clock-history text-teal me-1"></i> <strong class="text-white">Acceso ilimitado</strong></div>
+              <div><i class="bi bi-award text-teal me-1"></i> <strong class="text-white">Certificación oficial</strong></div>
+            </div>
           </div>
-          <div class="col-12 col-md-auto text-center text-md-end mt-3 mt-md-0">
-            <button id="btnCerrarSesion" class="btn btn-outline-danger btn-sm px-3 py-2 rounded-3">
+
+          <!-- BOTÓN CERRAR SESIÓN -->
+          <div class="col-12 col-md-auto text-center text-md-end">
+            <button id="btnCerrarSesion" class="btn btn-outline-danger btn-sm px-3 py-2 rounded-3 shadow-sm">
               <i class="bi bi-box-arrow-right me-1"></i> Cerrar Sesión
             </button>
           </div>
         </div>
       </div>
 
-      <!-- TÍTULO DE CURSOS ADQUIRIDOS -->
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="h5 fw-bold text-white mb-0"><i class="bi bi-journal-code me-2" style="color: #7ee7d8;"></i> Mis Cursos Adquiridos</h2>
-        <a href="cursos.html" class="btn btn-success-tech btn-sm fw-bold px-3 py-2 text-dark">
-          <i class="bi bi-plus-lg me-1"></i> Explorar Más Cursos
-        </a>
-      </div>
+      <!-- NAVEGACIÓN POR PESTAÑAS DEL PANEL -->
+      <ul class="nav nav-pills mb-4 gap-2" id="perfilTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active fw-semibold px-4 py-2 rounded-3" id="tab-cursos" data-bs-toggle="pill" data-bs-target="#panel-cursos" type="button" role="tab">
+            <i class="bi bi-journal-code me-2"></i>Mis Cursos
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link fw-semibold px-4 py-2 rounded-3" id="tab-datos" data-bs-toggle="pill" data-bs-target="#panel-datos" type="button" role="tab">
+            <i class="bi bi-person-gear me-2"></i>Datos Personales
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link fw-semibold px-4 py-2 rounded-3" id="tab-seguridad" data-bs-toggle="pill" data-bs-target="#panel-seguridad" type="button" role="tab">
+            <i class="bi bi-shield-lock me-2"></i>Seguridad
+          </button>
+        </li>
+      </ul>
 
-      <!-- GRILLA DINÁMICA DE CURSOS COMPRADOS -->
-      <div class="row g-4" id="contenedor-mis-cursos">
-        <!-- Inyectado dinámicamente por JavaScript -->
+      <!-- CONTENIDO DE LAS PESTAÑAS -->
+      <div class="tab-content" id="perfilTabsContent">
+        
+        <!-- 1. PESTAÑA: MIS CURSOS ADQUIRIDOS -->
+        <div class="tab-pane fade show active" id="panel-cursos" role="tabpanel">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+            <div>
+              <h2 class="h5 fw-bold text-white mb-1"><i class="bi bi-journal-code me-2" style="color: #7ee7d8;"></i> Mis Cursos Adquiridos</h2>
+              <p class="small texto-secundario-claro mb-0">Continuá tu formación desde donde la dejaste o explorá nuevas tecnologías.</p>
+            </div>
+            <a href="cursos.html" class="btn btn-success-tech btn-sm fw-bold px-3 py-2 text-dark shadow-sm">
+              <i class="bi bi-plus-lg me-1"></i> Explorar Catálogo
+            </a>
+          </div>
+
+          <div class="row g-4" id="contenedor-mis-cursos">
+            <!-- Inyectado dinámicamente por JavaScript -->
+          </div>
+        </div>
+
+        <!-- 2. PESTAÑA: DATOS PERSONALES (Basado en tu Wireframe) -->
+        <div class="tab-pane fade" id="panel-datos" role="tabpanel">
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 border border-secondary border-opacity-25 shadow-sm">
+            <h2 class="h5 fw-bold text-white mb-4"><i class="bi bi-person-vcard me-2" style="color: #7ee7d8;"></i> Información Personal</h2>
+            
+            <form id="formDatosPersonales">
+              <div class="row g-4 align-items-start">
+                
+                <!-- COLUMNA IZQUIERDA: IMG DE PERFIL + CAMBIAR IMG -->
+                <div class="col-12 col-md-4 text-center">
+                  <div class="mx-auto rounded-4 overflow-hidden border border-secondary border-opacity-50 d-flex align-items-center justify-content-center mb-3 shadow" style="width: 200px; height: 200px;">
+                    <img id="preview-foto-perfil" src="./img/Designer.png" alt="Foto de Perfil" class="w-100 h-100 object-fit-cover" />
+                  </div>
+                  
+                  <input type="file" id="input-foto-perfil" accept="image/*" class="d-none" />
+                  <button type="button" id="btn-cambiar-img" class="btn btn-outline-light btn-sm px-3 py-2 rounded-3">
+                    <i class="bi bi-camera me-1"></i> Cambiar img
+                  </button>
+                  <p class="small text-muted mt-2 mb-0">Formatos: JPG, PNG (Máx. 2MB)</p>
+                </div>
+
+                <!-- COLUMNA DERECHA: CAMPOS DE FORMULARIO -->
+                <div class="col-12 col-md-8">
+                  <div class="row g-3">
+                    
+                    <!-- Nombre y Apellido completo -->
+                    <div class="col-12">
+                      <label for="edit-nombre" class="form-label small fw-semibold text-white">Nombre y Apellido completo:</label>
+                      <input type="text" class="form-control text-white" id="edit-nombre" required />
+                    </div>
+
+                    <!-- Género -->
+                    <div class="col-12 col-sm-6">
+                      <label for="edit-genero" class="form-label small fw-semibold text-white">Género:</label>
+                      <select class="form-select text-white" id="edit-genero">
+                        <option value="">Seleccionar...</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="No binario">No binario</option>
+                        <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                      </select>
+                    </div>
+
+                    <!-- Fecha de Nacimiento -->
+                    <div class="col-12 col-sm-6">
+                      <label for="edit-nacimiento" class="form-label small fw-semibold text-white">Fecha de Nacimiento:</label>
+                      <input type="date" class="form-control text-white" id="edit-nacimiento" />
+                    </div>
+
+                    <!-- Mail -->
+                    <div class="col-12">
+                      <label for="edit-email" class="form-label small fw-semibold text-white">Mail:</label>
+                      <input type="email" class="form-control text-white" id="edit-email" required />
+                    </div>
+
+                    <!-- Botón Guardar Cambios -->
+                    <div class="col-12 mt-4">
+                      <button type="submit" class="btn btn-success-tech px-4 py-2 text-dark fw-bold rounded-3">
+                        <i class="bi bi-check2-circle me-1"></i> Guardar cambios
+                      </button>
+                      <span id="msg-datos-guardados" class="text-success small ms-3 d-none fw-semibold">
+                        <i class="bi bi-check-lg"></i> ¡Datos actualizados correctamente!
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- 3. PESTAÑA: SEGURIDAD (Basado en tu Wireframe) -->
+        <div class="tab-pane fade" id="panel-seguridad" role="tabpanel">
+          <div class="filtros_cursos p-4 p-md-5 rounded-4 border border-secondary border-opacity-25 shadow-sm">
+            <h2 class="h5 fw-bold text-white mb-4"><i class="bi bi-shield-lock me-2" style="color: #7ee7d8;"></i> Seguridad:</h2>
+            
+            <div class="row g-4 align-items-center">
+              
+              <!-- FORMULARIO CONTRASEÑA (Izquierda) -->
+              <div class="col-12 col-lg-6">
+                <form id="formSeguridad">
+                  <div class="mb-3">
+                    <label for="nueva-password" class="form-label small fw-semibold text-white">Nueva contraseña:</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control text-white" id="nueva-password" placeholder="Ingresá tu nueva clave" required />
+                      <button class="btn" type="button" id="toggleNuevaPass">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="repetir-password" class="form-label small fw-semibold text-white">Repetir nuevamente:</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control text-white" id="repetir-password" placeholder="Repetí tu nueva clave" required />
+                      <button class="btn" type="button" id="toggleRepetirPass">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div id="error-password" class="alert alert-danger py-2 small d-none" role="alert"></div>
+                  <div id="exito-password" class="alert alert-success py-2 small d-none" role="alert"></div>
+
+                  <button type="submit" class="btn btn-success-tech px-4 py-2 text-dark fw-bold rounded-3">
+                    <i class="bi bi-key me-1"></i> Guardar cambios
+                  </button>
+                </form>
+              </div>
+
+              <!-- REQUISITOS DE SEGURIDAD (Derecha - Exactos a tu imagen) -->
+             
+
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </main>
