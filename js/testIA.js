@@ -36,6 +36,18 @@ const preguntas = [
     ]
   },
   {
+    titulo: "¿Cuánta carga horaria semanal real podés dedicarle al estudio?",
+    tipo: "carga_horaria",
+    opciones: [
+      { texto: "Más de 15 horas semanales (Busco inmersión total en desarrollo completo)", valor: "fullstack" },
+      { texto: "Entre 12 y 15 horas semanales (Prácticas intensivas de seguridad ofensiva)", valor: "hacking" },
+      { texto: "Entre 8 y 12 horas semanales (Ritmo constante de defensa e infraestructura)", valor: "ciberseguridad" },
+      { texto: "Entre 6 y 8 horas semanales (Módulos ágiles de automatización con IA)", valor: "ia" },
+      { texto: "Entre 4 y 6 horas semanales (Aprendizaje enfocado en consultas y datos)", valor: "mysql" },
+      { texto: "Menos de 4 horas semanales (Flexibilidad total para armar tableros visuales)", valor: "powerbi" }
+    ]
+  },
+  {
     titulo: "¿Cuál es tu meta profesional a corto plazo al finalizar la capacitación?",
     tipo: "meta",
     opciones: [
@@ -45,6 +57,58 @@ const preguntas = [
       { texto: "Potenciar mi productividad y desarrollo de software con IA", valor: "ia" },
       { texto: "Convertirme en analista de datos para la toma de decisiones gerenciales", valor: "powerbi" },
       { texto: "Insertarme en el área de seguridad ofensiva y hacking ético", valor: "hacking" }
+    ]
+  },
+  {
+    titulo: "¿Cómo te llevás con la resolución de problemas matemáticos y lógica abstracta?",
+    tipo: "logica",
+    opciones: [
+      { texto: "Me apasionan los algoritmos y la arquitectura de software", valor: "fullstack" },
+      { texto: "Disfruto mucho el álgebra relacional y la estructuración de tablas", valor: "mysql" },
+      { texto: "Prefiero aplicar la lógica para detectar patrones de ataque y brechas", valor: "hacking" },
+      { texto: "Me interesa usar la lógica para entrenar prompts y flujos inteligentes", valor: "ia" }
+    ]
+  },
+  {
+    titulo: "¿Qué grado de afinidad tenés con el diseño visual y la presentación de información?",
+    tipo: "afinidad_visual",
+    opciones: [
+      { texto: "Alta: me encanta crear tableros gráficos e indicadores visuales claros", valor: "powerbi" },
+      { texto: "Media-Alta: disfruto maquetar interfaces web atractivas para el usuario", valor: "fullstack" },
+      { texto: "Baja: prefiero trabajar en servidores ocultos, consolas y bases de datos", valor: "mysql" },
+      { texto: "Nula: me interesa exclusivamente la seguridad de redes y sistemas", valor: "ciberseguridad" }
+    ]
+  },
+  {
+    titulo: "¿Cómo preferís que sean las evaluaciones prácticas de tu cursada?",
+    tipo: "evaluacion",
+    opciones: [
+      { texto: "Construyendo una aplicación web funcional desde cero", valor: "fullstack" },
+      { texto: "Auditando un entorno simulado para encontrar vulnerabilidades", valor: "hacking" },
+      { texto: "Diseñando un dashboard ejecutivo a partir de datos crudos", valor: "powerbi" },
+      { texto: "Configurando protocolos de seguridad y cifrado en servidores", valor: "ciberseguridad" }
+    ]
+  },
+  {
+    titulo: "¿Qué rol te gustaría ocupar dentro de un equipo de tecnología?",
+    tipo: "rol",
+    opciones: [
+      { texto: "Desarrollador Full Stack", valor: "fullstack" },
+      { texto: "Administrador de Bases de Datos (DBA)", valor: "mysql" },
+      { texto: "Especialista en Ciberseguridad Defensiva", valor: "ciberseguridad" },
+      { texto: "Arquitecto de Soluciones con IA", valor: "ia" },
+      { texto: "Analista de Business Intelligence (BI)", valor: "powerbi" },
+      { texto: "Consultor de Seguridad Ofensiva / Pentester", valor: "hacking" }
+    ]
+  },
+  {
+    titulo: "¿Qué aspecto de la tecnología actual te genera mayor curiosidad explorar?",
+    tipo: "curiosidad",
+    opciones: [
+      { texto: "Cómo los asistentes de IA están transformando la forma de programar", valor: "ia" },
+      { texto: "Cómo se protegen las empresas frente al robo de información", valor: "ciberseguridad" },
+      { texto: "Cómo se toman decisiones millonarias analizando grandes volúmenes de datos", valor: "powerbi" },
+      { texto: "Cómo piensan los atacantes informáticos para vulnerar sistemas", valor: "hacking" }
     ]
   }
 ];
@@ -133,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (conteo[r] !== undefined) conteo[r]++;
         });
 
-        // Encontrar el curso con mayor puntaje (o por defecto fullstack)
+        // Encontrar el curso con mayor puntaje
         let ganador = "fullstack";
         let maxVotos = -1;
         for (const [key, value] of Object.entries(conteo)) {
