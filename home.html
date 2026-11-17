@@ -91,32 +91,41 @@
 
       <!-- CURSOS MAS RECOMENDADOS -->
       <section class="mt-5" id="cursos">
+        <!-- Alineado al centro en mobile (text-center), alineado a la izquierda en desktop (text-md-start) -->
         <div
-          class="d-flex flex-wrap align-items-center justify-content-between mb-5"
+          class="d-flex flex-column flex-md-row align-items-center align-items-md-center justify-content-between text-center text-md-start gap-3 mb-4 mb-md-5"
         >
-          <div class="d-flex align-items-center gap-3">
-            <h2 class="text-white fw-bold mb-0">Cursos más recomendados</h2>
+          <!-- Título y Badge -->
+          <div
+            class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start gap-2 gap-md-3 w-100 w-md-auto"
+          >
+            <h2 class="text-white fw-bold mb-0 fs-3">
+              Cursos más recomendados
+            </h2>
             <span
-              class="badge px-3 py-2 rounded-pill fw-medium fs-6 d-inline-flex align-items-center gap-2"
+              class="badge px-3 py-2 rounded-pill fw-medium d-inline-flex align-items-center gap-2"
               style="
                 background: rgba(79, 70, 229, 0.15);
                 border: 1px solid rgba(129, 140, 248, 0.3);
                 color: #a5a6ff;
+                font-size: 0.8rem;
               "
             >
               ⭐ Los favoritos de la comunidad
             </span>
           </div>
 
+          <!-- Enlace Ver catálogo -->
           <a
             href="cursos.html"
-            class="text-decoration-none small text-indigo fw-semibold hover-link"
+            class="text-decoration-none small text-indigo fw-semibold hover-link mt-1 mt-md-0"
           >
             Ver catálogo completo →
           </a>
         </div>
 
-        <div id="carouselCards" class="carousel slide">
+        <!-- ================= 1. CARRUSEL DE ESCRITORIO (Se ve en pantallas medianas/grandes) ================= -->
+        <div id="carouselCards" class="carousel slide d-none d-md-block">
           <div class="carousel-stage">
             <button
               class="carousel-nav-btn side-arrow prev"
@@ -162,10 +171,9 @@
             </button>
 
             <div class="carousel-inner">
-              <!-- SLIDE 1 -->
+              <!-- SLIDE 1 (PC) -->
               <div class="carousel-item active">
                 <div class="row g-3">
-                  <!-- 1. Full Stack -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-violet h-100 d-flex flex-column"
@@ -184,17 +192,14 @@
                           <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
                         </svg>
                       </div>
-                      <div
-                        class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1"
-                      >
+                      <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
                         <span class="course-tag">Desarrollo web</span>
                         <h3 class="h5 fw-bold mb-0">
                           Desarrollo Web Full Stack
                         </h3>
                         <p class="mb-2">
                           Aprende desarrollo Full Stack desde cero y domina
-                          JavaScript, React y Node.js con una formación práctica
-                          orientada a construir aplicaciones reales.
+                          JavaScript, React y Node.js...
                         </p>
                         <a
                           href="curso-detalle.html?id=fullstack"
@@ -211,8 +216,6 @@
                       </div>
                     </article>
                   </div>
-
-                  <!-- 2. MySQL -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-teal h-100 d-flex flex-column"
@@ -231,15 +234,12 @@
                           <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
                         </svg>
                       </div>
-                      <div
-                        class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1"
-                      >
+                      <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
                         <span class="course-tag">Datos</span>
                         <h3 class="h5 fw-bold mb-0">Bases de datos en MySQL</h3>
                         <p class="mb-2">
                           Aprenderás a diseñar y optimizar bases de datos
-                          relacionales, asegurando un rendimiento eficiente y
-                          seguro, incluso con grandes volúmenes de datos.
+                          relacionales...
                         </p>
                         <a
                           href="curso-detalle.html?id=mysql"
@@ -256,8 +256,6 @@
                       </div>
                     </article>
                   </div>
-
-                  <!-- 3. Ciberseguridad -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-amber h-100 d-flex flex-column"
@@ -279,17 +277,14 @@
                           <path d="M9 12l2 2 4-4" />
                         </svg>
                       </div>
-                      <div
-                        class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1"
-                      >
+                      <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
                         <span class="course-tag">Ciberseguridad</span>
                         <h3 class="h5 fw-bold mb-0">
                           Especialista en ciberseguridad
                         </h3>
                         <p class="mb-2">
-                          Aprenderás a identificar vulnerabilidades, implementar
-                          medidas de seguridad y realizar análisis de riesgos
-                          para garantizar la protección de la información.
+                          Aprenderás a identificar vulnerabilidades e
+                          implementar medidas...
                         </p>
                         <a
                           href="curso-detalle.html?id=ciberseguridad"
@@ -309,10 +304,9 @@
                 </div>
               </div>
 
-              <!-- SLIDE 2 -->
+              <!-- SLIDE 2 (PC) -->
               <div class="carousel-item">
                 <div class="row g-3">
-                  <!-- 4. IA -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-violet h-100 d-flex flex-column"
@@ -331,15 +325,12 @@
                           <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
                         </svg>
                       </div>
-                      <div
-                        class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1"
-                      >
+                      <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
                         <span class="course-tag">Desarrollo web</span>
                         <h3 class="h5 fw-bold mb-0">IA en Programación</h3>
                         <p class="mb-2">
                           Descubre cómo implementar Inteligencia Artificial en
-                          el desarrollo de software y automatización de
-                          procesos.
+                          el desarrollo...
                         </p>
                         <a
                           href="curso-detalle.html?id=ia"
@@ -356,8 +347,6 @@
                       </div>
                     </article>
                   </div>
-
-                  <!-- 5. Power BI -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-teal h-100 d-flex flex-column"
@@ -376,15 +365,12 @@
                           <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
                         </svg>
                       </div>
-                      <div
-                        class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1"
-                      >
+                      <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
                         <span class="course-tag">Datos</span>
                         <h3 class="h5 fw-bold mb-0">Curso de POWER BI</h3>
                         <p class="mb-2">
-                          Aprenderás a conectar fuentes de datos, transformar
-                          información y generar informes visuales de alto
-                          impacto con Business Intelligence.
+                          Aprenderás a conectar fuentes de datos y generar
+                          informes visuales...
                         </p>
                         <a
                           href="curso-detalle.html?id=powerbi"
@@ -401,8 +387,6 @@
                       </div>
                     </article>
                   </div>
-
-                  <!-- 6. Hacking Ético -->
                   <div class="col-md-4">
                     <article
                       class="course-card c-amber h-100 d-flex flex-column"
@@ -424,15 +408,12 @@
                           <path d="M9 12l2 2 4-4" />
                         </svg>
                       </div>
-                      <div
-                        class="p-3 p-md-4 d-flex flex-column gap-2 flex-grow-1"
-                      >
+                      <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
                         <span class="course-tag">Ciberseguridad</span>
                         <h3 class="h5 fw-bold mb-0">Hacking etico</h3>
                         <p class="mb-2">
-                          Aprende conceptos clave como pruebas de penetración,
-                          seguridad de redes y análisis de amenazas esenciales
-                          para puestos de TI.
+                          Aprende conceptos clave como pruebas de penetración y
+                          seguridad...
                         </p>
                         <a
                           href="curso-detalle.html?id=hacking"
@@ -470,12 +451,343 @@
               aria-label="Página 2"
             ></button>
           </div>
+        </div>
 
-          <div class="carousel-counter-container text-center mt-3">
-            <span class="text-indigo fw-semibold small" id="carouselCounter">
-              <span id="currentIndex">1</span> / <span id="totalSlides">2</span>
-            </span>
+        <!-- ================= 2. CARRUSEL DE CELULAR (Se ve solo en mobile, 1 tarjeta por slide) ================= -->
+        <div id="carouselCardsMobile" class="carousel slide d-block d-md-none">
+          <div class="carousel-stage">
+            <button
+              class="carousel-nav-btn side-arrow prev"
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide="prev"
+              aria-label="Anterior"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M15 6l-6 6 6 6" />
+              </svg>
+            </button>
+            <button
+              class="carousel-nav-btn side-arrow next"
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide="next"
+              aria-label="Siguiente"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M9 6l6 6-6 6" />
+              </svg>
+            </button>
+
+            <div class="carousel-inner">
+              <!-- Tarjeta 1 -->
+              <div class="carousel-item active">
+                <article class="course-card c-violet h-100 d-flex flex-column">
+                  <div class="course-thumb">
+                    <svg
+                      width="56"
+                      height="56"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
+                    </svg>
+                  </div>
+                  <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
+                    <span class="course-tag">Desarrollo web</span>
+                    <h3 class="h5 fw-bold mb-0">Desarrollo Web Full Stack</h3>
+                    <p class="mb-2">
+                      Aprende desarrollo Full Stack desde cero y domina
+                      JavaScript, React y Node.js...
+                    </p>
+                    <a
+                      href="curso-detalle.html?id=fullstack"
+                      class="btn btn-course mt-auto btn-guardar-curso"
+                      data-titulo="Desarrollo Web Full Stack"
+                      data-precio="0"
+                      data-modalidad="Remoto asincrónico"
+                      data-habilidad="Desarrollo Full Stack"
+                      data-empresa="Platzi"
+                      data-ubicacion="Latino América"
+                      data-idioma="Español"
+                      >Ver curso</a
+                    >
+                  </div>
+                </article>
+              </div>
+              <!-- Tarjeta 2 -->
+              <div class="carousel-item">
+                <article class="course-card c-teal h-100 d-flex flex-column">
+                  <div class="course-thumb">
+                    <svg
+                      width="56"
+                      height="56"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+                    </svg>
+                  </div>
+                  <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
+                    <span class="course-tag">Datos</span>
+                    <h3 class="h5 fw-bold mb-0">Bases de datos en MySQL</h3>
+                    <p class="mb-2">
+                      Aprenderás a diseñar y optimizar bases de datos
+                      relacionales...
+                    </p>
+                    <a
+                      href="curso-detalle.html?id=mysql"
+                      class="btn btn-course mt-auto btn-guardar-curso"
+                      data-titulo="Bases de Datos en MySQL"
+                      data-precio="150"
+                      data-modalidad="Remoto asincrónico"
+                      data-habilidad="Bases de Datos"
+                      data-empresa="Data Camp"
+                      data-ubicacion="América del Norte"
+                      data-idioma="Español"
+                      >Ver curso</a
+                    >
+                  </div>
+                </article>
+              </div>
+              <!-- Tarjeta 3 -->
+              <div class="carousel-item">
+                <article class="course-card c-amber h-100 d-flex flex-column">
+                  <div class="course-thumb">
+                    <svg
+                      width="56"
+                      height="56"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+                      <path d="M9 12l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
+                    <span class="course-tag">Ciberseguridad</span>
+                    <h3 class="h5 fw-bold mb-0">
+                      Especialista en ciberseguridad
+                    </h3>
+                    <p class="mb-2">
+                      Aprenderás a identificar vulnerabilidades e implementar
+                      medidas...
+                    </p>
+                    <a
+                      href="curso-detalle.html?id=ciberseguridad"
+                      class="btn btn-course mt-auto btn-guardar-curso"
+                      data-titulo="Especialista en Ciberseguridad"
+                      data-precio="0"
+                      data-modalidad="Remoto asincrónico"
+                      data-habilidad="Ciberseguridad"
+                      data-empresa="CoderHouse"
+                      data-ubicacion="Argentina"
+                      data-idioma="Español"
+                      >Ver curso</a
+                    >
+                  </div>
+                </article>
+              </div>
+              <!-- Tarjeta 4 -->
+              <div class="carousel-item">
+                <article class="course-card c-violet h-100 d-flex flex-column">
+                  <div class="course-thumb">
+                    <svg
+                      width="56"
+                      height="56"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
+                    </svg>
+                  </div>
+                  <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
+                    <span class="course-tag">Desarrollo web</span>
+                    <h3 class="h5 fw-bold mb-0">IA en Programación</h3>
+                    <p class="mb-2">
+                      Descubre cómo implementar Inteligencia Artificial en el
+                      desarrollo...
+                    </p>
+                    <a
+                      href="curso-detalle.html?id=ia"
+                      class="btn btn-course mt-auto btn-guardar-curso"
+                      data-titulo="IA en Programación"
+                      data-precio="300"
+                      data-modalidad="Remoto asincrónico"
+                      data-habilidad="Inteligencia Artificial"
+                      data-empresa="Platzi"
+                      data-ubicacion="Latino América"
+                      data-idioma="Español"
+                      >Ver curso</a
+                    >
+                  </div>
+                </article>
+              </div>
+              <!-- Tarjeta 5 -->
+              <div class="carousel-item">
+                <article class="course-card c-teal h-100 d-flex flex-column">
+                  <div class="course-thumb">
+                    <svg
+                      width="56"
+                      height="56"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+                    </svg>
+                  </div>
+                  <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
+                    <span class="course-tag">Datos</span>
+                    <h3 class="h5 fw-bold mb-0">Curso de POWER BI</h3>
+                    <p class="mb-2">
+                      Aprenderás a conectar fuentes de datos y generar informes
+                      visuales...
+                    </p>
+                    <a
+                      href="curso-detalle.html?id=powerbi"
+                      class="btn btn-course mt-auto btn-guardar-curso"
+                      data-titulo="Curso de Power BI"
+                      data-precio="0"
+                      data-modalidad="Remoto asincrónico"
+                      data-habilidad="Business Intelligence"
+                      data-empresa="Data Camp"
+                      data-ubicacion="América del Norte"
+                      data-idioma="Español"
+                      >Ver curso</a
+                    >
+                  </div>
+                </article>
+              </div>
+              <!-- Tarjeta 6 -->
+              <div class="carousel-item">
+                <article class="course-card c-amber h-100 d-flex flex-column">
+                  <div class="course-thumb">
+                    <svg
+                      width="56"
+                      height="56"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+                      <path d="M9 12l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div class="p-4 d-flex flex-column gap-2 flex-grow-1">
+                    <span class="course-tag">Ciberseguridad</span>
+                    <h3 class="h5 fw-bold mb-0">Hacking etico</h3>
+                    <p class="mb-2">
+                      Aprende conceptos clave como pruebas de penetración y
+                      seguridad...
+                    </p>
+                    <a
+                      href="curso-detalle.html?id=hacking"
+                      class="btn btn-course mt-auto btn-guardar-curso"
+                      data-titulo="Hacking Ético"
+                      data-precio="50"
+                      data-modalidad="Remoto asincrónico"
+                      data-habilidad="Ciberseguridad"
+                      data-empresa="CoderHouse"
+                      data-ubicacion="Argentina"
+                      data-idioma="Español"
+                      >Ver curso</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
+
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Página 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide-to="1"
+              aria-label="Página 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide-to="2"
+              aria-label="Página 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide-to="3"
+              aria-label="Página 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide-to="4"
+              aria-label="Página 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCardsMobile"
+              data-bs-slide-to="5"
+              aria-label="Página 6"
+            ></button>
+          </div>
+        </div>
+
+        <!-- CONTADOR DINÁMICO (Funciona para ambos con el JS adaptado) -->
+        <div class="carousel-counter-container text-center mt-3">
+          <span class="text-indigo fw-semibold small" id="carouselCounter">
+            <span id="currentIndex">1</span> / <span id="totalSlides">2</span>
+          </span>
         </div>
       </section>
 

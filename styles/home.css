@@ -128,7 +128,6 @@
   --tag-fg: #fbc27a;
 }
 
-/* Indicadores del carrusel */
 #carouselCards .carousel-indicators,
 #carruselTarjetas .carousel-indicators {
   position: static;
@@ -155,4 +154,99 @@
 .card {
   background-color: #14143a;
   border-color: rgba(255, 255, 255, 0.09);
+}
+
+
+@media (max-width: 991.98px) {
+  .hero-bot,
+  .seccion-hero {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .carousel-stage,
+  .escenario-carrusel {
+    padding: 0 2.5rem;
+  }
+
+  .carousel-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  h1.display-5 {
+    font-size: 1.85rem !important;
+    line-height: 1.2;
+  }
+
+  h2.display-6,
+  section h2 {
+    font-size: 1.5rem !important;
+  }
+
+  main.container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .carousel-stage,
+  .escenario-carrusel {
+    padding: 0 2rem !important;
+  }
+
+  #carouselCards .carousel-inner .row,
+  #carruselTarjetas .carousel-inner .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #carouselCards .carousel-item .col-12,
+  #carruselTarjetas .carousel-item .col-12 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .carousel-nav-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .carousel-nav-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero-bot .d-flex.flex-wrap,
+  .seccion-hero .d-flex.flex-wrap {
+    justify-content: center;
+  }
+
+  .hero-bot .d-flex.flex-wrap .btn,
+  .seccion-hero .d-flex.flex-wrap .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .course-card,
+  .tarjeta-curso {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .carousel-stage,
+  .escenario-carrusel {
+    padding: 0 1.5rem !important;
+  }
+
+  .carousel-nav-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .carousel-nav-btn svg {
+    width: 14px;
+    height: 14px;
+  }
 }
