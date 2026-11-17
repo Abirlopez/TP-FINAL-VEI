@@ -69,3 +69,19 @@
 
 .bg-amber-subtle { background: rgba(180, 83, 9, 0.2); }
 .text-amber { color: #fbbf24; }
+
+.filtros_cursos {
+  background: #151936;
+  border: 1px solid #2f3570;
+}
+
+.offcanvas.offcanvas-start {
+  background-color: #0b0d17 !important;
+  border-right: 1px solid #2f3570;
+  width: 85% !important;
+  max-width: 320px;
+}
+
+.custom-range {
+  accent-color: #4f46e5;
+}

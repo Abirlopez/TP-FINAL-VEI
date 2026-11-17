@@ -31,14 +31,319 @@
         <div class="col-12">
           <h1 class="h3 fw-bold text-white mb-1">Explorá nuestro catálogo</h1>
           <p class="texto-secundario-claro small mb-0">
-            Encontrá el curso ideal para potenciar tus habilidades profesionales.
+            Encontrá el curso ideal para potenciar tus habilidades
+            profesionales.
           </p>
         </div>
       </div>
 
+      <!-- GRILLA GENERAL -->
       <div class="row g-4">
-        <!-- FILTROS (TODOS LOS ORIGINALES RESTAURADOS) -->
-        <aside class="col-12 col-lg-3">
+        <!-- ================= 1. MENÚ LATERAL OCULTO PARA MOBILE (OFFCANVAS) ================= -->
+        <div
+          class="offcanvas offcanvas-start bg-dark text-white d-lg-none"
+          tabindex="-1"
+          id="filtrosMobileOffcanvas"
+          aria-labelledby="filtrosMobileLabel"
+        >
+          <div
+            class="offcanvas-header border-bottom border-secondary border-opacity-25"
+          >
+            <h5 class="offcanvas-title fw-bold" id="filtrosMobileLabel">
+              <i class="bi bi-funnel-fill text-indigo me-2"></i>Filtrar cursos
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body filtros_cursos p-4">
+            <!-- Acá adentro van los mismos filtros para que el usuario los use en el celu -->
+            <div
+              class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-secondary border-opacity-25"
+            >
+              <span class="fw-bold text-white fs-6"
+                ><i class="bi bi-funnel-fill text-indigo me-2"></i>Filtros</span
+              >
+              <button
+                class="btn btn-link text-indigo p-0 text-decoration-none small"
+                style="font-size: 0.8rem"
+              >
+                Limpiar
+              </button>
+            </div>
+
+            <!-- MODALIDAD (Mobile) -->
+            <details class="mb-3 grupo-filtro" open>
+              <summary
+                class="fw-semibold text-white mb-2 cursor-puntero d-flex align-items-center justify-content-between"
+              >
+                <span>Modalidad</span>
+                <i class="bi bi-chevron-down small text-muted"></i>
+              </summary>
+              <div
+                class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
+              >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-modalidad m-0"
+                    type="checkbox"
+                    value="Remoto asincrónico"
+                  />
+                  Remoto asincrónico</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-modalidad m-0"
+                    type="checkbox"
+                    value="Remoto sincrónico"
+                  />
+                  Remoto sincrónico</label
+                >
+              </div>
+            </details>
+
+            <hr class="border-secondary opacity-25 my-3" />
+
+            <!-- HABILIDADES (Mobile) -->
+            <details class="mb-3 grupo-filtro" open>
+              <summary
+                class="fw-semibold text-white mb-2 cursor-puntero d-flex align-items-center justify-content-between"
+              >
+                <span>Habilidades</span>
+                <i class="bi bi-chevron-down small text-muted"></i>
+              </summary>
+              <div
+                class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
+              >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Desarrollo Frontend"
+                  />
+                  Desarrollo Frontend</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Desarrollo Backend"
+                  />
+                  Desarrollo Backend</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Desarrollo Full Stack"
+                  />
+                  Desarrollo Full Stack</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Bases de Datos"
+                  />
+                  Bases de Datos</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Ciberseguridad"
+                  />
+                  Ciberseguridad</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Inteligencia Artificial"
+                  />
+                  Inteligencia Artificial</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Business Intelligence"
+                  />
+                  Business Intelligence</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Testing Manual"
+                  />
+                  Testing Manual</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-habilidad m-0"
+                    type="checkbox"
+                    value="Testing Automation"
+                  />
+                  Testing Automation</label
+                >
+              </div>
+            </details>
+
+            <hr class="border-secondary opacity-25 my-3" />
+
+            <!-- PRECIO MÁXIMO (Mobile) -->
+            <details class="mb-3 grupo-filtro" open>
+              <summary
+                class="fw-semibold text-white mb-2 cursor-puntero d-flex align-items-center justify-content-between"
+              >
+                <span>Precio máximo</span>
+                <i class="bi bi-chevron-down small text-muted"></i>
+              </summary>
+              <div class="px-1 pt-2">
+                <input
+                  type="range"
+                  class="form-range custom-range"
+                  min="0"
+                  max="500"
+                  value="500"
+                />
+                <div
+                  class="d-flex justify-content-between align-items-center mt-1"
+                >
+                  <span class="small text-muted">USD $0</span>
+                  <span class="text-yellow fw-bold small">USD $500</span>
+                </div>
+              </div>
+            </details>
+
+            <hr class="border-secondary opacity-25 my-3" />
+
+            <!-- EMPRESAS (Mobile) -->
+            <details class="mb-3 grupo-filtro" open>
+              <summary
+                class="fw-semibold text-white mb-2 cursor-puntero d-flex align-items-center justify-content-between"
+              >
+                <span>Empresas</span>
+                <i class="bi bi-chevron-down small text-muted"></i>
+              </summary>
+              <div
+                class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
+              >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-empresa m-0"
+                    type="checkbox"
+                    value="CoderHouse"
+                  />
+                  CoderHouse</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-empresa m-0"
+                    type="checkbox"
+                    value="Udemy"
+                  />
+                  Udemy</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-empresa m-0"
+                    type="checkbox"
+                    value="Platzi"
+                  />
+                  Platzi</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-empresa m-0"
+                    type="checkbox"
+                    value="Data Camp"
+                  />
+                  Data Camp</label
+                >
+              </div>
+            </details>
+
+            <hr class="border-secondary opacity-25 my-3" />
+
+            <!-- UBICACIÓN (Mobile) -->
+            <details class="mb-3 grupo-filtro" open>
+              <summary
+                class="fw-semibold text-white mb-2 cursor-puntero d-flex align-items-center justify-content-between"
+              >
+                <span>Ubicación</span>
+                <i class="bi bi-chevron-down small text-muted"></i>
+              </summary>
+              <div
+                class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
+              >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-ubicacion m-0"
+                    type="checkbox"
+                    value="Argentina"
+                  />
+                  Argentina</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-ubicacion m-0"
+                    type="checkbox"
+                    value="Latino América"
+                  />
+                  Latino América</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-ubicacion m-0"
+                    type="checkbox"
+                    value="América del Norte"
+                  />
+                  América del Norte</label
+                >
+              </div>
+            </details>
+
+            <hr class="border-secondary opacity-25 my-3" />
+
+            <!-- IDIOMA (Mobile) -->
+            <details class="grupo-filtro" open>
+              <summary
+                class="fw-semibold text-white mb-2 cursor-puntero d-flex align-items-center justify-content-between"
+              >
+                <span>Idioma</span>
+                <i class="bi bi-chevron-down small text-muted"></i>
+              </summary>
+              <div
+                class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
+              >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-idioma m-0"
+                    type="checkbox"
+                    value="Español"
+                  />
+                  Español</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
+                    class="form-check-input filtro-idioma m-0"
+                    type="checkbox"
+                    value="Inglés"
+                  />
+                  Inglés</label
+                >
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- ================= 2. LOS FILTROS DE SIEMPRE PARA ESCRITORIO ================= -->
+        <aside class="col-lg-3 d-none d-lg-block">
           <div
             class="filtros_cursos p-4 rounded-4 shadow-sm sticky-top"
             style="top: 2rem"
@@ -68,22 +373,22 @@
               <div
                 class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
               >
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-modalidad m-0"
                     type="checkbox"
                     value="Remoto asincrónico"
                   />
-                  Remoto asincrónico
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Remoto asincrónico</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-modalidad m-0"
                     type="checkbox"
                     value="Remoto sincrónico"
                   />
-                  Remoto sincrónico
-                </label>
+                  Remoto sincrónico</label
+                >
               </div>
             </details>
 
@@ -100,78 +405,78 @@
               <div
                 class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
               >
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Desarrollo Frontend"
                   />
-                  Desarrollo Frontend
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Desarrollo Frontend</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Desarrollo Backend"
                   />
-                  Desarrollo Backend
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Desarrollo Backend</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Desarrollo Full Stack"
                   />
-                  Desarrollo Full Stack
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Desarrollo Full Stack</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Bases de Datos"
                   />
-                  Bases de Datos
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Bases de Datos</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Ciberseguridad"
                   />
-                  Ciberseguridad
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Ciberseguridad</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Inteligencia Artificial"
                   />
-                  Inteligencia Artificial
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Inteligencia Artificial</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Business Intelligence"
                   />
-                  Business Intelligence
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Business Intelligence</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Testing Manual"
                   />
-                  Testing Manual
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Testing Manual</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-habilidad m-0"
                     type="checkbox"
                     value="Testing Automation"
                   />
-                  Testing Automation
-                </label>
+                  Testing Automation</label
+                >
               </div>
             </details>
 
@@ -218,38 +523,38 @@
               <div
                 class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
               >
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-empresa m-0"
                     type="checkbox"
                     value="CoderHouse"
                   />
-                  CoderHouse
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  CoderHouse</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-empresa m-0"
                     type="checkbox"
                     value="Udemy"
                   />
-                  Udemy
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Udemy</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-empresa m-0"
                     type="checkbox"
                     value="Platzi"
                   />
-                  Platzi
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Platzi</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-empresa m-0"
                     type="checkbox"
                     value="Data Camp"
                   />
-                  Data Camp
-                </label>
+                  Data Camp</label
+                >
               </div>
             </details>
 
@@ -266,30 +571,30 @@
               <div
                 class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
               >
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-ubicacion m-0"
                     type="checkbox"
                     value="Argentina"
                   />
-                  Argentina
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Argentina</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-ubicacion m-0"
                     type="checkbox"
                     value="Latino América"
                   />
-                  Latino América
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Latino América</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-ubicacion m-0"
                     type="checkbox"
                     value="América del Norte"
                   />
-                  América del Norte
-                </label>
+                  América del Norte</label
+                >
               </div>
             </details>
 
@@ -306,22 +611,22 @@
               <div
                 class="d-flex flex-column gap-2 mt-2 small texto-secundario-claro ps-2"
               >
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-idioma m-0"
                     type="checkbox"
                     value="Español"
                   />
-                  Español
-                </label>
-                <label class="d-flex align-items-center gap-2 cursor-puntero">
-                  <input
+                  Español</label
+                >
+                <label class="d-flex align-items-center gap-2 cursor-puntero"
+                  ><input
                     class="form-check-input filtro-idioma m-0"
                     type="checkbox"
                     value="Inglés"
                   />
-                  Inglés
-                </label>
+                  Inglés</label
+                >
               </div>
             </details>
           </div>
@@ -329,45 +634,56 @@
 
         <!-- RESULTADOS -->
         <section class="col-12 col-lg-9">
-          <!-- BARRA SUPERIOR -->
-          <div
-            class="barra p-3 rounded-4 mb-4 d-flex flex-wrap align-items-center justify-content-between gap-3 shadow-sm"
-          >
-            <p
-              class="mb-0 small texto-secundario-claro d-flex align-items-center gap-2"
+          <!-- BARRA SUPERIOR (Acá agregamos el botón de Filtros para mobile) -->
+          <div class="row mb-4">
+            <div
+              class="col-12 d-flex flex-wrap align-items-center justify-content-between gap-3 barra p-3 rounded-4 shadow-sm"
             >
-              <span
-                class="badge text-dark px-2 py-1 rounded-pill fw-bold"
-                style="background-color: #7ee7d8;"
-                id="cantidadCursos"
-                >6</span
-              >
-              <span>cursos encontrados</span>
-            </p>
+              <div class="d-flex align-items-center gap-3">
+                <!-- Botón exclusivo para celular/tablet -->
+                <button
+                  class="btn btn-outline-light btn-sm d-lg-none d-flex align-items-center gap-2"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#filtrosMobileOffcanvas"
+                  aria-controls="filtrosMobileOffcanvas"
+                >
+                  <i class="bi bi-funnel-fill text-indigo"></i> Filtrar cursos
+                </button>
 
-            <div class="d-flex align-items-center gap-2">
-              <label
-                for="ordenarCursos"
-                class="small texto-secundario-claro mb-0"
-                >Ordenar por:</label
-              >
-              <select
-                id="ordenarCursos"
-                class="form-select form-select-sm bg-dark text-white border-secondary rounded-3 px-3"
-              >
-                <option value="relevancia">Más relevantes</option>
-                <option value="az">A - Z</option>
-                <option value="za">Z - A</option>
-                <option value="rating">Mejor valoración</option>
-              </select>
+                <p
+                  class="mb-0 small texto-secundario-claro d-flex align-items-center gap-2"
+                >
+                  <span
+                    class="badge text-dark px-2 py-1 rounded-pill fw-bold"
+                    style="background-color: #7ee7d8"
+                    id="cantidadCursos"
+                    >6</span
+                  >
+                  <span>cursos encontrados</span>
+                </p>
+              </div>
+
+              <div class="d-flex align-items-center gap-2">
+                <label
+                  for="ordenarCursos"
+                  class="small texto-secundario-claro mb-0"
+                  >Ordenar por:</label
+                >
+                <select
+                  id="ordenarCursos"
+                  class="form-select form-select-sm bg-dark text-white border-secondary rounded-3 px-3"
+                >
+                  <option value="relevancia">Más relevantes</option>
+                  <option value="az">A - Z</option>
+                  <option value="za">Z - A</option>
+                  <option value="rating">Mejor valoración</option>
+                </select>
+              </div>
             </div>
           </div>
-
           <!-- GRILLA DE TARJETA DE CURSOS (7 TRAYECTOS) -->
           <div class="row g-4" id="listaCursos">
-            
-          
-
             <!-- CURSO 2: DESARROLLO WEB FULL STACK -->
             <div class="col-12 col-md-6">
               <article
@@ -386,38 +702,64 @@
                   <div
                     class="banner-curso c-turquesa rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
-                    <i class="bi bi-code-slash fs-1 text-white mb-2 position-relative z-1"></i>
-                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                    <div
+                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
+                    ></div>
+                    <i
+                      class="bi bi-code-slash fs-1 text-white mb-2 position-relative z-1"
+                    ></i>
+                    <h3
+                      class="h5 fw-bold text-white mb-0 position-relative z-1"
+                    >
                       Desarrollo Web Full Stack
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
-                        <div class="avatar-profe bg-teal-subtle text-teal rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">CM</div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-1"
+                    >
+                      <span
+                        class="fw-semibold text-white small d-flex align-items-center gap-2"
+                      >
+                        <div
+                          class="avatar-profe bg-teal-subtle text-teal rounded-circle d-flex align-items-center justify-content-center"
+                          style="width: 24px; height: 24px; font-size: 0.75rem"
+                        >
+                          CM
+                        </div>
                         Carla Méndez
                       </span>
-                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                      <span
+                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
+                      >
                         <i class="bi bi-star-fill me-1"></i>4.9
                       </span>
                     </div>
                   </div>
 
-                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                  <div
+                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
+                  >
                     <p class="small mb-0 text-muted-custom">
-                      Domina frontend y backend moderno construyendo aplicaciones con React, Node.js y bases de datos.
+                      Domina frontend y backend moderno construyendo
+                      aplicaciones con React, Node.js y bases de datos.
                     </p>
                   </div>
                 </a>
 
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
+                >
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
                     <span class="pildora-curso pildora-gratis">Gratis</span>
                   </div>
-                  <a href="curso-detalle.html?id=fullstack" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                  <a
+                    href="curso-detalle.html?id=fullstack"
+                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold"
+                    >Ver detalles</a
+                  >
                 </div>
               </article>
             </div>
@@ -440,38 +782,64 @@
                   <div
                     class="banner-curso c-ambar rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
-                    <i class="bi bi-database-fill-gear fs-1 text-white mb-2 position-relative z-1"></i>
-                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                    <div
+                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
+                    ></div>
+                    <i
+                      class="bi bi-database-fill-gear fs-1 text-white mb-2 position-relative z-1"
+                    ></i>
+                    <h3
+                      class="h5 fw-bold text-white mb-0 position-relative z-1"
+                    >
                       Bases de Datos en MySQL
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
-                        <div class="avatar-profe bg-amber-subtle text-amber rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">ER</div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-1"
+                    >
+                      <span
+                        class="fw-semibold text-white small d-flex align-items-center gap-2"
+                      >
+                        <div
+                          class="avatar-profe bg-amber-subtle text-amber rounded-circle d-flex align-items-center justify-content-center"
+                          style="width: 24px; height: 24px; font-size: 0.75rem"
+                        >
+                          ER
+                        </div>
                         Esteban Ruarte
                       </span>
-                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                      <span
+                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
+                      >
                         <i class="bi bi-star-fill me-1"></i>4.8
                       </span>
                     </div>
                   </div>
 
-                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                  <div
+                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
+                  >
                     <p class="small mb-0 text-muted-custom">
-                      Aprende a modelar, optimizar y consultar bases relacionales de alto rendimiento en entornos corporativos.
+                      Aprende a modelar, optimizar y consultar bases
+                      relacionales de alto rendimiento en entornos corporativos.
                     </p>
                   </div>
                 </a>
 
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
+                >
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
                     <span class="pildora-curso pildora-precio">$150 USD</span>
                   </div>
-                  <a href="curso-detalle.html?id=mysql" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                  <a
+                    href="curso-detalle.html?id=mysql"
+                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold"
+                    >Ver detalles</a
+                  >
                 </div>
               </article>
             </div>
@@ -494,38 +862,64 @@
                   <div
                     class="banner-curso c-violeta rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
-                    <i class="bi bi-shield-lock-fill fs-1 text-white mb-2 position-relative z-1"></i>
-                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                    <div
+                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
+                    ></div>
+                    <i
+                      class="bi bi-shield-lock-fill fs-1 text-white mb-2 position-relative z-1"
+                    ></i>
+                    <h3
+                      class="h5 fw-bold text-white mb-0 position-relative z-1"
+                    >
                       Especialista en Ciberseguridad
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
-                        <div class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">LB</div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-1"
+                    >
+                      <span
+                        class="fw-semibold text-white small d-flex align-items-center gap-2"
+                      >
+                        <div
+                          class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center"
+                          style="width: 24px; height: 24px; font-size: 0.75rem"
+                        >
+                          LB
+                        </div>
                         Lucía Benítez
                       </span>
-                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                      <span
+                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
+                      >
                         <i class="bi bi-star-fill me-1"></i>4.9
                       </span>
                     </div>
                   </div>
 
-                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                  <div
+                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
+                  >
                     <p class="small mb-0 text-muted-custom">
-                      Comprende vectores de amenaza, hardening de sistemas y protocolos de defensa activa en infraestructura.
+                      Comprende vectores de amenaza, hardening de sistemas y
+                      protocolos de defensa activa en infraestructura.
                     </p>
                   </div>
                 </a>
 
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
+                >
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
                     <span class="pildora-curso pildora-gratis">Gratis</span>
                   </div>
-                  <a href="curso-detalle.html?id=ciberseguridad" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                  <a
+                    href="curso-detalle.html?id=ciberseguridad"
+                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold"
+                    >Ver detalles</a
+                  >
                 </div>
               </article>
             </div>
@@ -541,45 +935,68 @@
                 data-ubicacion="Latino América"
                 data-idioma="Español"
               >
-                <a
-                  href="curso-detalle.html?id=ia"
-                  class="text-decoration-none"
-                >
+                <a href="curso-detalle.html?id=ia" class="text-decoration-none">
                   <div
                     class="banner-curso c-turquesa rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
-                    <i class="bi bi-cpu-fill fs-1 text-white mb-2 position-relative z-1"></i>
-                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                    <div
+                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
+                    ></div>
+                    <i
+                      class="bi bi-cpu-fill fs-1 text-white mb-2 position-relative z-1"
+                    ></i>
+                    <h3
+                      class="h5 fw-bold text-white mb-0 position-relative z-1"
+                    >
                       IA en Programación
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
-                        <div class="avatar-profe bg-teal-subtle text-teal rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">MR</div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-1"
+                    >
+                      <span
+                        class="fw-semibold text-white small d-flex align-items-center gap-2"
+                      >
+                        <div
+                          class="avatar-profe bg-teal-subtle text-teal rounded-circle d-flex align-items-center justify-content-center"
+                          style="width: 24px; height: 24px; font-size: 0.75rem"
+                        >
+                          MR
+                        </div>
                         Mateo Rossi
                       </span>
-                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                      <span
+                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
+                      >
                         <i class="bi bi-star-fill me-1"></i>5.0
                       </span>
                     </div>
                   </div>
 
-                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                  <div
+                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
+                  >
                     <p class="small mb-0 text-muted-custom">
-                      Integra modelos de lenguaje avanzados y asistentes inteligentes en tu flujo de desarrollo diario.
+                      Integra modelos de lenguaje avanzados y asistentes
+                      inteligentes en tu flujo de desarrollo diario.
                     </p>
                   </div>
                 </a>
 
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
+                >
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
                     <span class="pildora-curso pildora-precio">$300 USD</span>
                   </div>
-                  <a href="curso-detalle.html?id=ia" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                  <a
+                    href="curso-detalle.html?id=ia"
+                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold"
+                    >Ver detalles</a
+                  >
                 </div>
               </article>
             </div>
@@ -602,38 +1019,64 @@
                   <div
                     class="banner-curso c-ambar rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
-                    <i class="bi bi-bar-chart-fill fs-1 text-white mb-2 position-relative z-1"></i>
-                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                    <div
+                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
+                    ></div>
+                    <i
+                      class="bi bi-bar-chart-fill fs-1 text-white mb-2 position-relative z-1"
+                    ></i>
+                    <h3
+                      class="h5 fw-bold text-white mb-0 position-relative z-1"
+                    >
                       Curso de Power BI
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
-                        <div class="avatar-profe bg-amber-subtle text-amber rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">VS</div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-1"
+                    >
+                      <span
+                        class="fw-semibold text-white small d-flex align-items-center gap-2"
+                      >
+                        <div
+                          class="avatar-profe bg-amber-subtle text-amber rounded-circle d-flex align-items-center justify-content-center"
+                          style="width: 24px; height: 24px; font-size: 0.75rem"
+                        >
+                          VS
+                        </div>
                         Valeria Sosa
                       </span>
-                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                      <span
+                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
+                      >
                         <i class="bi bi-star-fill me-1"></i>4.9
                       </span>
                     </div>
                   </div>
 
-                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                  <div
+                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
+                  >
                     <p class="small mb-0 text-muted-custom">
-                      Transforma datos dispersos en dashboards interactivos y reportes con modelado DAX avanzado.
+                      Transforma datos dispersos en dashboards interactivos y
+                      reportes con modelado DAX avanzado.
                     </p>
                   </div>
                 </a>
 
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
+                >
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
                     <span class="pildora-curso pildora-gratis">Gratis</span>
                   </div>
-                  <a href="curso-detalle.html?id=powerbi" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                  <a
+                    href="curso-detalle.html?id=powerbi"
+                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold"
+                    >Ver detalles</a
+                  >
                 </div>
               </article>
             </div>
@@ -656,42 +1099,67 @@
                   <div
                     class="banner-curso c-violeta rounded-4 p-4 text-center mb-3 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden"
                   >
-                    <div class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"></div>
-                    <i class="bi bi-terminal-fill fs-1 text-white mb-2 position-relative z-1"></i>
-                    <h3 class="h5 fw-bold text-white mb-0 position-relative z-1">
+                    <div
+                      class="position-absolute opacity-10 top-0 start-0 w-100 h-100 pattern-bg"
+                    ></div>
+                    <i
+                      class="bi bi-terminal-fill fs-1 text-white mb-2 position-relative z-1"
+                    ></i>
+                    <h3
+                      class="h5 fw-bold text-white mb-0 position-relative z-1"
+                    >
                       Hacking Ético
                     </h3>
                   </div>
 
                   <div class="mb-3">
-                    <div class="d-flex align-items-center justify-content-between mb-1">
-                      <span class="fw-semibold text-white small d-flex align-items-center gap-2">
-                        <div class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem">DK</div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-1"
+                    >
+                      <span
+                        class="fw-semibold text-white small d-flex align-items-center gap-2"
+                      >
+                        <div
+                          class="avatar-profe bg-indigo-subtle text-indigo rounded-circle d-flex align-items-center justify-content-center"
+                          style="width: 24px; height: 24px; font-size: 0.75rem"
+                        >
+                          DK
+                        </div>
                         Damián Kestel
                       </span>
-                      <span class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1">
+                      <span
+                        class="badge bg-dark border border-secondary border-opacity-25 text-yellow small px-2 py-1"
+                      >
                         <i class="bi bi-star-fill me-1"></i>4.9
                       </span>
                     </div>
                   </div>
 
-                  <div class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1">
+                  <div
+                    class="caja-descripcion-curso p-3 rounded-3 mb-4 flex-grow-1"
+                  >
                     <p class="small mb-0 text-muted-custom">
-                      Aprende técnicas profesionales de pentesting, auditoría de vulnerabilidades y pruebas de intrusión legales.
+                      Aprende técnicas profesionales de pentesting, auditoría de
+                      vulnerabilidades y pruebas de intrusión legales.
                     </p>
                   </div>
                 </a>
 
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10">
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-auto pt-2 border-top border-secondary border-opacity-10"
+                >
                   <div class="d-flex gap-2">
                     <span class="pildora-curso">En español</span>
                     <span class="pildora-curso pildora-precio">$50 USD</span>
                   </div>
-                  <a href="curso-detalle.html?id=hacking" class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold">Ver detalles</a>
+                  <a
+                    href="curso-detalle.html?id=hacking"
+                    class="btn btn-success-tech btn-sm px-3 py-2 rounded-3 text-dark fw-bold"
+                    >Ver detalles</a
+                  >
                 </div>
               </article>
             </div>
-
           </div>
         </section>
       </div>

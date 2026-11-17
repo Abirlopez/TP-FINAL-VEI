@@ -129,13 +129,15 @@
 }
 
 #carouselCards .carousel-indicators,
-#carruselTarjetas .carousel-indicators {
+#carruselTarjetas .carousel-indicators,
+#carouselCardsMobile .carousel-indicators {
   position: static;
   margin: 1.25rem 0 0;
   justify-content: center;
 }
 #carouselCards .carousel-indicators [data-bs-target],
-#carruselTarjetas .carousel-indicators [data-bs-target] {
+#carruselTarjetas .carousel-indicators [data-bs-target],
+#carouselCardsMobile .carousel-indicators [data-bs-target] {
   width: 8px;
   height: 8px;
   border: 0;
@@ -146,11 +148,11 @@
   transition: width 0.2s;
 }
 #carouselCards .carousel-indicators .active,
-#carruselTarjetas .carousel-indicators .active {
+#carruselTarjetas .carousel-indicators .active,
+#carouselCardsMobile .carousel-indicators .active {
   width: 28px;
   background-color: #4f46e5;
 }
-
 .card {
   background-color: #14143a;
   border-color: rgba(255, 255, 255, 0.09);
