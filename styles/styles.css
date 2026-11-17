@@ -198,7 +198,7 @@
   gap: 12px;
 }
 
-/* El botón circular con tu robotito */
+/* El botón robotito */
 .ai-floating-btn {
   position: relative;
   width: 60px;
@@ -229,7 +229,7 @@
   border-radius: 50%;
 }
 
-/* Anillo de pulso sutil para llamar la atención sin ser molesto */
+/* Anillo de pulso robotito */
 .ai-pulse-ring {
   position: absolute;
   top: -4px;
@@ -298,7 +298,7 @@
     right: 15px;
   }
   .ai-tooltip-bubble {
-    display: none; /* Ocultamos la burbuja en pantallas muy chicas para no tapar contenido */
+    display: none;
   }
 }
 
