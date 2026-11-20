@@ -101,25 +101,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ESCUCHA DE CLICS PARA GUARDAR EN LOCALSTORAGE AL VER DETALLES
-  tarjetas.forEach(tarjeta => {
-    const enlacesDetalle = tarjeta.querySelectorAll("a[href*='curso-detalle.html']");
-    
-    enlacesDetalle.forEach(enlace => {
-      enlace.addEventListener("click", () => {
-        const cursoSeleccionado = {
-          titulo: tarjeta.querySelector("h3").textContent.trim(),
-          precio: tarjeta.getAttribute("data-precio") || "0",
-          modalidad: tarjeta.getAttribute("data-modalidad") || "",
-          habilidad: tarjeta.getAttribute("data-habilidad") || "",
-          empresa: tarjeta.getAttribute("data-empresa") || "",
-          ubicacion: tarjeta.getAttribute("data-ubicacion") || "",
-          idioma: tarjeta.getAttribute("data-idioma") || ""
-        };
+  listaCursos.addEventListener("click", (e) => {
+    const enlace = e.target.closest("a[href*='curso-detalle.html']");
+    if (!enlace) return;
 
-        // Guardamos los datos específicos de la tarjeta en localStorage
-        localStorage.setItem("cursoDetalleActual", JSON.stringify(cursoSeleccionado));
-      });
-    });
+    const tarjeta = enlace.closest(".tarjeta-catalogo-curso");
+    if (!tarjeta) return;
+
+    const url = new URL(enlace.href, window.location.href);
+    const idCurso = url.searchParams.get("id") || "";
+    const titulo = (tarjeta.querySelector("h3")?.textContent || "").trim();
+    const descripcion = (tarjeta.querySelector(".caja-descripcion-curso p")?.textContent || "").trim();
+    const rating = (tarjeta.querySelector(".text-yellow")?.textContent || "").trim();
+
+    const cursoSeleccionado = {
+      titulo: tarjeta.getAttribute("data-titulo") || "",
+      precio: tarjeta.getAttribute("data-precio") || "0",
+      modalidad: tarjeta.getAttribute("data-modalidad") || "",
+      habilidad: tarjeta.getAttribute("data-habilidad") || "",
+      empresa: tarjeta.getAttribute("data-empresa") || "",
+      ubicacion: tarjeta.getAttribute("data-ubicacion") || "",
+      idioma: tarjeta.getAttribute("data-idioma") || ""
+    };
+
+    try {
+      localStorage.setItem("cursoDetalleActual", JSON.stringify(cursoSeleccionado));
+    } catch (error) {
+      console.error("No se pudo guardar en localStorage:", error);
+    }
   });
 
   // Escuchar cambios en los inputs y filtros
