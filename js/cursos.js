@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cantidadCursosSpan = document.getElementById("cantidadCursos");
   const filtroPrecio = document.getElementById("filtroPrecio");
   const valorPrecio = document.getElementById("valorPrecio");
+  const filtroPrecioMobile = document.getElementById("filtroPrecioMobile");
+  const valorPrecioMobile = document.getElementById("valorPrecioMobile");
   const ordenarSelect = document.getElementById("ordenarCursos");
-  const btnLimpiar = document.querySelector("aside .btn-link");
+  const botonesLimpiar = document.querySelectorAll(".filtros_cursos .btn-link");
 
   const checkboxGrupos = [
     document.querySelectorAll(".filtro-modalidad"),
@@ -28,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const precioMaximo = filtroPrecio ? parseFloat(filtroPrecio.value) : 500;
     if (valorPrecio) {
       valorPrecio.textContent = `USD $${precioMaximo}`;
+    }
+    if (valorPrecioMobile) {
+      valorPrecioMobile.textContent = `USD $${precioMaximo}`;
     }
 
     let visiblesCount = 0;
@@ -131,27 +136,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Los filtros estan repetidos (celular y escritorio), asi que cuando se cambia
+  // uno hay que dejar el otro igual
+  function igualarFiltros(input) {
+    if (input === filtroPrecio && filtroPrecioMobile) {
+      filtroPrecioMobile.value = input.value;
+    }
+    if (input === filtroPrecioMobile && filtroPrecio) {
+      filtroPrecio.value = input.value;
+    }
+    if (input.type === "checkbox") {
+      document.querySelectorAll(".filtros_cursos .form-check-input").forEach(cb => {
+        if (cb.value === input.value) {
+          cb.checked = input.checked;
+        }
+      });
+    }
+  }
+
   // Escuchar cambios en los inputs y filtros
-  const todosInputs = document.querySelectorAll(".form-check-input, #filtroPrecio, #ordenarCursos");
+  const todosInputs = document.querySelectorAll(".form-check-input, #filtroPrecio, #filtroPrecioMobile, #ordenarCursos");
   todosInputs.forEach(input => {
-    input.addEventListener("input", filtrarYOrdenarCursos);
-    input.addEventListener("change", filtrarYOrdenarCursos);
+    input.addEventListener("input", () => {
+      igualarFiltros(input);
+      filtrarYOrdenarCursos();
+    });
+    input.addEventListener("change", () => {
+      igualarFiltros(input);
+      filtrarYOrdenarCursos();
+    });
   });
 
-  // Funcionalidad del botón "Limpiar"
-  if (btnLimpiar) {
+  // Funcionalidad de los botones "Limpiar" (hay uno en celular y otro en escritorio)
+  botonesLimpiar.forEach(btnLimpiar => {
     btnLimpiar.addEventListener("click", (e) => {
       e.preventDefault();
       todosInputs.forEach(input => {
         if (input.type === "checkbox") input.checked = false;
-        if (input.type === "range") {
-          input.value = input.max;
-          if (valorPrecio) valorPrecio.textContent = `USD $${input.max}`;
-        }
+        if (input.type === "range") input.value = input.max;
       });
       filtrarYOrdenarCursos();
     });
-  }
+  });
 
   // Ejecutar al cargar la página
   filtrarYOrdenarCursos();

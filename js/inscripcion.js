@@ -79,76 +79,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 3. FUNCIÓN PARA ACTUALIZAR EL ESTADO DEL STEPPER
 
+  const colorActivoBg = "#7ee7d8";
+  const colorActivoText = "#0b0d17";
+  const claseCirculo = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1";
+
+  // Paso ya terminado: queda pintado y con un check
+  function pintarCompletado(circulo, texto) {
+    if (circulo) {
+      circulo.style.cssText = `width: 40px; height: 40px; background-color: ${colorActivoBg}; color: ${colorActivoText};`;
+      circulo.className = claseCirculo + " shadow-sm";
+      circulo.innerHTML = '<i class="bi bi-check-lg"></i>';
+    }
+    if (texto) texto.className = "d-block small text-white fw-semibold";
+  }
+
+  // Paso en el que esta el usuario: pintado con el numero
+  function pintarActivo(circulo, texto, numero) {
+    if (circulo) {
+      circulo.style.cssText = `width: 40px; height: 40px; background-color: ${colorActivoBg}; color: ${colorActivoText};`;
+      circulo.className = claseCirculo + " shadow-sm";
+      circulo.textContent = numero;
+    }
+    if (texto) texto.className = "d-block small text-white fw-semibold";
+  }
+
+  // Paso que todavia falta: solo el borde
+  function pintarPendiente(circulo, texto, numero) {
+    if (circulo) {
+      circulo.style.cssText = "width: 40px; height: 40px; background-color: transparent;";
+      circulo.className = claseCirculo + " border border-secondary text-muted";
+      circulo.textContent = numero;
+    }
+    if (texto) texto.className = "d-block small text-muted fw-semibold";
+  }
+
   function actualizarStepper(pasoActivo) {
-    const colorActivoBg = "#7ee7d8";
-    const colorActivoText = "#0b0d17";
-
-    const styleInactivoCirculo = () => {
-      return 'width: 40px; height: 40px; background-color: transparent; color: #6c757d;';
-    };
-
     if (pasoActivo === 1) {
-      if (circulo1) {
-        circulo1.style.cssText = `width: 40px; height: 40px; background-color: ${colorActivoBg}; color: ${colorActivoText};`;
-        circulo1.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 shadow-sm";
-      }
-      if (texto1) texto1.className = "d-block small text-white fw-semibold";
+      pintarActivo(circulo1, texto1, 1);
+      pintarPendiente(circuloPago, textoPago, 2);
+      pintarPendiente(circuloFinal, textoFinal, esGratis ? 2 : 3);
       if (linea1) linea1.style.width = "0%";
-
-      if (circuloPago) {
-        circuloPago.style.cssText = styleInactivoCirculo();
-        circuloPago.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary text-muted";
-      }
-      if (textoPago) textoPago.className = "d-block small text-muted fw-semibold";
       if (linea2) linea2.style.width = "0%";
-
-      if (circuloFinal) {
-        circuloFinal.style.cssText = styleInactivoCirculo();
-        circuloFinal.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary text-muted";
-      }
-      if (textoFinal) textoFinal.className = "d-block small text-muted fw-semibold";
 
     } else if (pasoActivo === 2 && !esGratis) {
-      if (circulo1) {
-        circulo1.style.cssText = 'width: 40px; height: 40px; background-color: transparent; color: #7ee7d8;';
-        circulo1.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary";
-      }
-      if (texto1) texto1.className = "d-block small text-muted fw-semibold";
+      pintarCompletado(circulo1, texto1);
+      pintarActivo(circuloPago, textoPago, 2);
+      pintarPendiente(circuloFinal, textoFinal, 3);
       if (linea1) linea1.style.width = "100%";
-
-      if (circuloPago) {
-        circuloPago.style.cssText = `width: 40px; height: 40px; background-color: ${colorActivoBg}; color: ${colorActivoText};`;
-        circuloPago.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 shadow-sm";
-      }
-      if (textoPago) textoPago.className = "d-block small text-white fw-semibold";
       if (linea2) linea2.style.width = "0%";
 
-      if (circuloFinal) {
-        circuloFinal.style.cssText = styleInactivoCirculo();
-        circuloFinal.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary text-muted";
-      }
-      if (textoFinal) textoFinal.className = "d-block small text-muted fw-semibold";
-
     } else {
-      if (circulo1) {
-        circulo1.style.cssText = 'width: 40px; height: 40px; background-color: transparent; color: #7ee7d8;';
-        circulo1.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary";
-      }
-      if (texto1) texto1.className = "d-block small text-muted fw-semibold";
-      if (linea1) linea1.style.width = "100%";
-
-      if (!esGratis && circuloPago) {
-        circuloPago.style.cssText = 'width: 40px; height: 40px; background-color: transparent; color: #7ee7d8;';
-        circuloPago.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 border border-secondary";
-        if (textoPago) textoPago.className = "d-block small text-muted fw-semibold";
+      pintarCompletado(circulo1, texto1);
+      if (!esGratis) {
+        pintarCompletado(circuloPago, textoPago);
         if (linea2) linea2.style.width = "100%";
       }
-
-      if (circuloFinal) {
-        circuloFinal.style.cssText = `width: 40px; height: 40px; background-color: ${colorActivoBg}; color: ${colorActivoText};`;
-        circuloFinal.className = "rounded-circle d-inline-flex align-items-center justify-content-center fw-bold mb-1 shadow-sm";
-      }
-      if (textoFinal) textoFinal.className = "d-block small text-white fw-semibold";
+      pintarActivo(circuloFinal, textoFinal, esGratis ? 2 : 3);
+      if (linea1) linea1.style.width = "100%";
     }
   }
 
