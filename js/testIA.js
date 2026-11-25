@@ -130,6 +130,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultadoDetalle = document.getElementById("resultado-detalle");
   const btnReiniciar = document.getElementById("btn-reiniciar");
 
+  // Calcula el porcentaje segun las preguntas que ya se respondieron
+  function actualizarProgreso() {
+    let respondidas = indiceActual;
+    if (respuestasUsuario[indiceActual]) {
+      respondidas++;
+    }
+
+    const progresoNum = (respondidas / preguntas.length) * 100;
+    badgePorcentaje.textContent = `${Math.round(progresoNum)}% completado`;
+    barraProgreso.style.width = `${progresoNum}%`;
+  }
+
   function renderizarPregunta() {
     const pregunta = preguntas[indiceActual];
     let htmlOpciones = "";
@@ -160,13 +172,12 @@ document.addEventListener("DOMContentLoaded", () => {
         respuestasUsuario[indiceActual] = e.target.value;
         const alerta = document.getElementById("error-alerta");
         if (alerta) alerta.classList.add("d-none");
+        actualizarProgreso();
       });
     });
 
-    const progresoNum = ((indiceActual + 1) / preguntas.length) * 100;
     textoProgreso.textContent = `Pregunta ${indiceActual + 1} de ${preguntas.length}`;
-    badgePorcentaje.textContent = `${Math.round(progresoNum)}% completado`;
-    barraProgreso.style.width = `${progresoNum}%`;
+    actualizarProgreso();
 
     btnAnterior.disabled = indiceActual === 0;
     btnAnterior.style.opacity = indiceActual === 0 ? "0.5" : "1";
