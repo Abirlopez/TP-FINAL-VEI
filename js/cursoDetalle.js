@@ -465,6 +465,308 @@ document.addEventListener("DOMContentLoaded", () => {
         "Conceptos básicos de lenguajes de scripting (Python o Bash).",
       ],
     },
+    "ia-ml": {
+      categoria: "Inteligencia Artificial",
+      nivel: "Nivel Intermedio",
+      rating: "4.8",
+      reseñas: "310",
+      titulo: "Inteligencia Artificial y Machine Learning",
+      descripcionLarga:
+        "Entrená modelos predictivos con Python, scikit-learn y fundamentos de redes neuronales aplicados a casos reales. Aprendé a preparar datasets, evaluar métricas y llevar modelos a producción.",
+      duracionHoras: "28 horas",
+      instructorNombre: "Mateo Rossi",
+      instructorCargo: "Machine Learning Engineer",
+      instructorIniciales: "MR",
+      precioPrincipal: "280",
+      precioTachado: "USD $340",
+      clasesCount: "14 clases en video Full HD",
+      proyectosCount: "3 modelos de ML aplicados",
+      imagen: "./img/ia.jpg",
+      temarioResumen: "4 secciones · 14 clases · 28h total",
+      temario: [
+        {
+          id: "sec_ml_1",
+          tituloBadge: "Sección 1 · Fundamentos",
+          tituloSeccion: "Introducción a IA y Machine Learning",
+          descripcion: "Tipos de aprendizaje automático y flujo de trabajo de un proyecto de datos.",
+          clases: [
+            { titulo: "Diferencias entre IA, Machine Learning y Deep Learning", duracion: "1h 45m" },
+            { titulo: "Aprendizaje supervisado, no supervisado y por refuerzo", duracion: "2h 00m" },
+            { titulo: "Preparación del entorno con Python, NumPy y Pandas", duracion: "1h 50m" }
+          ]
+        },
+        {
+          id: "sec_ml_2",
+          tituloBadge: "Sección 2 · Datos",
+          tituloSeccion: "Preprocesamiento y Análisis Exploratorio",
+          descripcion: "Limpieza, codificación de variables y división de conjuntos de datos.",
+          clases: [
+            { titulo: "Tratamiento de valores faltantes y outliers", duracion: "2h 10m" },
+            { titulo: "Escalado de variables y encoding de categorías", duracion: "1h 55m" },
+            { titulo: "Train/Test split y validación cruzada", duracion: "2h 05m" }
+          ]
+        },
+        {
+          id: "sec_ml_3",
+          tituloBadge: "Sección 3 · Algoritmos",
+          tituloSeccion: "Modelos de Regresión y Clasificación",
+          descripcion: "Entrenamiento y evaluación con scikit-learn.",
+          clases: [
+            { titulo: "Regresión lineal y logística paso a paso", duracion: "2h 15m" },
+            { titulo: "Árboles de decisión y Random Forest", duracion: "2h 20m" },
+            { titulo: "Métricas de evaluación: Accuracy, Precision, Recall y F1", duracion: "2h 00m" },
+            { titulo: "Clustering con K-Means", duracion: "1h 50m" }
+          ]
+        },
+        {
+          id: "sec_ml_4",
+          tituloBadge: "Sección 4 · Redes Neuronales",
+          tituloSeccion: "Introducción a Redes Neuronales y Proyecto",
+          descripcion: "Bases de redes neuronales y cierre con un caso práctico.",
+          clases: [
+            { titulo: "Perceptrón, funciones de activación y backpropagation", duracion: "2h 15m" },
+            { titulo: "Primer modelo neuronal secuencial", duracion: "2h 10m" },
+            { titulo: "Ajuste de hiperparámetros y prevención de overfitting", duracion: "1h 50m" },
+            { titulo: "Proyecto integrador: predicción de demanda o churn", duracion: "2h 00m" }
+          ]
+        }
+      ],
+      aprender: [
+        "Manipular y limpiar datasets reales con Python, NumPy y Pandas.",
+        "Entrenar y evaluar modelos de clasificación, regresión y clustering.",
+        "Elegir las métricas adecuadas para evitar overfitting y subajuste.",
+        "Construir un proyecto práctico de Machine Learning de punta a punta.",
+      ],
+      requisitos: [
+        "Conocimientos básicos de programación en Python.",
+        "Nociones elementales de estadística y álgebra.",
+      ],
+    },
+    ciberseguridad: {
+      categoria: "Ciberseguridad",
+      nivel: "Nivel Inicial a Intermedio",
+      rating: "4.7",
+      reseñas: "245",
+      titulo: "Ciberseguridad Fundamental",
+      descripcionLarga:
+        "Protegé redes, aplicaciones y datos identificando vulnerabilidades comunes, autenticación segura y respuesta a incidentes con enfoque práctico en entornos reales.",
+      duracionHoras: "24 horas",
+      instructorNombre: "Lucia Benitez",
+      instructorCargo: "Security Analyst & Blue Team Lead",
+      instructorIniciales: "SL",
+      precioPrincipal: "190",
+      precioTachado: "USD $240",
+      clasesCount: "12 clases en video Full HD",
+      proyectosCount: "4 simulaciones de defensa y respuesta",
+      imagen: "./img/ciberseguridad.jpg",
+      temarioResumen: "4 secciones · 12 clases · 24h total",
+      temario: [
+        {
+          id: "sec_cibfund_1",
+          tituloBadge: "Sección 1 · Bases",
+          tituloSeccion: "Fundamentos de Seguridad y Redes",
+          descripcion: "Principios de defensa, vectores de ataque y tráfico de red.",
+          clases: [
+            { titulo: "Tríada CIA, gestión de riesgos y superficie de ataque", duracion: "1h 50m" },
+            { titulo: "Protocolos TCP/IP, DNS, HTTP/HTTPS y puertos críticos", duracion: "2h 10m" },
+            { titulo: "Análisis de tráfico y captura de paquetes", duracion: "2h 00m" }
+          ]
+        },
+        {
+          id: "sec_cibfund_2",
+          tituloBadge: "Sección 2 · Identidad",
+          tituloSeccion: "Control de Acceso, Criptografía y Autenticación",
+          descripcion: "Protección de identidades y datos en tránsito o reposo.",
+          clases: [
+            { titulo: "Principio de menor privilegio y control de accesos RBAC", duracion: "1h 45m" },
+            { titulo: "Criptografía simétrica, asimétrica, hashing y certificados TLS", duracion: "2h 15m" },
+            { titulo: "MFA, OAuth y prevención de robo de sesiones", duracion: "1h 55m" }
+          ]
+        },
+        {
+          id: "sec_cibfund_3",
+          tituloBadge: "Sección 3 · Amenazas",
+          tituloSeccion: "Vulnerabilidades Web y Malware",
+          descripcion: "Cómo se originan los ataques más frecuentes y cómo mitigarlos.",
+          clases: [
+            { titulo: "Phishing, ingeniería social y defensas de correo", duracion: "1h 50m" },
+            { titulo: "Malware, ransomware y hardening de sistemas", duracion: "2h 05m" },
+            { titulo: "Fallas web frecuentes: inyecciones, XSS y CSRF", duracion: "2h 00m" }
+          ]
+        },
+        {
+          id: "sec_cibfund_4",
+          tituloBadge: "Sección 4 · Respuesta",
+          tituloSeccion: "Monitoreo, Logs y Respuesta a Incidentes",
+          descripcion: "Detección temprana, contención y recuperación ante incidentes.",
+          clases: [
+            { titulo: "Lectura de logs de sistema, firewalls y servidores web", duracion: "2h 00m" },
+            { titulo: "Fases de respuesta a incidentes: preparación a lecciones aprendidas", duracion: "2h 10m" },
+            { titulo: "Plan de continuidad y backups resilientes ante ransomware", duracion: "2h 00m" }
+          ]
+        }
+      ],
+      aprender: [
+        "Identificar amenazas y vulnerabilidades frecuentes en redes y aplicaciones.",
+        "Aplicar buenas prácticas de autenticación, cifrado y control de accesos.",
+        "Analizar registros y eventos para detectar comportamientos anómalos.",
+        "Ejecutar un protocolo ordenado de contención y respuesta ante incidentes.",
+      ],
+      requisitos: [
+        "Manejo fluido de computadora y navegación web.",
+        "Conocimientos básicos de redes o sistemas operativos es un plus.",
+      ],
+    },
+    "testing-automation": {
+      categoria: "Testing Automation",
+      nivel: "Nivel Inicial a Intermedio",
+      rating: "4.9",
+      reseñas: "360",
+      titulo: "Testing Automation con Selenium y Playwright",
+      descripcionLarga:
+        "Automatizá pruebas end-to-end en aplicaciones web para detectar bugs temprano y mejorar la calidad de cada release con estrategias mantenibles y reportes claros.",
+      duracionHoras: "22 horas",
+      instructorNombre: "Mateo Rossi",
+      instructorCargo: "QA Automation Engineer",
+      instructorIniciales: "DG",
+      precioPrincipal: "Gratuito",
+      precioTachado: "USD $140",
+      clasesCount: "12 clases en video Full HD",
+      proyectosCount: "3 suites automatizadas E2E",
+      imagen: "./img/full stack.jpg",
+      temarioResumen: "4 secciones · 12 clases · 22h total",
+      temario: [
+        {
+          id: "sec_qa_1",
+          tituloBadge: "Sección 1 · Estrategia",
+          tituloSeccion: "Fundamentos de QA y Automatización E2E",
+          descripcion: "Qué automatizar, pirámide de pruebas y selectores estables.",
+          clases: [
+            { titulo: "Pirámide de testing y criterios para automatizar casos", duracion: "1h 40m" },
+            { titulo: "Localizadores robustos: CSS, XPath y roles accesibles", duracion: "1h 55m" },
+            { titulo: "Configuración inicial del proyecto de pruebas", duracion: "1h 45m" }
+          ]
+        },
+        {
+          id: "sec_qa_2",
+          tituloBadge: "Sección 2 · Playwright",
+          tituloSeccion: "Pruebas Modernas con Playwright",
+          descripcion: "Interacciones, esperas automáticas y aserciones confiables.",
+          clases: [
+            { titulo: "Navegación, formularios, modales y uploads con Playwright", duracion: "2h 00m" },
+            { titulo: "Web-first assertions y manejo de asincronía sin flaky tests", duracion: "1h 50m" },
+            { titulo: "Interceptación y mock de respuestas HTTP/API", duracion: "1h 50m" }
+          ]
+        },
+        {
+          id: "sec_qa_3",
+          tituloBadge: "Sección 3 · Selenium",
+          tituloSeccion: "Automatización con Selenium WebDriver",
+          descripcion: "Uso de WebDriver, esperas explícitas y compatibilidad cross-browser.",
+          clases: [
+            { titulo: "Arquitectura de Selenium WebDriver y manejo del navegador", duracion: "1h 55m" },
+            { titulo: "Explicit waits, frames, alertas y acciones avanzadas", duracion: "1h 50m" },
+            { titulo: "Comparativa práctica: cuándo usar Playwright o Selenium", duracion: "1h 30m" }
+          ]
+        },
+        {
+          id: "sec_qa_4",
+          tituloBadge: "Sección 4 · Arquitectura",
+          tituloSeccion: "Page Object Model, Reportes y CI",
+          descripcion: "Código limpio y ejecución automática en pipelines.",
+          clases: [
+            { titulo: "Implementación de Page Object Model (POM)", duracion: "2h 00m" },
+            { titulo: "Capturas de pantalla, trazas, videos y reportes HTML", duracion: "1h 45m" },
+            { titulo: "Integración de la suite en flujos de CI (GitHub Actions)", duracion: "1h 45m" }
+          ]
+        }
+      ],
+      aprender: [
+        "Diseñar y automatizar pruebas end-to-end en flujos web críticos.",
+        "Escribir scripts estables con Playwright y Selenium WebDriver.",
+        "Organizar pruebas con Page Object Model para facilitar el mantenimiento.",
+        "Generar reportes de fallos y correr pruebas automáticamente en CI.",
+      ],
+      requisitos: [
+        "Conocimientos básicos de HTML y programación (JavaScript o Python).",
+        "Familiaridad con el funcionamiento básico de sitios web.",
+      ],
+    },
+    "bi-datos": {
+      categoria: "Business Intelligence",
+      nivel: "Nivel Inicial a Intermedio",
+      rating: "4.8",
+      reseñas: "275",
+      titulo: "Business Intelligence y Analítica de Datos",
+      descripcionLarga:
+        "Transformá datos crudos en tableros interactivos, KPIs claros y reportes accionables para la toma de decisiones en áreas comerciales, operativas y financieras.",
+      duracionHoras: "26 horas",
+      instructorNombre: "Valeria Sosa",
+      instructorCargo: "BI & Data Analytics Specialist",
+      instructorIniciales: "VP",
+      precioPrincipal: "240",
+      precioTachado: "USD $295",
+      clasesCount: "13 clases en video Full HD",
+      proyectosCount: "4 tableros y reportes de negocio",
+      imagen: "./img/bi.jpg",
+      temarioResumen: "4 secciones · 13 clases · 26h total",
+      temario: [
+        {
+          id: "sec_bidat_1",
+          tituloBadge: "Sección 1 · Analítica",
+          tituloSeccion: "Cultura Data-Driven y Definición de KPIs",
+          descripcion: "De preguntas de negocio a indicadores medibles.",
+          clases: [
+            { titulo: "Rol de Business Intelligence en las organizaciones", duracion: "1h 50m" },
+            { titulo: "Definición de KPIs y métricas accionables vs. métricas vanidosas", duracion: "2h 00m" },
+            { titulo: "Fuentes de datos: planillas, bases SQL y sistemas de gestión", duracion: "1h 55m" }
+          ]
+        },
+        {
+          id: "sec_bidat_2",
+          tituloBadge: "Sección 2 · ETL y Modelo",
+          tituloSeccion: "Preparación y Modelado Dimensional",
+          descripcion: "Limpieza de datos y diseño de esquemas analíticos.",
+          clases: [
+            { titulo: "Extracción, limpieza y estandarización de datos", duracion: "2h 05m" },
+            { titulo: "Modelo estrella, tablas de hechos y tablas de dimensiones", duracion: "2h 15m" },
+            { titulo: "Granularidad, calendarios y relaciones correctas", duracion: "1h 55m" }
+          ]
+        },
+        {
+          id: "sec_bidat_3",
+          tituloBadge: "Sección 3 · Métricas",
+          tituloSeccion: "Cálculos, Comparativas y Tendencias",
+          descripcion: "Análisis temporal, variaciones y segmentación de resultados.",
+          clases: [
+            { titulo: "Cálculo de márgenes, ticket promedio, conversión y retención", duracion: "2h 00m" },
+            { titulo: "Comparativas interanuales, acumulados y análisis de estacionalidad", duracion: "2h 05m" },
+            { titulo: "Análisis de cohorts y segmentación por clientes o canales", duracion: "2h 00m" }
+          ]
+        },
+        {
+          id: "sec_bidat_4",
+          tituloBadge: "Sección 4 · Visualización",
+          tituloSeccion: "Storytelling con Datos y Dashboards Ejecutivos",
+          descripcion: "Diseño visual claro y presentación de hallazgos.",
+          clases: [
+            { titulo: "Jerarquía visual y elección del gráfico adecuado", duracion: "1h 55m" },
+            { titulo: "Diseño de tableros ejecutivos y operativos sin saturación", duracion: "2h 05m" },
+            { titulo: "Data storytelling: cómo comunicar hallazgos y recomendaciones", duracion: "2h 00m" }
+          ]
+        }
+      ],
+      aprender: [
+        "Traducir objetivos de negocio en KPIs y tableros fáciles de interpretar.",
+        "Limpiar y estructurar datos bajo un modelo dimensional claro.",
+        "Calcular métricas clave de ventas, operaciones y evolución temporal.",
+        "Presentar reportes visuales que respalden decisiones concretas.",
+      ],
+      requisitos: [
+        "Manejo básico de hojas de cálculo (Excel o Google Sheets).",
+        "Interés en análisis de datos y toma de decisiones de negocio.",
+      ],
+    },
   };
 
   let curso = baseDeDatosCursos[cursoId] || baseDeDatosCursos["fullstack"];
@@ -626,6 +928,14 @@ document.addEventListener("DOMContentLoaded", () => {
         nombreCursoOficial = "Curso de Power BI";
       } else if (tituloLower.includes("hacking") || tituloLower.includes("etico")) {
         nombreCursoOficial = "Hacking Ético";
+      } else if (tituloLower.includes("machine learning") || tituloLower.includes("ia en programación")) {
+        nombreCursoOficial = "Inteligencia Artificial y Machine Learning";
+      } else if (tituloLower.includes("ciberseguridad fundamental")) {
+        nombreCursoOficial = "Ciberseguridad Fundamental";
+      } else if (tituloLower.includes("testing automation") || tituloLower.includes("selenium")) {
+        nombreCursoOficial = "Testing Automation con Selenium y Playwright";
+      } else if (tituloLower.includes("analítica de datos") || tituloLower.includes("business intelligence")) {
+        nombreCursoOficial = "Business Intelligence y Analítica de Datos";
       }
 
       const yaAdquirido = misCursos.some(c => c.curso.toLowerCase() === nombreCursoOficial.toLowerCase());
