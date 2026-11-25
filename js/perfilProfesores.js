@@ -2,13 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-profesores");
   if (!contenedor) return;
 
-  // Base de datos oficial de instructores correspondiente a los 6 cursos
+  // Base de datos de instructores y los cursos que dicta cada uno
   const profesores = [
     {
       nombre: "Carla Méndez",
       cargo: "Lead Full Stack Engineer",
-      cursoAsociado: "Desarrollo Web Full Stack Avanzado",
-      linkCurso: "curso-detalle.html?id=fullstack",
+      cursos: [
+        { titulo: "Desarrollo Web Full Stack Avanzado", link: "curso-detalle.html?id=fullstack" }
+      ],
       iniciales: "CM",
       bio: "Especialista en arquitecturas frontend robustas con React y ecosistema Node.js. Apasionada por el código limpio y escalable.",
       tag: "Desarrollo Web",
@@ -18,8 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       nombre: "Esteban Ruarte",
       cargo: "Database Administrator",
-      cursoAsociado: "Bases de Datos en MySQL y Modelado SQL",
-      linkCurso: "curso-detalle.html?id=mysql",
+      cursos: [
+        { titulo: "Bases de Datos en MySQL y Modelado SQL", link: "curso-detalle.html?id=mysql" }
+      ],
       iniciales: "ER",
       bio: "Administrador experto en optimización de consultas de alto rendimiento, normalización de datos corporativos y transacciones ACID.",
       tag: "Bases de Datos",
@@ -29,8 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       nombre: "Lucía Benítez",
       cargo: "Information Security Officer",
-      cursoAsociado: "Especialista en Ciberseguridad y Defensa",
-      linkCurso: "curso-detalle.html?id=ciberseguridad",
+      cursos: [
+        { titulo: "Especialista en Ciberseguridad y Defensa", link: "curso-detalle.html?id=ciberseguridad" },
+        { titulo: "Ciberseguridad Fundamental", link: "curso-detalle.html?id=ciber-fundamental" }
+      ],
       iniciales: "LB",
       bio: "Consultora de seguridad ofensiva y defensiva. Enfocada en hardening de sistemas operativos, criptografía y respuesta a incidentes.",
       tag: "Ciberseguridad",
@@ -40,8 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       nombre: "Mateo Rossi",
       cargo: "AI Solutions Architect",
-      cursoAsociado: "IA en Programación y Desarrollo Ágil",
-      linkCurso: "curso-detalle.html?id=ia",
+      cursos: [
+        { titulo: "IA en Programación y Desarrollo Ágil", link: "curso-detalle.html?id=ia" },
+        { titulo: "Inteligencia Artificial y Machine Learning", link: "curso-detalle.html?id=ia-ml" },
+        { titulo: "Testing Automation con Selenium y Playwright", link: "curso-detalle.html?id=testing-automation" }
+      ],
       iniciales: "MR",
       bio: "Pionero en la integración de modelos de lenguaje avanzados y agentes inteligentes en flujos de desarrollo de software ágil.",
       tag: "Inteligencia Artificial",
@@ -51,8 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       nombre: "Valeria Sosa",
       cargo: "BI & Data Analytics Lead",
-      cursoAsociado: "Curso de Power BI y Analítica de Negocio",
-      linkCurso: "curso-detalle.html?id=powerbi",
+      cursos: [
+        { titulo: "Curso de Power BI y Analítica de Negocio", link: "curso-detalle.html?id=powerbi" },
+        { titulo: "Business Intelligence y Analítica de Datos", link: "curso-detalle.html?id=bi-datos" }
+      ],
       iniciales: "VS",
       bio: "Experta en modelado dimensional, lenguaje DAX y diseño de tableros de control ejecutivos para la toma de decisiones estratégicas.",
       tag: "Business Intelligence",
@@ -62,8 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       nombre: "Damián Kestel",
       cargo: "Lead Offensive Security Consultant",
-      cursoAsociado: "Hacking Ético y Pruebas de Intrusión",
-      linkCurso: "curso-detalle.html?id=hacking",
+      cursos: [
+        { titulo: "Hacking Ético y Pruebas de Intrusión", link: "curso-detalle.html?id=hacking" }
+      ],
       iniciales: "DK",
       bio: "Pentester profesional especializado en auditorías de aplicaciones web, explotación de servicios y marcos regulatorios de seguridad.",
       tag: "Seguridad Ofensiva",
@@ -92,16 +102,21 @@ document.addEventListener("DOMContentLoaded", () => {
           <p class="small texto-secundario-claro mb-3">${p.bio}</p>
 
           <div class="mb-3">
-            <span class="badge bg-dark border border-secondary border-opacity-25 text-white py-1 px-2 small">
-              <i class="bi bi-book me-1 text-teal"></i> ${p.cursoAsociado}
-            </span>
+            <span class="d-block small text-muted fw-semibold mb-2">Cursos que dicta</span>
+            <div class="d-flex flex-column gap-2">
+              ${p.cursos.map(curso => `
+                <a href="${curso.link}" class="badge bg-dark border border-secondary border-opacity-25 text-white text-start text-wrap text-decoration-none py-2 px-2 small">
+                  <i class="bi bi-book me-1 text-teal"></i> ${curso.titulo}
+                </a>
+              `).join("")}
+            </div>
           </div>
         </div>
 
         <div class="pt-3 border-top border-secondary border-opacity-25 d-flex align-items-center justify-content-between">
           <span class="course-tag ${p.colorTag}">${p.tag}</span>
-          <a href="${p.linkCurso}" class="btn btn-outline-light btn-sm rounded-3">
-            Ver Curso <i class="bi bi-arrow-right ms-1"></i>
+          <a href="cursos.html" class="btn btn-outline-light btn-sm rounded-3">
+            Ver Cursos <i class="bi bi-arrow-right ms-1"></i>
           </a>
         </div>
       </div>

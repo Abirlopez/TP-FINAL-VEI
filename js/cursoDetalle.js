@@ -542,7 +542,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Nociones elementales de estadística y álgebra.",
       ],
     },
-    ciberseguridad: {
+    "ciber-fundamental": {
       categoria: "Ciberseguridad",
       nivel: "Nivel Inicial a Intermedio",
       rating: "4.7",
@@ -551,9 +551,9 @@ document.addEventListener("DOMContentLoaded", () => {
       descripcionLarga:
         "Protegé redes, aplicaciones y datos identificando vulnerabilidades comunes, autenticación segura y respuesta a incidentes con enfoque práctico en entornos reales.",
       duracionHoras: "24 horas",
-      instructorNombre: "Lucia Benitez",
+      instructorNombre: "Lucía Benítez",
       instructorCargo: "Security Analyst & Blue Team Lead",
-      instructorIniciales: "SL",
+      instructorIniciales: "LB",
       precioPrincipal: "190",
       precioTachado: "USD $240",
       clasesCount: "12 clases en video Full HD",
@@ -628,7 +628,7 @@ document.addEventListener("DOMContentLoaded", () => {
       duracionHoras: "22 horas",
       instructorNombre: "Mateo Rossi",
       instructorCargo: "QA Automation Engineer",
-      instructorIniciales: "DG",
+      instructorIniciales: "MR",
       precioPrincipal: "Gratuito",
       precioTachado: "USD $140",
       clasesCount: "12 clases en video Full HD",
@@ -703,7 +703,7 @@ document.addEventListener("DOMContentLoaded", () => {
       duracionHoras: "26 horas",
       instructorNombre: "Valeria Sosa",
       instructorCargo: "BI & Data Analytics Specialist",
-      instructorIniciales: "VP",
+      instructorIniciales: "VS",
       precioPrincipal: "240",
       precioTachado: "USD $295",
       clasesCount: "13 clases en video Full HD",
